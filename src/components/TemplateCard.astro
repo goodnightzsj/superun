@@ -1,0 +1,29 @@
+---
+import type { TemplateRecord } from '@/data/site';
+import { templateMedia } from '@/data/fidelity';
+
+interface Props {
+  template: TemplateRecord;
+}
+
+const { template } = Astro.props;
+const media = templateMedia[template.slug];
+---
+
+<a class="template-card" data-category={template.category} data-preview-theme={template.previewTheme} href={`/web/community-view/${template.slug}`}>
+  <div class="template-card__media">
+    {media ? (
+      <img class="template-card__image" src={media.image} alt={template.title} loading="lazy" decoding="async" />
+    ) : null}
+    <div class="template-card__hover-cta-wrap" aria-hidden="true">
+      <span class="template-card__hover-cta" data-copy-key="home.cardRecreate">复刻</span>
+    </div>
+  </div>
+
+  <div class="template-card__meta">
+    <div class="template-card__title-row">
+      <h3>{template.title}</h3>
+    </div>
+    <p>{template.description}</p>
+  </div>
+</a>

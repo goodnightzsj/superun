@@ -1,0 +1,59 @@
+{
+  "deployedAt": "2026-03-27T05:12:55Z",
+  "validatedAt": "2026-03-27T05:26:07Z",
+  "workerName": "superun-public-site",
+  "workerUrl": "https://superun-public-site.sub-store.workers.dev",
+  "versionId": "cbfb4aff-ab40-4390-a7a5-dc90855f5ad1",
+  "deploymentStatus": {
+    "id": "696dab5f-1beb-4ef5-96db-23080ea099d0",
+    "strategy": "percentage",
+    "percentage": 100,
+    "createdOn": "2026-03-27T05:12:55.754007Z"
+  },
+  "localChecks": {
+    "check": "pass",
+    "build": "pass"
+  },
+  "remoteChecks": {
+    "rootRedirect": {
+      "url": "https://superun-public-site.sub-store.workers.dev/",
+      "status": 302,
+      "location": "https://superun-public-site.sub-store.workers.dev/home"
+    },
+    "login": {
+      "url": "https://superun-public-site.sub-store.workers.dev/web/login",
+      "title": "superun - 聊出你的产品 - 优势智设",
+      "googleContinuePresent": true,
+      "googleTextPresent": true,
+      "googleIconSpanPresent": true,
+      "hideMoreLogicPresent": true
+    },
+    "community": {
+      "url": "https://superun-public-site.sub-store.workers.dev/web/community-view/snapshot-health-guide",
+      "iframeHostPresent": true,
+      "iframePresent": true,
+      "loaderPulsePresent": true,
+      "loaderCopyPresent": false,
+      "loadListenerPresent": true,
+      "timeoutRevealPresent": false,
+      "detailShellClassPresent": true,
+      "cssHostFullWidthPresent": true,
+      "cssIframeHiddenUntilReadyPresent": true,
+      "cssReadyRevealPresent": true
+    }
+  },
+  "sourceEvidence": {
+    "workerRedirect": "src/worker.ts:10",
+    "communityLoader": "src/pages/web/community-view/[slug].astro:964",
+    "communityLoadReveal": "src/pages/web/community-view/[slug].astro:1056",
+    "communityShellSizing": "src/styles/global.css:1307",
+    "communityIframeHost": "src/styles/global.css:1324",
+    "communityIframeReveal": "src/styles/global.css:1343",
+    "loginGoogleAction": "src/pages/web/login.astro:39",
+    "loginHideMore": "src/pages/web/login.astro:135"
+  },
+  "notes": [
+    "Playwright and pinchtab browser sessions were unavailable in this environment during follow-up verification, so public acceptance used curl plus deployed HTML/CSS marker inspection.",
+    "The deployed community route no longer emits loader copy text and no longer contains the timeout-based pre-reveal path."
+  ]
+}

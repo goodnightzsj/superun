@@ -1,0 +1,199 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import LocaleMenu from '@/components/LocaleMenu.astro';
+import { brandAssetSrc, publicPageCopy } from '@/data/fidelity';
+
+const copy = publicPageCopy['zh-CN'];
+const locales = JSON.stringify(publicPageCopy);
+const wechatIcon = `<svg width="18" height="18" viewBox="0 0 1024 1024" fill="none" aria-hidden="true"><path d="M683.058 364.695c11 0 22 1.016 32.943 1.976C686.564 230.064 538.896 128 370.681 128c-188.104 0.66-342.237 127.793-342.237 289.226 0 93.068 51.379 169.827 136.725 229.256L130.72 748.43l119.796-59.368c42.918 8.395 77.37 16.79 119.742 16.79 11 0 21.46-0.48 31.914-1.442a259.168 259.168 0 0 1-10.455-71.358c0.485-148.002 128.744-268.297 291.403-268.297l-0.06-0.06z m-184.113-91.992c25.99 0 42.913 16.79 42.913 42.575 0 25.188-16.923 42.579-42.913 42.579-25.45 0-51.38-16.85-51.38-42.58 0-25.784 25.93-42.574 51.38-42.574z m-239.544 85.154c-25.384 0-51.374-16.85-51.374-42.58 0-25.784 25.99-42.574 51.374-42.574 25.45 0 42.918 16.79 42.918 42.575 0 25.188-16.924 42.579-42.918 42.579z m736.155 271.655c0-135.647-136.725-246.527-290.983-246.527-162.655 0-290.918 110.88-290.918 246.527 0 136.128 128.263 246.587 290.918 246.587 33.972 0 68.423-8.395 102.818-16.85l93.809 50.973-25.93-84.677c68.907-51.93 120.286-119.815 120.286-196.033z m-385.275-42.58c-16.923 0-34.452-16.79-34.452-34.179 0-16.79 17.529-34.18 34.452-34.18 25.99 0 42.918 16.85 42.918 34.18 0 17.39-16.928 34.18-42.918 34.18z m188.165 0c-16.984 0-33.972-16.79-33.972-34.179 0-16.79 16.927-34.18 33.972-34.18 25.93 0 42.913 16.85 42.913 34.18 0 17.39-16.983 34.18-42.913 34.18z" fill="#09BB07"></path></svg>`;
+const googleIcon = `<svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M17.64 9.20455c0-.63818-.0573-1.25182-.1636-1.84091H9v3.48182h4.8436c-.2086 1.125-.8427 2.0795-1.7963 2.7182v2.2582h2.9088c1.7018-1.5668 2.6839-3.8727 2.6839-6.61731Z" fill="#4285F4"></path><path d="M9 18c2.43 0 4.4673-.8059 5.9564-2.1773l-2.9088-2.2582c-.8068.54-1.8409.8591-3.0476.8591-2.3441 0-4.3282-1.5818-5.0373-3.7077H1.95682v2.3318C3.43773 15.9827 6.00818 18 9 18Z" fill="#34A853"></path><path d="M3.96273 10.715c-.18001-.54-.28364-1.1182-.28364-1.715s.10363-1.175.28364-1.715V4.95364H1.95682C1.34727 6.16864 1 7.54136 1 9s.34727 2.8314.95682 4.0464l2.00591-2.3314Z" fill="#FBBC05"></path><path d="M9 3.57682c1.32136 0 2.50773.45409 3.44182 1.34591l2.5814-2.58137C13.4632.891364 11.43 0 9 0 6.00818 0 3.43773 2.01727 1.95682 4.95364l2.00591 2.33136C4.67182 5.15864 6.65591 3.57682 9 3.57682Z" fill="#EA4335"></path></svg>`;
+---
+
+<BaseLayout title={copy.login.title} hideHeader hideFooter>
+  <section class="auth-shell">
+    <div class="auth-header">
+      <div class="auth-header__left">
+        <a class="auth-brand" href="/home" aria-label="返回首页">
+          <img class="brand__image" src={brandAssetSrc} alt="brand" loading="eager" decoding="async" />
+        </a>
+        <LocaleMenu className="auth-lang" />
+      </div>
+    </div>
+
+    <div class="auth-card">
+      <div class="auth-card__stack">
+        <h1 data-copy-key="login.heading">{copy.login.heading}</h1>
+
+        <div class="auth-socials">
+          <a class="auth-wechat-button" id="wechat-continue" href="/home">
+            <span class="auth-wechat-button__icon" set:html={wechatIcon}></span>
+            <span data-copy-key="login.wechat">{copy.login.wechat}</span>
+          </a>
+          <button class="auth-more-button" id="auth-more-button" type="button" aria-expanded="false" aria-controls="auth-extra-socials">
+            <span data-copy-key="login.more">{copy.login.more}</span>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="auth-socials auth-socials--extra" id="auth-extra-socials" hidden>
+          <a class="auth-wechat-button auth-wechat-button--secondary" id="google-continue" href="/home">
+            <span class="auth-wechat-button__icon" set:html={googleIcon}></span>
+            <span data-copy-key="login.google">{copy.login.google}</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="auth-auth">
+        <div class="auth-tabs" role="tablist" aria-label={copy.login.heading}>
+          <button class="auth-tab is-active" id="auth-tab-phone" type="button" role="tab" aria-selected="true" aria-controls="auth-panel-phone" data-auth-tab="phone" data-copy-key="login.phoneTab">{copy.login.phoneTab}</button>
+          <button class="auth-tab" id="auth-tab-email" type="button" role="tab" aria-selected="false" aria-controls="auth-panel-email" data-auth-tab="email" data-copy-key="login.emailTab">{copy.login.emailTab}</button>
+        </div>
+
+        <form class="auth-form auth-form--stacked" id="auth-panel-phone" data-auth-panel="phone" role="tabpanel" aria-labelledby="auth-tab-phone">
+          <label class="auth-field auth-field--phone">
+            <span class="auth-field__prefix">+86</span>
+            <input type="text" placeholder={copy.login.phonePlaceholder} data-copy-placeholder="login.phonePlaceholder" />
+          </label>
+
+          <div class="auth-code-row">
+            <input type="text" placeholder={copy.login.codePlaceholder} data-copy-placeholder="login.codePlaceholder" />
+            <button class="auth-code-button" type="button" data-copy-key="login.sendCode">{copy.login.sendCode}</button>
+          </div>
+        </form>
+
+        <form class="auth-form auth-form--stacked" id="auth-panel-email" data-auth-panel="email" role="tabpanel" aria-labelledby="auth-tab-email" hidden>
+          <label class="auth-field auth-field--email auth-field--single">
+            <input type="email" placeholder={copy.login.emailPlaceholder} data-copy-placeholder="login.emailPlaceholder" />
+          </label>
+
+          <label class="auth-field auth-field--single auth-password-row">
+            <input type="password" placeholder={copy.login.passwordPlaceholder} data-copy-placeholder="login.passwordPlaceholder" />
+            <button class="auth-forgot-button" type="button" data-copy-key="login.forgotPassword">{copy.login.forgotPassword}</button>
+          </label>
+        </form>
+
+        <a class="auth-submit-button auth-submit-button--full" id="register-continue" href="/home" data-auth-submit-link data-copy-key="login.submit">{copy.login.submit}</a>
+
+        <p class="auth-agreement">
+          <span data-copy-key="login.agreementPrefix">{copy.login.agreementPrefix}</span>
+          <a href="https://www.superun.com/web/agreement/superun-service-agreement-cn.html" data-copy-key="login.agreementService">{copy.login.agreementService}</a>
+          <span class="auth-agreement__separator">、</span>
+          <a href="https://www.superun.com/web/agreement/superun-privacy-cn.html" data-copy-key="login.agreementPrivacy">{copy.login.agreementPrivacy}</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="auth-create-team">
+      <button class="auth-team-button" type="button">
+        <span data-copy-key="login.createTeam">{copy.login.createTeam}</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M6 3.5L10.5 8L6 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <script is:inline define:vars={{ locales }}>
+    (() => {
+      const params = new URL(window.location.href).searchParams;
+      const redirectUrl = params.get('redirectUrl') || '/home';
+      const prompt = params.get('prompt') || '做一个面向中小企业的 AI 客服工作台';
+      const safeRedirectUrl = redirectUrl.startsWith('/') && !redirectUrl.startsWith('//') ? redirectUrl : '/home';
+      const targetUrl = new URL(safeRedirectUrl, window.location.origin);
+      targetUrl.searchParams.set('prompt', prompt);
+      const target = `${targetUrl.pathname}${targetUrl.search}${targetUrl.hash}`;
+
+      const wechatContinue = document.querySelector('#wechat-continue');
+      const googleContinue = document.querySelector('#google-continue');
+      const moreButton = document.querySelector('#auth-more-button');
+      const extraSocials = document.querySelector('#auth-extra-socials');
+      const registerContinue = document.querySelector('#register-continue');
+      const submitLinks = Array.from(document.querySelectorAll('[data-auth-submit-link], #register-continue'));
+      const tabs = Array.from(document.querySelectorAll('[data-auth-tab]'));
+      const panels = Array.from(document.querySelectorAll('[data-auth-panel]'));
+      const copy = JSON.parse(locales);
+      const localeAliases = {
+        'zh-CN': 'zh-CN',
+        'zh-TW': 'zh-CN',
+        yue: 'zh-CN',
+        ja: 'zh-CN',
+        ko: 'zh-CN',
+        en: 'en',
+        global: 'en',
+      };
+
+      if (wechatContinue instanceof HTMLAnchorElement) wechatContinue.href = target;
+      if (googleContinue instanceof HTMLAnchorElement) googleContinue.href = target;
+      if (registerContinue instanceof HTMLAnchorElement) registerContinue.href = target;
+      submitLinks.forEach((link) => {
+        if (link instanceof HTMLAnchorElement) link.href = target;
+      });
+
+      if (moreButton instanceof HTMLButtonElement && extraSocials instanceof HTMLElement) {
+        moreButton.addEventListener('click', () => {
+          moreButton.setAttribute('aria-expanded', 'true');
+          moreButton.hidden = true;
+          extraSocials.hidden = false;
+        });
+      }
+
+      const applyAuthPanel = (panelName) => {
+        const nextPanel = panelName === 'email' ? 'email' : 'phone';
+        tabs.forEach((tab) => {
+          if (!(tab instanceof HTMLButtonElement)) return;
+          const active = tab.getAttribute('data-auth-tab') === nextPanel;
+          tab.classList.toggle('is-active', active);
+          tab.setAttribute('aria-selected', active ? 'true' : 'false');
+          tab.tabIndex = active ? 0 : -1;
+        });
+        panels.forEach((panel) => {
+          if (!(panel instanceof HTMLElement)) return;
+          const active = panel.getAttribute('data-auth-panel') === nextPanel;
+          panel.hidden = !active;
+        });
+      };
+
+      tabs.forEach((tab) => {
+        if (!(tab instanceof HTMLButtonElement)) return;
+        tab.addEventListener('click', () => {
+          applyAuthPanel(tab.getAttribute('data-auth-tab') || 'phone');
+        });
+      });
+
+      applyAuthPanel('phone');
+
+      const applyCopy = (locale) => {
+        const nextLocale = localeAliases[locale] || 'zh-CN';
+        const nextCopy = copy[nextLocale] || copy['zh-CN'];
+        document.title = nextCopy.login.title;
+        document.querySelectorAll('[data-copy-key]').forEach((node) => {
+          const key = node.getAttribute('data-copy-key');
+          if (!key) return;
+          const [scope, field] = key.split('.');
+          const value = nextCopy?.[scope]?.[field];
+          if (typeof value === 'string') node.textContent = value;
+        });
+        document.querySelectorAll('[data-copy-placeholder]').forEach((node) => {
+          const key = node.getAttribute('data-copy-placeholder');
+          if (!(node instanceof HTMLInputElement) || !key) return;
+          const [scope, field] = key.split('.');
+          const value = nextCopy?.[scope]?.[field];
+          if (typeof value === 'string') node.placeholder = value;
+        });
+        const serviceLink = document.querySelector('a[data-copy-key="login.agreementService"]');
+        const privacyLink = document.querySelector('a[data-copy-key="login.agreementPrivacy"]');
+        const separator = document.querySelector('.auth-agreement__separator');
+        if (serviceLink instanceof HTMLAnchorElement) serviceLink.href = nextLocale === 'en' ? 'https://www.superun.com/web/agreement/superun-service-agreement-en.html' : 'https://www.superun.com/web/agreement/superun-service-agreement-cn.html';
+        if (privacyLink instanceof HTMLAnchorElement) privacyLink.href = nextLocale === 'en' ? 'https://www.superun.com/web/agreement/superun-privacy-en.html' : 'https://www.superun.com/web/agreement/superun-privacy-cn.html';
+        if (separator instanceof HTMLElement) separator.textContent = nextLocale === 'en' ? ' and ' : '、';
+      };
+
+      applyCopy(document.documentElement.dataset.publicLocale || 'zh-CN');
+      window.addEventListener('public-locale-change', (event) => {
+        const locale = event.detail?.locale || 'zh-CN';
+        applyCopy(locale);
+      });
+    })();
+  </script>
+</BaseLayout>

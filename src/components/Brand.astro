@@ -1,0 +1,16 @@
+---
+import { brandAssetSrc } from '@/data/fidelity';
+
+interface Props {
+  compact?: boolean;
+  className?: string;
+  ariaLabel?: string;
+}
+
+const { compact = false, className = '', ariaLabel = 'superun 首页' } = Astro.props;
+const classes = ['brand', compact ? 'brand--compact' : '', className].filter(Boolean).join(' ');
+---
+
+<a class={classes} href="/home" aria-label={ariaLabel}>
+  <img class="brand__image" src={brandAssetSrc} alt="brand" loading="eager" decoding="async" />
+</a>

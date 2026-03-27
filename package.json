@@ -1,0 +1,20 @@
+{
+  "name": "superun-public-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "check": "astro check",
+    "build": "astro build",
+    "preview": "astro preview",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "astro": "^5.5.5",
+    "typescript": "^5.8.3",
+    "wrangler": "^4.37.1"
+  }
+}

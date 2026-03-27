@@ -1,0 +1,47 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { docs } from '@/data/site';
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  return docs.map((doc) => ({ params: { slug: doc.slug }, props: { doc } }));
+}
+
+const { doc } = Astro.props;
+---
+
+<BaseLayout title={`${doc.title} - superun 文档`}>
+  <section class="doc-layout">
+    <aside class="doc-list">
+      <small class="doc-list__eyebrow">帮助文档</small>
+      <h2>最新内容</h2>
+      <ul>
+        {docs.map((item) => (
+          <li>
+            <a class={item.slug === doc.slug ? 'is-active' : ''} href={`/docs/${item.slug}`}>
+              <strong>{item.title}</strong>
+              <p style="margin: 6px 0 0;">{item.summary}</p>
+              <small>{item.category}</small>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </aside>
+
+    <article class="doc-article">
+      <div class="doc-article__meta">
+        <span>{doc.category}</span>
+        <span>·</span>
+        <span>superun Docs</span>
+      </div>
+      <h1>{doc.title}</h1>
+      <div class="doc-article__body">
+        <p>{doc.summary}</p>
+        {doc.content.map((paragraph) => <p>{paragraph}</p>)}
+        <h2>复刻站中的实现原则</h2>
+        <p>这批文档页面被设计成轻量、可索引、可内部跳转的答疑页，用来支撑首页之外的搜索流量与转化信任建设。</p>
+      </div>
+    </article>
+  </section>
+</BaseLayout>

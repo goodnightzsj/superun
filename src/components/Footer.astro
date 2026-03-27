@@ -1,0 +1,35 @@
+---
+import Brand from './Brand.astro';
+import { footerGroups } from '@/data/site';
+---
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__top">
+      <div class="footer-brand">
+        <Brand compact />
+        <p>聊出你的产品</p>
+      </div>
+
+      <div class="footer-link-groups">
+        {footerGroups.map((group) => (
+          <section class="footer-link-panel">
+            <h3>{group.title}</h3>
+            {group.links.map((link) => (
+              <a href={link.href}>{link.label}</a>
+            ))}
+          </section>
+        ))}
+      </div>
+    </div>
+
+    <div class="site-footer__legal">
+      <small>2026 superun Inc. All rights reserved.</small>
+      <small>
+        <a href="https://beian.miit.gov.cn">浙ICP备2024098187号</a>
+        <span> · </span>
+        <a href="https://beian.mps.gov.cn/#/query/webSearch?code=33010602014354">浙公网安备33010602014354号</a>
+      </small>
+    </div>
+  </div>
+</footer>

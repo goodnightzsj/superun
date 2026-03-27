@@ -1,0 +1,190 @@
+---
+interface Props {
+  theme: 'light' | 'mobile' | 'dark';
+  detailed?: boolean;
+  title?: string;
+  metric?: string;
+  submetric?: string;
+}
+
+const {
+  theme,
+  detailed = false,
+  title = 'Goose Planet',
+  metric = '32 个社群 · 1,402 条对话',
+  submetric = 'AI 推荐 3 条内容建议',
+} = Astro.props;
+
+const navItems = ['今日驾驶舱', '内容中心', '咨询洞察台', '产品机会台'];
+const statCards = [
+  { label: '高频顾虑聚类', value: '清洗保养', note: '占比 42%，连续 3 天位居首位', badge: '+12%' },
+  { label: '客户情绪指数', value: '温暖', note: '积极情绪占 78%，较上周提升', badge: '+5%' },
+  { label: '待补内容缺口', value: '3 个选题', note: '梅雨季保养、新生儿床品、送礼指南', badge: '急需' },
+];
+const suggestionRows = [
+  { title: '梅雨季鹅绒被保养指南', source: '来自广州VIP群高频提问', badge: '朋友圈' },
+  { title: '为什么95鹅绒比90鹅绒更透气？', source: '来自一对一私聊反复咨询', badge: '私聊话术' },
+  { title: '新生儿家庭的鹅绒被选购建议', source: '来自孕妈社群趋势洞察', badge: '小红书' },
+];
+const feedRows = [
+  { title: '南方梅雨季，这款鹅绒被会返潮吗？', meta: '广州VIP群 · 10分钟前' },
+  { title: '宝宝3个月大，可以用鹅绒被吗？', meta: '孕妈好物群 · 25分钟前' },
+  { title: '95白鹅绒和95灰鹅绒有什么区别？', meta: '一对一私聊 · 1小时前' },
+  { title: '送长辈的话，推荐哪个系列比较体面？', meta: '一对一私聊 · 1小时前' },
+  { title: '你们的被子可以机洗吗？', meta: '杭州体验群 · 2小时前' },
+];
+---
+
+{detailed ? (
+  <div class={`preview-ui ${theme}`}>
+    <aside class="preview-ui__sidebar">
+      <div class="preview-ui__workspace">
+        <div class="preview-ui__avatar"></div>
+        <div>
+          <strong>Goose Planet</strong>
+          <small>{title}</small>
+        </div>
+      </div>
+
+      <div class="preview-ui__sync-card">
+        <small>微信同步中</small>
+        <strong>{metric}</strong>
+      </div>
+
+      <nav class="preview-ui__sidebar-nav" aria-label="预览导航">
+        {navItems.map((item, index) => (
+          <div class={`preview-ui__sidebar-item ${index === 0 ? 'is-active' : ''}`}>
+            <span class="preview-ui__sidebar-dot"></span>
+            <span>{item}</span>
+          </div>
+        ))}
+      </nav>
+
+      <small class="preview-ui__sidebar-foot">Goose Planet © 2026</small>
+    </aside>
+
+    <div class="preview-ui__main">
+      <div class="preview-ui__headerbar">
+        <div class="preview-ui__hero">
+          <span class="preview-ui__hero-kicker">晚安，主理人</span>
+          <strong>{submetric}</strong>
+          <p>今日已从 {metric} 中整理出可直接执行的建议与待办线索。</p>
+        </div>
+        <button class="preview-ui__sync" type="button">刷新数据</button>
+      </div>
+
+      <div class="preview-ui__stats">
+        {statCards.map((card) => (
+          <section class="preview-ui__stat-card">
+            <div class="preview-ui__stat-head">
+              <small>{card.label}</small>
+              <span>{card.badge}</span>
+            </div>
+            <strong>{card.value}</strong>
+            <p>{card.note}</p>
+          </section>
+        ))}
+      </div>
+
+      <div class="preview-ui__content-grid">
+        <section class="preview-ui__panel preview-ui__panel--main">
+          <div class="preview-ui__panel-head">
+            <strong>今日内容建议</strong>
+            <small>AI 推荐</small>
+          </div>
+
+          <div class="preview-ui__suggestions">
+            {suggestionRows.map((row) => (
+              <div class="preview-ui__suggestion-row">
+                <div class="preview-ui__bullet"></div>
+                <div class="preview-ui__copy">
+                  <strong>{row.title}</strong>
+                  <small>
+                    <span>{row.source}</span>
+                    <span>{row.badge}</span>
+                  </small>
+                </div>
+                <button type="button">生成内容</button>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <aside class="preview-ui__panel preview-ui__panel--feed">
+          <div class="preview-ui__panel-head">
+            <strong>最新客户提问</strong>
+            <small>全部</small>
+          </div>
+
+          <div class="preview-ui__feed-filters">
+            <span class="is-active">全部</span>
+            <span>广州VIP群</span>
+            <span>孕妈好物群</span>
+            <span>一对一私聊</span>
+          </div>
+
+          <div class="preview-ui__feed-list">
+            {feedRows.map((row) => (
+              <div class="preview-ui__feed-row">
+                <strong>{row.title}</strong>
+                <small>{row.meta}</small>
+              </div>
+            ))}
+          </div>
+        </aside>
+      </div>
+
+      <nav class="preview-ui__mobile-nav" aria-label="移动端导航">
+        {['驾驶舱', '内容', '洞察', '机会'].map((item, index) => (
+          <span class={index === 0 ? 'is-active' : ''}>{item}</span>
+        ))}
+      </nav>
+    </div>
+  </div>
+) : (
+  <div class={`mini-ui ${theme}`}>
+    <div class="mini-ui__frame">
+      <div class="mini-ui__top">
+        <span class="mini-ui__logo"></span>
+        <small>{metric}</small>
+      </div>
+
+      <div class="mini-ui__hero">
+        <strong>{title}</strong>
+        <small>{submetric}</small>
+      </div>
+
+      <div class="mini-ui__stats">
+        <div class="mini-ui__stat">
+          <span>清洗保养</span>
+          <small>+12%</small>
+        </div>
+        <div class="mini-ui__stat">
+          <span>温暖</span>
+          <small>+5%</small>
+        </div>
+        <div class="mini-ui__stat">
+          <span>3 个选题</span>
+          <small>急需</small>
+        </div>
+      </div>
+
+      <div class="mini-ui__rows">
+        <div class="mini-ui__row">
+          <div class="mini-ui__row-copy">
+            <strong>梅雨季鹅绒被保养指南</strong>
+            <small>来自广州VIP群高频提问</small>
+          </div>
+          <span class="mini-ui__row-pill">生成</span>
+        </div>
+        <div class="mini-ui__row">
+          <div class="mini-ui__row-copy">
+            <strong>最新客户提问</strong>
+            <small>一对一私聊 · 1小时前</small>
+          </div>
+          <span class="mini-ui__row-dot"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+)}

@@ -1,0 +1,26 @@
+---
+import type { DocRecord } from '@/data/site';
+import { publicPageCopy } from '@/data/fidelity';
+
+interface Props {
+  docs: DocRecord[];
+}
+
+const { docs } = Astro.props;
+const copy = publicPageCopy['zh-CN'];
+---
+
+<section class="bottom-links" aria-label="帮助文档与延伸阅读">
+  <div class="bottom-links__panel">
+    <div class="bottom-links__tabs">
+      <span data-copy-key="home.bottomLatest">{copy.home.bottomLatest}</span>
+      <span data-copy-key="home.bottomTemplates">{copy.home.bottomTemplates}</span>
+    </div>
+
+    <nav class="bottom-links__list" aria-label="帮助文档">
+      {docs.map((doc) => (
+        <a href={`/docs/${doc.slug}`}>{doc.title}</a>
+      ))}
+    </nav>
+  </div>
+</section>

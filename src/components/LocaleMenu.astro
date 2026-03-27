@@ -1,0 +1,119 @@
+---
+import { defaultLocale, localeOptions, localeShortLabels } from '@/data/fidelity';
+
+interface Props {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
+---
+
+<div class={`locale-menu ${className}`.trim()} data-locale-root>
+  <button class="locale-menu__button" type="button" data-locale-button aria-haspopup="menu" aria-expanded="false">
+    <span data-locale-button-label>{localeShortLabels[defaultLocale]}</span>
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+      <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </button>
+  <div class="locale-menu__panel" data-locale-panel role="menu" hidden>
+    {localeOptions.map((option) => (
+      <button class="locale-menu__option" type="button" data-locale-option={option.key} role="menuitemradio" aria-checked={option.key === defaultLocale ? 'true' : 'false'}>
+        {option.label}
+      </button>
+    ))}
+  </div>
+</div>
+
+<script is:inline>
+  (() => {
+    if (window.__superunLocaleMenuInit) return;
+    window.__superunLocaleMenuInit = true;
+
+    const defaultLocale = 'zh-CN';
+    const shortLabels = {
+      'zh-CN': '简中',
+      'zh-TW': '繁體',
+      yue: '廣東話',
+      ja: '日本語',
+      ko: '한국어',
+      en: 'English',
+      global: 'Global',
+    };
+
+    const readLocale = () => {
+      const searchLocale = new URL(window.location.href).searchParams.get('lang');
+      if (searchLocale && searchLocale in shortLabels) return searchLocale;
+      const storedLocale = window.localStorage.getItem('superun-public-locale');
+      if (storedLocale && storedLocale in shortLabels) return storedLocale;
+      return defaultLocale;
+    };
+
+    const setLocale = (locale) => {
+      const nextLocale = locale in shortLabels ? locale : defaultLocale;
+      window.localStorage.setItem('superun-public-locale', nextLocale);
+      window.__superunPublicLocale = nextLocale;
+      document.documentElement.lang = nextLocale === 'en' ? 'en' : nextLocale === 'ja' ? 'ja' : nextLocale === 'ko' ? 'ko' : 'zh-CN';
+      document.documentElement.dataset.publicLocale = nextLocale;
+      document.querySelectorAll('[data-locale-root]').forEach((root) => {
+        const buttonLabel = root.querySelector('[data-locale-button-label]');
+        const button = root.querySelector('[data-locale-button]');
+        if (buttonLabel) buttonLabel.textContent = shortLabels[nextLocale];
+        if (button instanceof HTMLButtonElement) button.dataset.locale = nextLocale;
+        root.querySelectorAll('[data-locale-option]').forEach((option) => {
+          const active = option.getAttribute('data-locale-option') === nextLocale;
+          option.setAttribute('aria-checked', active ? 'true' : 'false');
+        });
+      });
+      window.dispatchEvent(new CustomEvent('public-locale-change', { detail: { locale: nextLocale } }));
+    };
+
+    const closeMenu = (root) => {
+      const button = root.querySelector('[data-locale-button]');
+      const panel = root.querySelector('[data-locale-panel]');
+      root.removeAttribute('data-open');
+      if (button instanceof HTMLButtonElement) button.setAttribute('aria-expanded', 'false');
+      if (panel instanceof HTMLElement) panel.hidden = true;
+    };
+
+    const toggleMenu = (root) => {
+      const button = root.querySelector('[data-locale-button]');
+      const panel = root.querySelector('[data-locale-panel]');
+      const open = root.getAttribute('data-open') === 'true';
+      document.querySelectorAll('[data-locale-root]').forEach((menu) => {
+        if (menu !== root) closeMenu(menu);
+      });
+      root.setAttribute('data-open', open ? 'false' : 'true');
+      if (button instanceof HTMLButtonElement) button.setAttribute('aria-expanded', open ? 'false' : 'true');
+      if (panel instanceof HTMLElement) panel.hidden = open;
+    };
+
+    document.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+      const root = target.closest('[data-locale-root]');
+      const option = target.closest('[data-locale-option]');
+      const button = target.closest('[data-locale-button]');
+
+      if (option instanceof HTMLElement && root instanceof HTMLElement) {
+        setLocale(option.getAttribute('data-locale-option') || defaultLocale);
+        closeMenu(root);
+        return;
+      }
+
+      if (button instanceof HTMLElement && root instanceof HTMLElement) {
+        event.preventDefault();
+        toggleMenu(root);
+        return;
+      }
+
+      document.querySelectorAll('[data-locale-root]').forEach((menu) => closeMenu(menu));
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape') return;
+      document.querySelectorAll('[data-locale-root]').forEach((menu) => closeMenu(menu));
+    });
+
+    setLocale(readLocale());
+  })();
+</script>

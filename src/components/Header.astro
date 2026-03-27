@@ -1,0 +1,20 @@
+---
+import Brand from './Brand.astro';
+import LocaleMenu from './LocaleMenu.astro';
+import { publicPageCopy } from '@/data/fidelity';
+
+const copy = publicPageCopy['zh-CN'];
+---
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <div class="header-brand-group">
+      <Brand ariaLabel={copy.header.homeAria} />
+      <LocaleMenu />
+    </div>
+
+    <nav class="header-actions" aria-label="主导航">
+      <a class="header-action header-action--login" href="/web/login?redirectUrl=%2Fhome" data-copy-key="header.login">{copy.header.login}</a>
+    </nav>
+  </div>
+</header>

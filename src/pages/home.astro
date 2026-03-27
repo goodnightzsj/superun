@@ -1,0 +1,294 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BottomLinks from '@/components/BottomLinks.astro';
+import Footer from '@/components/Footer.astro';
+import TemplateCard from '@/components/TemplateCard.astro';
+import { docs, galleryCategories, templates } from '@/data/site';
+import { homePlaceholderSequences, publicPageCopy } from '@/data/fidelity';
+
+const copy = publicPageCopy['zh-CN'];
+const locales = JSON.stringify(publicPageCopy);
+const placeholderSequences = JSON.stringify(homePlaceholderSequences);
+const defaultCategories = JSON.stringify(galleryCategories);
+const homeTemplateOrder = [
+  'snapshot-performance-center',
+  'snapshot-performance-system',
+  'snapshot-talentos',
+  'snapshot-health-guide',
+  'snapshot-ai-growth-workbench',
+  'snapshot-glowmind',
+  'snapshot-hr-payroll-suite',
+  'snapshot-customer-success',
+  'snapshot-ai-coworker-platform',
+  'snapshot-workforce-engine',
+  'snapshot-jucaicloud',
+  'snapshot-onboardai',
+  'snapshot-hr-dashboard',
+  'snapshot-service-center',
+];
+const homeTemplateOverrides = {
+  'snapshot-performance-center': {
+    title: '薪擎 - 业绩提成绩效管理平台',
+    description: '面向中型企业的销售绩效管理平台，三端联动管理提成规则、核算审批与团队人效。',
+  },
+  'snapshot-performance-system': {
+    title: '绩效星',
+    description: '面向中大型企业的一站式绩效管理平台，覆盖目标制定、过程跟踪到绩效评估的完整闭环并支持三端协同与移动适配。',
+  },
+  'snapshot-talentos': {
+    title: '招聘流程管理',
+    description: '招聘流程管理：HR 面试、人才评估与入职流程工作台。',
+  },
+  'snapshot-customer-success': {
+    title: '销售拜访助手',
+    description: '面向外勤销售的拜访与客户管理助手，支持本地运行与智能日报，含消息通知与主题定制。',
+  },
+  'snapshot-ai-coworker-platform': {
+    title: 'AI虚拟同事平台',
+    description: '面向企业的 AI 同事管理平台，集中管理 AI 角色、流程与运营数据并支持可视化与移动适配。',
+  },
+  'snapshot-jucaicloud': {
+    title: '智能招聘管理平台',
+    description: '智聘——智能招聘管理平台，简化流程并支持 AI 岗位描述生成。',
+  },
+  'snapshot-hr-dashboard': {
+    title: 'HR决策驾驶舱',
+    description: '企业人力资源 AI 驾驶舱，覆盖招聘、入职、培养、绩效与保留的全流程智能决策平台。',
+  },
+  'snapshot-service-center': {
+    title: '客户管理系统',
+    description: '面向销售与客户成功团队的 CRM 演示平台，含线索、续约与 AI 洞察。',
+  },
+} as const;
+const homeTemplates = [
+  ...homeTemplateOrder.flatMap((slug) => {
+    const template = templates.find((item) => item.slug === slug);
+    return template ? [{ ...template, ...(homeTemplateOverrides[slug as keyof typeof homeTemplateOverrides] ?? {}) }] : [];
+  }),
+  ...templates.filter((template) => !homeTemplateOrder.includes(template.slug)),
+];
+const homeDocOrder = [
+  'what-is-superun',
+  'superun-vs-competitors',
+  'how-to-use-superun',
+  'superun-pricing-guide',
+  'superun-ai-features',
+  'ai-website-builder-2026',
+  'how-to-build-app-without-code',
+  'ai-prototype-design',
+  'startup-mvp-guide',
+  'design-to-code-workflow',
+  'superun-free-trial',
+  'superun-export-code',
+  'superun-team-collaboration',
+  'ai-design-tool-comparison',
+  'superun-mobile-responsive',
+];
+const homeDocs = [
+  ...homeDocOrder.flatMap((slug) => docs.find((item) => item.slug === slug) ?? []),
+  ...docs.filter((doc) => !homeDocOrder.includes(doc.slug)),
+];
+---
+
+<BaseLayout title={copy.home.title} hideFooter>
+  <section class="home-hero" id="hero">
+    <div class="home-hero__slogan" data-copy-key="home.slogan">{copy.home.slogan}</div>
+
+    <form class="home-composer" action="/web/login" method="GET">
+      <input type="hidden" name="redirectUrl" value="/home" />
+      <textarea id="prompt-input" name="prompt" required placeholder={homePlaceholderSequences['zh-CN'][0]}></textarea>
+      <div class="home-composer__footer">
+        <div class="home-composer__tools">
+          <button class="home-icon-button" type="button" aria-label="voice-input">⌁</button>
+          <button class="home-icon-button" type="button" aria-label="attach-file">＋</button>
+        </div>
+        <button id="prompt-submit" class="home-submit-button" type="submit" disabled aria-label="submit">↵</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="home-gallery" id="recommended-templates">
+    <div class="home-gallery__header">
+      <h2 data-copy-key="home.galleryTitle">{copy.home.galleryTitle}</h2>
+      <div class="home-gallery__tabs" aria-label="模板分类">
+        {galleryCategories.map((category, index) => (
+          <button class={`home-gallery__tab ${index === 0 ? 'is-active' : ''}`} data-category={category} data-category-index={index} type="button">{category}</button>
+        ))}
+      </div>
+    </div>
+
+    <div class="home-gallery__grid" id="template-grid">
+      {homeTemplates.map((template) => <TemplateCard template={template} />)}
+    </div>
+
+    <div class="home-gallery__more">
+      <button class="home-gallery__more-button" data-copy-key="home.more" type="button">{copy.home.more}</button>
+    </div>
+  </section>
+
+  <Footer />
+  <BottomLinks docs={homeDocs} />
+
+  <script is:inline define:vars={{ locales, placeholderSequences, defaultCategories }}>
+    (() => {
+      const heroSection = document.querySelector('.home-hero');
+      const promptInput = document.querySelector('#prompt-input');
+      const submitButton = document.querySelector('#prompt-submit');
+      const tabButtons = Array.from(document.querySelectorAll('.home-gallery__tab[data-category-index]'));
+      const templateCards = Array.from(document.querySelectorAll('.template-card[data-category]'));
+      const copy = JSON.parse(locales);
+      const placeholderMap = JSON.parse(placeholderSequences);
+      const fallbackCategories = JSON.parse(defaultCategories);
+      const localeAliases = {
+        'zh-CN': 'zh-CN',
+        'zh-TW': 'zh-CN',
+        yue: 'zh-CN',
+        ja: 'zh-CN',
+        ko: 'zh-CN',
+        en: 'en',
+        global: 'en',
+      };
+
+      let activeLocale = localeAliases[document.documentElement.dataset.publicLocale] || 'zh-CN';
+      let typingTimer;
+      let isAnimatingPlaceholder = true;
+
+      const clearPlaceholderTimer = () => {
+        window.clearTimeout(typingTimer);
+      };
+
+      const syncSubmitState = () => {
+        if (!(promptInput instanceof HTMLTextAreaElement) || !(submitButton instanceof HTMLButtonElement)) return;
+        submitButton.disabled = promptInput.value.trim().length === 0;
+      };
+
+      const applyCategoryFilter = (category) => {
+        const normalizedCategory = category || fallbackCategories[0];
+        const isAllCategory = normalizedCategory === fallbackCategories[0];
+        tabButtons.forEach((button) => {
+          button.classList.toggle('is-active', (button.getAttribute('data-category') || fallbackCategories[0]) === normalizedCategory);
+        });
+        templateCards.forEach((card) => {
+          const shouldShow = isAllCategory || card.getAttribute('data-category') === normalizedCategory;
+          card.toggleAttribute('hidden', !shouldShow);
+        });
+      };
+
+      const applyCopy = (locale) => {
+        const nextLocale = localeAliases[locale] || 'zh-CN';
+        activeLocale = nextLocale;
+        const nextCopy = copy[nextLocale] || copy['zh-CN'];
+        document.title = nextCopy.home.title;
+        document.querySelectorAll('[data-copy-key]').forEach((node) => {
+          const key = node.getAttribute('data-copy-key');
+          if (!key) return;
+          const [scope, field] = key.split('.');
+          const value = nextCopy?.[scope]?.[field];
+          if (typeof value === 'string') node.textContent = value;
+        });
+        document.querySelectorAll('.home-gallery__tab[data-category-index]').forEach((node) => {
+          const index = Number(node.getAttribute('data-category-index'));
+          const canonicalCategory = fallbackCategories[index] || '';
+          node.textContent = nextCopy.home.categories[index] || canonicalCategory;
+          node.dataset.category = canonicalCategory;
+        });
+      };
+
+      const revealHero = () => {
+        if (!(heroSection instanceof HTMLElement)) return;
+        requestAnimationFrame(() => {
+          heroSection.classList.add('is-ready');
+        });
+      };
+
+      const runPlaceholderLoop = () => {
+        if (!(promptInput instanceof HTMLTextAreaElement) || !isAnimatingPlaceholder) return;
+        const sequence = placeholderMap[activeLocale] || placeholderMap['zh-CN'];
+        const firstPhrase = sequence[0] || placeholderMap['zh-CN']?.[0] || '';
+        const forwardDelay = 72;
+        const eraseDelay = 32;
+        const pauseDelay = 1550;
+        const restartDelay = 160;
+        let phraseIndex = 0;
+        let charIndex = firstPhrase.length;
+        let deleting = true;
+
+        const step = () => {
+          if (!(promptInput instanceof HTMLTextAreaElement) || !isAnimatingPlaceholder) return;
+          if (document.activeElement === promptInput || promptInput.value.trim().length > 0) return;
+          const phrase = sequence[phraseIndex] || '';
+
+          if (!deleting) {
+            charIndex = Math.min(charIndex + 1, phrase.length);
+            promptInput.placeholder = phrase.slice(0, charIndex);
+            if (charIndex >= phrase.length) {
+              deleting = true;
+              typingTimer = window.setTimeout(step, pauseDelay);
+              return;
+            }
+            typingTimer = window.setTimeout(step, forwardDelay);
+            return;
+          }
+
+          charIndex = Math.max(charIndex - 1, 0);
+          promptInput.placeholder = phrase.slice(0, charIndex);
+          if (charIndex === 0) {
+            deleting = false;
+            phraseIndex = (phraseIndex + 1) % sequence.length;
+            typingTimer = window.setTimeout(step, restartDelay);
+            return;
+          }
+          typingTimer = window.setTimeout(step, eraseDelay);
+        };
+
+        clearPlaceholderTimer();
+        promptInput.placeholder = firstPhrase;
+        typingTimer = window.setTimeout(step, pauseDelay);
+      };
+
+      const stopPlaceholderLoop = () => {
+        isAnimatingPlaceholder = false;
+        clearPlaceholderTimer();
+      };
+
+      const resumePlaceholderLoop = () => {
+        if (!(promptInput instanceof HTMLTextAreaElement) || promptInput.value.trim().length > 0) return;
+        isAnimatingPlaceholder = true;
+        runPlaceholderLoop();
+      };
+
+      if (promptInput instanceof HTMLTextAreaElement) {
+        syncSubmitState();
+        promptInput.addEventListener('input', () => {
+          syncSubmitState();
+          if (promptInput.value.trim().length > 0) stopPlaceholderLoop();
+        });
+        promptInput.addEventListener('focus', stopPlaceholderLoop);
+        promptInput.addEventListener('blur', resumePlaceholderLoop);
+      }
+
+      tabButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          applyCategoryFilter(button.getAttribute('data-category') || fallbackCategories[0]);
+        });
+      });
+
+      window.addEventListener('public-locale-change', (event) => {
+        const locale = event.detail?.locale || 'zh-CN';
+        const activeTab = tabButtons.find((button) => button.classList.contains('is-active'));
+        const activeCategory = activeTab?.getAttribute('data-category') || fallbackCategories[0];
+        applyCopy(locale);
+        applyCategoryFilter(activeCategory);
+        if (promptInput instanceof HTMLTextAreaElement && promptInput.value.trim().length === 0) {
+          isAnimatingPlaceholder = true;
+          runPlaceholderLoop();
+        }
+      });
+
+      applyCopy(document.documentElement.dataset.publicLocale || 'zh-CN');
+      applyCategoryFilter(fallbackCategories[0]);
+      revealHero();
+      runPlaceholderLoop();
+    })();
+  </script>
+</BaseLayout>
