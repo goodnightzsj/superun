@@ -11,86 +11,88 @@ const googleIcon = `<svg width="18" height="18" viewBox="0 0 18 18" fill="none" 
 
 <BaseLayout title={copy.login.title} hideHeader hideFooter>
   <section class="auth-shell">
-    <div class="auth-header">
-      <div class="auth-header__left">
-        <a class="auth-brand" href="/home" aria-label="返回首页">
-          <img class="brand__image" src={brandAssetSrc} alt="brand" loading="eager" decoding="async" />
-        </a>
-        <LocaleMenu className="auth-lang" />
-      </div>
-    </div>
-
-    <div class="auth-card">
-      <div class="auth-card__stack">
-        <h1 data-copy-key="login.heading">{copy.login.heading}</h1>
-
-        <div class="auth-socials">
-          <a class="auth-wechat-button" id="wechat-continue" href="/home">
-            <span class="auth-wechat-button__icon" set:html={wechatIcon}></span>
-            <span data-copy-key="login.wechat">{copy.login.wechat}</span>
-          </a>
-          <button class="auth-more-button" id="auth-more-button" type="button" aria-expanded="false" aria-controls="auth-extra-socials">
-            <span data-copy-key="login.more">{copy.login.more}</span>
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-              <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
+    <div class="auth-shell__main">
+      <div class="auth-header">
+        <div class="auth-header__left">
+          <button class="auth-brand" type="button" onclick="window.location.href='/home'" aria-label="返回首页">
+            <img class="brand__image" src={brandAssetSrc} alt="brand" loading="eager" decoding="async" />
           </button>
-        </div>
-        <div class="auth-socials auth-socials--extra" id="auth-extra-socials" hidden>
-          <a class="auth-wechat-button auth-wechat-button--secondary" id="google-continue" href="/home">
-            <span class="auth-wechat-button__icon" set:html={googleIcon}></span>
-            <span data-copy-key="login.google">{copy.login.google}</span>
-          </a>
+          <LocaleMenu className="auth-lang" />
         </div>
       </div>
 
-      <div class="auth-auth">
-        <div class="auth-tabs" role="tablist" aria-label={copy.login.heading}>
-          <button class="auth-tab is-active" id="auth-tab-phone" type="button" role="tab" aria-selected="true" aria-controls="auth-panel-phone" data-auth-tab="phone" data-copy-key="login.phoneTab">{copy.login.phoneTab}</button>
-          <button class="auth-tab" id="auth-tab-email" type="button" role="tab" aria-selected="false" aria-controls="auth-panel-email" data-auth-tab="email" data-copy-key="login.emailTab">{copy.login.emailTab}</button>
-        </div>
+      <div class="auth-card">
+        <div class="auth-card__stack">
+          <h1 data-copy-key="login.heading">{copy.login.heading}</h1>
 
-        <form class="auth-form auth-form--stacked" id="auth-panel-phone" data-auth-panel="phone" role="tabpanel" aria-labelledby="auth-tab-phone">
-          <label class="auth-field auth-field--phone">
-            <span class="auth-field__prefix">+86</span>
-            <input type="text" placeholder={copy.login.phonePlaceholder} data-copy-placeholder="login.phonePlaceholder" />
-          </label>
-
-          <div class="auth-code-row">
-            <input type="text" placeholder={copy.login.codePlaceholder} data-copy-placeholder="login.codePlaceholder" />
-            <button class="auth-code-button" type="button" data-copy-key="login.sendCode">{copy.login.sendCode}</button>
+          <div class="auth-socials">
+            <button class="auth-wechat-button" id="wechat-continue" type="button" data-auth-target>
+              <span class="auth-wechat-button__icon" set:html={wechatIcon}></span>
+              <span data-copy-key="login.wechat">{copy.login.wechat}</span>
+            </button>
+            <button class="auth-more-button" id="auth-more-button" type="button" aria-expanded="false" aria-controls="auth-extra-socials">
+              <span data-copy-key="login.more">{copy.login.more}</span>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </button>
           </div>
-        </form>
+          <div class="auth-socials auth-socials--extra" id="auth-extra-socials" hidden>
+            <button class="auth-wechat-button auth-wechat-button--secondary" id="google-continue" type="button" data-auth-target>
+              <span class="auth-wechat-button__icon" set:html={googleIcon}></span>
+              <span data-copy-key="login.google">{copy.login.google}</span>
+            </button>
+          </div>
+        </div>
 
-        <form class="auth-form auth-form--stacked" id="auth-panel-email" data-auth-panel="email" role="tabpanel" aria-labelledby="auth-tab-email" hidden>
-          <label class="auth-field auth-field--email auth-field--single">
-            <input type="email" placeholder={copy.login.emailPlaceholder} data-copy-placeholder="login.emailPlaceholder" />
-          </label>
+        <div class="auth-auth">
+          <div class="auth-tabs" role="tablist" aria-label={copy.login.heading}>
+            <button class="auth-tab is-active" id="auth-tab-phone" type="button" role="tab" aria-selected="true" aria-controls="auth-panel-phone" data-auth-tab="phone" data-copy-key="login.phoneTab">{copy.login.phoneTab}</button>
+            <button class="auth-tab" id="auth-tab-email" type="button" role="tab" aria-selected="false" aria-controls="auth-panel-email" data-auth-tab="email" data-copy-key="login.emailTab">{copy.login.emailTab}</button>
+          </div>
 
-          <label class="auth-field auth-field--single auth-password-row">
-            <input type="password" placeholder={copy.login.passwordPlaceholder} data-copy-placeholder="login.passwordPlaceholder" />
-            <button class="auth-forgot-button" type="button" data-copy-key="login.forgotPassword">{copy.login.forgotPassword}</button>
-          </label>
-        </form>
+          <form class="auth-form auth-form--stacked" id="auth-panel-phone" data-auth-panel="phone" role="tabpanel" aria-labelledby="auth-tab-phone">
+            <label class="auth-field auth-field--phone">
+              <span class="auth-field__prefix">+86</span>
+              <input type="text" inputmode="tel" autocomplete="tel" placeholder={copy.login.phonePlaceholder} data-copy-placeholder="login.phonePlaceholder" />
+            </label>
 
-        <a class="auth-submit-button auth-submit-button--full" id="register-continue" href="/home" data-auth-submit-link data-copy-key="login.submit">{copy.login.submit}</a>
+            <div class="auth-code-row">
+              <input type="text" inputmode="numeric" autocomplete="one-time-code" placeholder={copy.login.codePlaceholder} data-copy-placeholder="login.codePlaceholder" />
+              <button class="auth-code-button" type="button" data-copy-key="login.sendCode">{copy.login.sendCode}</button>
+            </div>
+          </form>
 
-        <p class="auth-agreement">
-          <span data-copy-key="login.agreementPrefix">{copy.login.agreementPrefix}</span>
-          <a href="https://www.superun.com/web/agreement/superun-service-agreement-cn.html" data-copy-key="login.agreementService">{copy.login.agreementService}</a>
-          <span class="auth-agreement__separator">、</span>
-          <a href="https://www.superun.com/web/agreement/superun-privacy-cn.html" data-copy-key="login.agreementPrivacy">{copy.login.agreementPrivacy}</a>
-        </p>
+          <form class="auth-form auth-form--stacked" id="auth-panel-email" data-auth-panel="email" role="tabpanel" aria-labelledby="auth-tab-email" hidden>
+            <label class="auth-field auth-field--email auth-field--single">
+              <input type="email" autocomplete="email" placeholder={copy.login.emailPlaceholder} data-copy-placeholder="login.emailPlaceholder" />
+            </label>
+
+            <label class="auth-field auth-field--single auth-password-row">
+              <input type="password" autocomplete="current-password" placeholder={copy.login.passwordPlaceholder} data-copy-placeholder="login.passwordPlaceholder" />
+              <button class="auth-forgot-button" type="button" data-copy-key="login.forgotPassword">{copy.login.forgotPassword}</button>
+            </label>
+          </form>
+
+          <button class="auth-submit-button auth-submit-button--full" id="register-continue" type="button" data-auth-target data-copy-key="login.submit">{copy.login.submit}</button>
+
+          <p class="auth-agreement">
+            <span data-copy-key="login.agreementPrefix">{copy.login.agreementPrefix}</span>
+            <a href="https://www.superun.com/web/agreement/superun-service-agreement-cn.html" data-copy-key="login.agreementService">{copy.login.agreementService}</a>
+            <span class="auth-agreement__separator">、</span>
+            <a href="https://www.superun.com/web/agreement/superun-privacy-cn.html" data-copy-key="login.agreementPrivacy">{copy.login.agreementPrivacy}</a>
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="auth-create-team">
-      <button class="auth-team-button" type="button">
-        <span data-copy-key="login.createTeam">{copy.login.createTeam}</span>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-          <path d="M6 3.5L10.5 8L6 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-      </button>
+      <div class="auth-create-team">
+        <button class="auth-team-button" type="button">
+          <span data-copy-key="login.createTeam">{copy.login.createTeam}</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M6 3.5L10.5 8L6 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -109,7 +111,7 @@ const googleIcon = `<svg width="18" height="18" viewBox="0 0 18 18" fill="none" 
       const moreButton = document.querySelector('#auth-more-button');
       const extraSocials = document.querySelector('#auth-extra-socials');
       const registerContinue = document.querySelector('#register-continue');
-      const submitLinks = Array.from(document.querySelectorAll('[data-auth-submit-link], #register-continue'));
+      const submitTargets = Array.from(document.querySelectorAll('[data-auth-target], #register-continue'));
       const tabs = Array.from(document.querySelectorAll('[data-auth-tab]'));
       const panels = Array.from(document.querySelectorAll('[data-auth-panel]'));
       const copy = JSON.parse(locales);
@@ -123,11 +125,18 @@ const googleIcon = `<svg width="18" height="18" viewBox="0 0 18 18" fill="none" 
         global: 'en',
       };
 
-      if (wechatContinue instanceof HTMLAnchorElement) wechatContinue.href = target;
-      if (googleContinue instanceof HTMLAnchorElement) googleContinue.href = target;
-      if (registerContinue instanceof HTMLAnchorElement) registerContinue.href = target;
-      submitLinks.forEach((link) => {
-        if (link instanceof HTMLAnchorElement) link.href = target;
+      const bindNavigation = (node) => {
+        if (!(node instanceof HTMLButtonElement)) return;
+        node.addEventListener('click', () => {
+          window.location.href = target;
+        });
+      };
+
+      bindNavigation(wechatContinue);
+      bindNavigation(googleContinue);
+      bindNavigation(registerContinue);
+      submitTargets.forEach((node) => {
+        if (node instanceof HTMLButtonElement) bindNavigation(node);
       });
 
       if (moreButton instanceof HTMLButtonElement && extraSocials instanceof HTMLElement) {

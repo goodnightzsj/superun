@@ -1,0 +1,59 @@
+{
+  "checkedAt": "2026-03-28T20:57:45+08:00",
+  "upstreamEvidence": {
+    "homeDomSource": ".codex-tasks/20260328-superun-dom-css-fidelity/raw/upstream/pages/home/page.html",
+    "homeCssSource": ".codex-tasks/20260328-superun-dom-css-fidelity/raw/upstream/pages/home/styles/index-DZ4fhGQK.css",
+    "runtimeCardChain": "https://www.superun.com/web/community-view/snapshot--d84ad43ac3ca73a429f26cece4a3d557",
+    "notes": [
+      "Scraped upstream home HTML still exposes /templates links in static markup, but verified runtime card clicks open hashed /web/community-view/<preview-slug> routes in a new tab.",
+      "Current headless access to upstream /home returned an empty feed state, so spacing and route truth were finalized from the archived upstream DOM/CSS pack plus prior runtime click evidence."
+    ],
+    "homeGrid": {
+      "className": "grid gap-y-[44px] gap-x-6 grid-cols-[repeat(auto-fill,minmax(260px,1fr))]",
+      "rowGap": "44px",
+      "columnGap": "24px"
+    },
+    "homeCardStructure": {
+      "wrapper": "div.group[role=link][tabindex=0]",
+      "meta": "div.flex.items-center.justify-between.mt-3",
+      "copy": "div.min-w-0.flex-1",
+      "title": "14px / 20px / 400",
+      "description": "13px / 19.5px, mt-2"
+    }
+  },
+  "localVerification": {
+    "home": {
+      "url": "http://127.0.0.1:4332/home",
+      "firstCardHref": "/web/community-view/snapshot--d84ad43ac3ca73a429f26cece4a3d557",
+      "firstCardTarget": "_blank",
+      "gridGap": "44px 24px",
+      "rowGap": "44px",
+      "columnGap": "24px",
+      "columnDistance": 24,
+      "titleTag": "SPAN",
+      "descriptionTag": "DIV",
+      "titleGap": 8,
+      "titleFont": "14px/20px/400",
+      "descriptionFont": "13px/19.5px",
+      "mediaRadius": "12px",
+      "visibleCreatedAtControl": false
+    },
+    "community": {
+      "url": "http://127.0.0.1:4332/web/community-view/snapshot--d84ad43ac3ca73a429f26cece4a3d557",
+      "contains": [
+        "产品简介",
+        "功能亮点",
+        "复刻创作",
+        "手机",
+        "电脑",
+        "主页端"
+      ],
+      "missingSessionTextPresent": false
+    }
+  },
+  "validation": [
+    "npm run check",
+    "npm run build",
+    "Playwright snapshot on local /home and /web/community-view/<preview-slug>"
+  ]
+}

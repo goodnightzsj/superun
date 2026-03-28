@@ -32,6 +32,7 @@ export const publicPageCopy = {
       slogan: '聊出你的产品',
       galleryTitle: '看看其他人的创作',
       categories: ['全部', '有趣的应用', '管理类应用', '一些网站'],
+      sortCreatedAt: '创建时间',
       cardRecreate: '复刻',
       more: '显示更多',
       bottomLatest: '最新内容',
@@ -58,10 +59,13 @@ export const publicPageCopy = {
       forgotPassword: '忘记密码？',
     },
     community: {
+      newChat: '新对话',
       mobile: '手机',
       desktop: '电脑',
       recreate: '复刻创作',
       previewButton: '查看预览',
+      viewConversation: '查看对话',
+      missingSession: '会话不存在',
       previewAria: '模板预览',
     },
   },
@@ -75,6 +79,7 @@ export const publicPageCopy = {
       slogan: 'Talk About Your Product',
       galleryTitle: 'See What Others Created',
       categories: ['All', 'Interesting Apps', 'Management Apps', 'Some Websites'],
+      sortCreatedAt: 'Created At',
       cardRecreate: 'Remix',
       more: 'Show more',
       bottomLatest: 'Latest content',
@@ -101,16 +106,34 @@ export const publicPageCopy = {
       forgotPassword: 'Forgot Password?',
     },
     community: {
+      newChat: 'New chat',
       mobile: 'Mobile',
       desktop: 'Desktop',
       recreate: 'Remix creation',
       previewButton: 'Preview',
+      viewConversation: 'View conversation',
+      missingSession: 'Conversation unavailable',
       previewAria: 'Template preview',
     },
   },
 } as const;
 
-export const templateMedia: Record<string, { image: string; communityPreviewSrc?: string; templatePageSrc?: string }> = {
+export const templateMedia: Record<string, { image: string; communityPreviewSrc?: string; communityPreviewShellSrc?: string; templatePageSrc?: string }> = {
+  'snapshot-sales-incentive-platform': {
+    image: 'https://b.ux-cdn.com/uxarts/files/t20260325165147/1supk66e.png?imageView2/2/w/800/q/80/format/webp',
+    communityPreviewSrc: 'https://snapshot--d84ad43ac3ca73a429f26cece4a3d557.superun.yun',
+    communityPreviewShellSrc: 'https://snapshot--d84ad43ac3ca73a429f26cece4a3d557.superun.yun',
+  },
+  'snapshot-performance-star': {
+    image: 'https://b.ux-cdn.com/uxarts/files/t20260321172152/ngs8ngmo.png?imageView2/2/w/800/q/80/format/webp',
+    communityPreviewSrc: 'https://snapshot--1d7bef6cb0e2de67aef6c1d5ad5cb51b.superun.yun',
+    communityPreviewShellSrc: 'https://snapshot--1d7bef6cb0e2de67aef6c1d5ad5cb51b.superun.yun',
+  },
+  'snapshot-recruitment-flow': {
+    image: 'https://b.ux-cdn.com/uxarts/files/t20260326201853/h3s1zdym.png?imageView2/2/w/800/q/80/format/webp',
+    communityPreviewSrc: 'https://snapshot--d977b65ac0b056f9170976fcc8d383c7.superun.yun',
+    communityPreviewShellSrc: 'https://snapshot--d977b65ac0b056f9170976fcc8d383c7.superun.yun',
+  },
   'snapshot-ai-growth-workbench': {
     image: 'https://b.ux-cdn.com/uxarts/files/t20260317121854/pxzh69hr.png?imageView2/2/w/800/q/80/format/webp',
     communityPreviewSrc: 'https://snapshot--5970b4812267a8197073cf6ea8474a34.superun.yun',
@@ -131,6 +154,11 @@ export const templateMedia: Record<string, { image: string; communityPreviewSrc?
     communityPreviewSrc: 'https://snapshot--a9628af05d1de701f56fe5805fad58c6.superun.yun',
     templatePageSrc: 'https://www.superun.com/templates/yang-sheng-zhi-dao-mei-ri-jian-kang-shou-ce',
   },
+  'snapshot-sales-visit-assistant': {
+    image: 'https://b.ux-cdn.com/uxarts/files/t20260326204604/wkgg9ddy.png?imageView2/2/w/800/q/80/format/webp',
+    communityPreviewSrc: 'https://snapshot--5c7e520f924a003da6fd6cb7fa78ce18.superun.yun',
+    communityPreviewShellSrc: 'https://snapshot--5c7e520f924a003da6fd6cb7fa78ce18.superun.yun',
+  },
   'snapshot-ai-coworker-platform': {
     image: 'https://b.ux-cdn.com/uxarts/files/t20260309223354/xpu68e6v.png?imageView2/2/w/800/q/80/format/webp',
     communityPreviewSrc: 'https://snapshot--38bc4fa638e814c84f4229bce3e94454.superun.yun',
@@ -145,6 +173,11 @@ export const templateMedia: Record<string, { image: string; communityPreviewSrc?
     image: 'https://b.ux-cdn.com/uxarts/files/t20260309180302/ukzoq7gk.png?imageView2/2/w/800/q/80/format/webp',
     communityPreviewSrc: 'https://snapshot--854243fe76e519c2ed38818134a27157.superun.yun',
     templatePageSrc: 'https://www.superun.com/templates/ji-xiao-xiao-zhun-zhong-xin-qi-ye-ji-xiao-ping-fen',
+  },
+  'snapshot-smart-recruiting-platform': {
+    image: 'https://b.ux-cdn.com/uxarts/files/t20260326221513/v9w44mqm.png?imageView2/2/w/800/q/80/format/webp',
+    communityPreviewSrc: 'https://snapshot--8f2076e4e8da6752b9212f3207c40c6f.superun.yun',
+    communityPreviewShellSrc: 'https://snapshot--8f2076e4e8da6752b9212f3207c40c6f.superun.yun',
   },
   'snapshot-pomodoro-journal': {
     image: 'https://b.ux-cdn.com/uxarts/files/t20260312174006/0iaocepf.png?imageView2/2/w/800/q/80/format/webp',
@@ -165,6 +198,11 @@ export const templateMedia: Record<string, { image: string; communityPreviewSrc?
     image: 'https://b.ux-cdn.com/uxarts/files/t20260309191228/a4jt3ohe.png?imageView2/2/w/800/q/80/format/webp',
     communityPreviewSrc: 'https://snapshot--c0ab6399bda7217ddb4319894dacf7a5.superun.yun',
     templatePageSrc: 'https://www.superun.com/templates/hr-jue-ce-jia-shi-cang',
+  },
+  'snapshot-customer-management-system': {
+    image: 'https://b.ux-cdn.com/uxarts/files/t20260326213533/dk57nx3c.png?imageView2/2/w/800/q/80/format/webp',
+    communityPreviewSrc: 'https://snapshot--f851f57fef4b80b7f9ff1ad4c63d089e.superun.yun',
+    communityPreviewShellSrc: 'https://snapshot--f851f57fef4b80b7f9ff1ad4c63d089e.superun.yun',
   },
   'snapshot-supply-chain-mobile': {
     image: 'https://b.ux-cdn.com/uxarts/files/t20260212201859/fagh39ej.png?imageView2/2/w/800/q/80/format/webp',
@@ -247,7 +285,8 @@ export const templateMedia: Record<string, { image: string; communityPreviewSrc?
   },
   'snapshot-performance-system': {
     image: 'https://b.ux-cdn.com/uxarts/files/t20260306114245/tpnngq6l.png?imageView2/2/w/800/q/80/format/webp',
-    communityPreviewSrc: 'https://snapshot--4647609d9501e1154739a4b7c8c0c363.superun.yun',
+    communityPreviewSrc: 'https://snapshot--f02f11ef9cfdd1394bc001e2ca943806.superun.yun',
+    communityPreviewShellSrc: 'https://snapshot--f02f11ef9cfdd1394bc001e2ca943806.superun.yun',
   },
   'snapshot-industrial-prd': {
     image: 'https://b.ux-cdn.com/uxarts/files/t20260119183300/thumfomb.png?imageView2/2/w/800/q/80/format/webp',

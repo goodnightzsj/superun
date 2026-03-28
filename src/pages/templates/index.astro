@@ -1,0 +1,54 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { templateCatalog } from '@/data/template-directory';
+---
+
+<BaseLayout title="模板中心 - 优势智设" description="浏览 superun 平台的精选模板，快速开始您的项目" hideHeader hideFooter>
+  <div class="template-hub-page">
+    <header class="template-hub-nav">
+      <div class="template-hub-nav__inner">
+        <nav class="template-hub-nav__bar" aria-label="模板中心导航">
+          <a class="template-hub-nav__logo" href="/">superun</a>
+          <div class="template-hub-nav__links">
+            <a href="/">首页</a>
+            <a href="/docs/what-is-superun">文档中心</a>
+            <a href="/templates" aria-current="page">模板中心</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="template-hub-main">
+      <div class="template-hub-container">
+        <div class="template-hub-copy">
+          <h1>模板中心</h1>
+          <p>浏览 superun 平台的精选模板，快速开始您的项目</p>
+        </div>
+
+        <div class="template-hub-grid">
+          {templateCatalog.map((template) => (
+            <a class="template-hub-card" href={`/templates/${template.templateSlug}`}>
+              {template.previewImage ? (
+                <img
+                  class="template-hub-card__image"
+                  src={template.previewImage}
+                  alt={`${template.title} - superun AI 模板预览`}
+                  loading="lazy"
+                  decoding="async"
+                />
+              ) : null}
+              <h3>{template.title}</h3>
+              <p>{template.description}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </main>
+
+    <footer class="template-hub-footer">
+      <div class="template-hub-container">
+        <p>© 2026 superun Inc. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+</BaseLayout>

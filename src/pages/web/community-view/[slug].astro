@@ -1,1032 +1,160 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import Brand from '@/components/Brand.astro';
-import { templates } from '@/data/site';
-import { publicPageCopy, templateMedia } from '@/data/fidelity';
+import { publicPageCopy } from '@/data/fidelity';
+import {
+  homeTemplateByRouteSlug,
+  homeTemplateRouteSlugs,
+  parseWebsiteIntroduction,
+} from '@/data/template-directory';
 
 export const prerender = true;
 
 export function getStaticPaths() {
-  return templates.map((template) => ({
-    params: { slug: template.slug },
-    props: { template },
+  return homeTemplateRouteSlugs.map((slug) => ({
+    params: { slug },
+    props: { template: homeTemplateByRouteSlug[slug] },
   }));
 }
 
 const { template } = Astro.props;
-const media = templateMedia[template.slug];
 const copy = publicPageCopy['zh-CN'];
-const locales = JSON.stringify(publicPageCopy);
-const remixHref = `/web/login?redirectUrl=${encodeURIComponent(`/web/community-view/${template.slug}`)}&prompt=${encodeURIComponent(`复刻 ${template.title}`)}`;
-
-const glowmindPreview = template.slug === 'snapshot-glowmind'
-  ? {
-      brand: { mark: 'G', name: 'GlowMind' },
-      navigation: [
-        { label: '功能', href: '#features' },
-        { label: '场景', href: '#scenarios' },
-        { label: '数据价值', href: '#data' },
-        { label: '客户分层', href: '#segmentation' },
-      ],
-      eyebrow: 'AI-Powered Beauty CRM',
-      titleLeading: '赋予美感',
-      titlePrefix: '以智能的',
-      titleAccent: '灵魂',
-      description: '让 AI 成为美妆品牌的金牌客服与增长助手。从智能应答到客户分层运营，GlowMind 帮助品牌在每一次对话中创造价值。',
-      primaryCta: '免费体验演示',
-      secondaryCta: '了解更多',
-      trustMarks: ['数据安全保障', '5 分钟快速部署'],
-      heroImage: 'https://images.unsplash.com/photo-1571302171812-11f04b0d6005?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MzY4NDR8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBiZWF1dHklMjBjb3NtZXRpY3MlMjBza2luY2FyZSUyMGNyZWFtJTIwdGV4dHVyZSUyMGNsb3NlJTIwdXAlMjBlbGVnYW50fGVufDB8MHx8fDE3NzMxMzM0MDN8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      heroImageAlt: 'Beauty cosmetics',
-      chatTitle: 'GlowMind AI 正在为您智能应答',
-      chatQuestion: '这款精华液适合敏感肌吗？成分里有烟酰胺会不会刺激？',
-      chatAnswer: '您好！这款精华液含有 2% 浓度的烟酰胺，属于温和浓度，大多数敏感肌肤都可以耐受。建议您先在耳后试用，再根据肤况逐步加入日常护理。',
-      features: [
-        { index: '01', title: 'AI 智能应答', description: '基于美妆专业知识库的 AI 客服，自动识别客户肤质需求、产品成分疑问，生成专业且亲和的回复建议。客服效率提升 300%。' },
-        { index: '02', title: '商品知识库', description: '结构化管理美妆产品的成分、功效、使用方法与常见问答。AI 自动学习并关联相关产品，让每次推荐都精准匹配客户需求。' },
-        { index: '03', title: '智能导购推荐', description: '根据客户画像、消费记录与对话语境，AI 实时推荐最适合的产品组合。将被动应答转化为主动导购，提升客单价与转化率。' },
-        { index: '04', title: '客户分层运营', description: '基于 RFM 模型与 AI 行为分析，自动将客户分为高价值、活跃、沉睡、流失等层级，为每一层制定精准的运营策略。' },
-        { index: '05', title: '自动化运营', description: '配置生日祝福、复购提醒、沉睡唤醒等自动化营销规则。AI 选择最佳触达时机与渠道，让运营动作如呼吸般自然。' },
-        { index: '06', title: '数据分析看板', description: '多维度可视化客服效率、客户生命周期价值、转化漏斗与 ROI 分析。让数据说话，让每一分投入都有据可循。' },
-      ],
-      scenarios: [
-        {
-          eyebrow: '日均 5000+ 咨询的高效管理',
-          title: '国际美妆大牌',
-          description: 'AI 自动分流咨询类型，VIP 客户优先接入人工，常规问题 AI 秒回。客服团队从 20 人精简至 8 人，服务满意度反升 15%。',
-          image: 'https://images.unsplash.com/photo-1591375275686-e9b036b15f95?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MzY4NDR8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHNvZnQlMjBwaW5rJTIwYmVpZ2UlMjBncmFkaWVudCUyMHRleHR1cmUlMjBsdXh1cnklMjBjb3NtZXRpY3MlMjBiYWNrZ3JvdW5kfGVufDB8MHx8fDE3NzMxMzM0MDN8MA&ixlib=rb-4.1.0&q=80&w=1080',
-          imageAlt: '国际美妆大牌',
-        },
-        {
-          eyebrow: '从 0 到 1 的客户分层体系',
-          title: '新锐国货品牌',
-          description: '通过 AI 自动标记客户肤质偏好、消费频次、社交活跃度，3 个月内建立起精准的客户分层体系。复购率提升 42%，沉睡客户唤醒率达 28%。',
-          image: 'https://images.unsplash.com/photo-1701760211427-e7a9068028b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MzY4NDR8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMHVzaW5nJTIwbGFwdG9wJTIwaW4lMjBtb2Rlcm4lMjBtaW5pbWFsaXN0JTIwb2ZmaWNlJTIwYmVhdXR5JTIwYnJhbmR8ZW58MHwwfHx8MTc3MzEzMzQwM3ww&ixlib=rb-4.1.0&q=80&w=1080',
-          imageAlt: '新锐国货品牌',
-        },
-      ],
-      metrics: [
-        { value: '300%', label: '客服效率提升', description: 'AI 自动处理 70% 常规咨询' },
-        { value: '42%', label: '复购率提升', description: '精准分层运营驱动增长' },
-        { value: '< 3s', label: '平均首次响应', description: '全天候 AI 即时应答' },
-        { value: '28%', label: '沉睡客户唤醒', description: '自动化策略精准触达' },
-      ],
-      segmentationTitle: '智能客户分层，\n让运营有的放矢',
-      segmentationDescription: '基于 RFM 模型与 AI 行为预测，自动将客户分为不同价值层级。每个层级配备专属运营策略，实现从拉新到留存的全生命周期管理。',
-      tiers: [
-        { name: '钻石', rule: '年消费 ¥5000+，复购 6 次+', percent: '8%', detail: '专属美妆顾问 · VIP 新品预览 · 生日定制礼盒' },
-        { name: '金牌', rule: '年消费 ¥2000-5000，复购 3 次+', percent: '15%', detail: '季度新品试用 · 积分加倍 · 专属优惠券' },
-        { name: '活跃', rule: '近 90 天有消费或互动行为', percent: '32%', detail: '个性化推荐 · 节日关怀 · 满减活动推送' },
-        { name: '沉睡', rule: '90-180 天无互动', percent: '28%', detail: '唤醒优惠券 · 新品推荐 · 个性化回访' },
-        { name: '流失', rule: '180 天+ 无互动', percent: '17%', detail: '高额回归礼 · 问卷调研 · 社交再触达' },
-      ],
-      closingTitle: '让每一次对话\n都创造价值',
-      closingDescription: '现在开始体验 GlowMind，看看 AI 如何重新定义美妆品牌的客户运营。',
-      closingSecondary: '预约咨询',
-      footerCopy: '© 2026 GlowMind. All rights reserved.',
-    }
-  : null;
-
-const goosePreview = template.slug === 'snapshot-ai-growth-workbench'
-  ? {
-      brand: {
-        name: 'Goose Planet',
-        subtitle: '私域增长工作台',
-        metric: '1,402 条',
-      },
-      syncLabel: '微信同步中',
-      syncMeta: '32 个社群 · 1,402 条对话',
-      importLabel: '导入聊天记录',
-      navigation: [
-        { label: '今日驾驶舱', mobileLabel: '驾驶舱', href: '#goose-dashboard', icon: 'dashboard', active: true },
-        { label: '内容中心', mobileLabel: '内容', href: '#goose-content', icon: 'content', active: false },
-        { label: '咨询洞察台', mobileLabel: '洞察', href: '#goose-questions', icon: 'insights', active: false },
-        { label: '产品机会台', mobileLabel: '机会', href: '#goose-opportunities', icon: 'opportunity', active: false },
-      ],
-      greeting: '晚安，主理人',
-      summary: '今日已从 32 个社群同步 1,402 条客户对话，为你提炼了 3 条内容建议',
-      refreshLabel: '刷新数据',
-      insightCards: [
-        { label: '高频顾虑聚类', value: '清洗保养', detail: '占比 42%，连续 3 天位居首位', delta: '+12%', tone: 'amber' },
-        { label: '客户情绪指数', value: '温暖', detail: '积极情绪占 78%，较上周提升', delta: '+5%', tone: 'gold' },
-        { label: '待补内容缺口', value: '3 个选题', detail: '梅雨季保养、新生儿床品、送礼指南', delta: '急需', tone: 'rose' },
-      ],
-      suggestions: [
-        { title: '梅雨季鹅绒被保养指南', source: '来自广州VIP群高频提问', badge: '朋友圈', action: '生成内容' },
-        { title: '为什么95鹅绒比90鹅绒更透气？', source: '来自一对一私聊反复咨询', badge: '私聊话术', action: '生成内容' },
-        { title: '新生儿家庭的鹅绒被选购建议', source: '来自孕妈社群趋势洞察', badge: '小红书', action: '生成内容' },
-      ],
-      questionFilters: ['全部', '广州VIP群', '孕妈好物群', '一对一私聊', '杭州体验群'],
-      questions: [
-        { text: '南方梅雨季，这款鹅绒被会返潮吗？', meta: '广州VIP群 · 10 分钟前' },
-        { text: '宝宝3个月大，可以用鹅绒被吗？', meta: '孕妈好物群 · 34 分钟前' },
-        { text: '95白鹅绒和90灰鹅绒有什么区别？', meta: '一对一私聊 · 59 分钟前' },
-        { text: '送长辈的话，推荐哪个系列比较体面？', meta: '杭州体验群 · 1 小时前' },
-        { text: '你们的被子可以机洗吗？', meta: '一对一私聊 · 2 小时前' },
-        { text: '皇钻系列和经典系列更适合送谁做礼物？', meta: '一对一私聊 · 3 小时前' },
-      ],
-      actions: [
-        { title: '主推抗菌静音鹅绒被', detail: '将清洗顾虑转译为「静音、抗菌、易护理」的内容组合，在梅雨季更容易建立信任。', index: '建议 01' },
-        { title: '强化「梅雨季不返潮」卖点', detail: '把高频问答沉淀为图文与短视频脚本，放在内容中心与群公告，减少重复解释。', index: '建议 02' },
-        { title: '补充送礼场景内容', detail: '围绕乔迁、待产、探亲三类送礼场景补齐内容模板，提升高客单产品转化。', index: '建议 03' },
-      ],
-    }
-  : null;
-
-const nexusPreview = template.slug === 'snapshot-hr-payroll-suite'
-  ? {
-      banner: '全新发布 — AI 驱动的合规引擎，覆盖全部50个州',
-      brand: { mark: 'N', name: 'Nexus' },
-      navigation: [
-        { label: '功能', href: '#nexus-features' },
-        { label: '客户评价', href: '#nexus-testimonials' },
-        { label: '入驻流程', href: '#nexus-onboard' },
-        { label: '安全与集成', href: '#nexus-support' },
-      ],
-      heroIntro: 'AI 原生',
-      heroTitle: ['薪资管理，', '人力资源，', '福利与合规'],
-      heroDescription: 'Nexus 将您管理团队所需的一切整合在一起——覆盖全部50个州的薪资发放、福利管理、合规自动化和全方位人力资源服务——由 AI 驱动。',
-      heroPrimary: '免费试用 NEXUS',
-      heroMeta: '无需信用卡 · 30天免费试用',
-      logos: ['Lattice', 'Ramp', 'Brex', 'Notion', 'Linear', 'Vercel', 'Figma', 'Stripe'],
-      featured: {
-        title: 'Nexus 改变了我的工作方式',
-        quote: '「我们从传统薪资服务商切换过来，效果立竿见影。Nexus 自动处理了我们的多州合规问题，一个下午就完成了全部福利设置，团队成员也真正喜欢使用它。AI 助手还发现了两个本可能让我们损失数千美元的税务申报错误。」',
-        author: 'Marcus Chen',
-        role: 'CEO，Orbital Labs',
-        cta: '在 X 上阅读 →',
-      },
-      features: [
-        {
-          id: 'payroll',
-          index: '01 薪资管理',
-          title: '随时随地\n发放薪资',
-          bullets: ['自动化薪资处理', '多州税务申报', '直接存款与支票', '承包商付款', '工资扣押管理'],
-          cardTitle: '薪资概览',
-          cardStatus: '运行中',
-          metricLabel: '下次发薪',
-          metricValue: '$84,320.00',
-          metricMeta: '2026年3月15日 · 42位员工',
-          people: [
-            { initials: 'SK', name: 'Sarah Kim', team: '工程部', value: '$8,450' },
-            { initials: 'JL', name: 'James Liu', team: '产品部', value: '$7,200' },
-            { initials: 'AR', name: 'Ana Ruiz', team: '设计部', value: '$6,800' },
-          ],
-          primary: '执行发薪',
-        },
-        {
-          id: 'compliance',
-          index: '02 合规管理',
-          title: '杜绝罚款\n与处罚',
-          bullets: ['州注册追踪', '自动税务申报', '实时合规预警', '法规更新推送', '审计就绪报告'],
-          cardTitle: '合规地图',
-          cardStatus: '50个州',
-          focusTitle: '加利福尼亚',
-          focusMeta: '12项法规',
-          focusStatus: '全部合规 ✓',
-          stats: [
-            { value: '32', label: '活跃州' },
-            { value: '4', label: '待申报' },
-            { value: '0', label: '警报' },
-          ],
-        },
-        {
-          id: 'benefits',
-          index: '03 福利保险',
-          title: '个性化保险\n与401(k)',
-          bullets: ['医疗、牙科、视力计划', '401(k) 管理', 'FSA 与 HSA 管理', 'COBRA 合规', '开放投保工具'],
-          cardTitle: '福利与401(k)',
-          cardStatus: '开放投保',
-          plans: [
-            { name: '高级健康计划', detail: 'Blue Shield · 医疗+牙科+视力', value: '$420/月', badge: '已选择' },
-            { name: '标准健康计划', detail: 'Aetna · 医疗+牙科', value: '$280/月' },
-            { name: '基础健康计划', detail: 'Kaiser · 仅医疗', value: '$180/月' },
-          ],
-          contributionLabel: '401(k) 供款',
-          contributionValue: '员工6% · 雇主匹配4%',
-        },
-        {
-          id: 'hr',
-          index: '04 HR 平台',
-          title: '招聘、管理\n与离职',
-          bullets: ['录用通知生成', '员工入职流程', '假期与考勤追踪', '绩效管理', '离职自动化'],
-          cardTitle: '录用通知',
-          cardStatus: '草稿',
-          fields: [
-            { label: '候选人姓名', value: 'Jordan Williams' },
-            { label: '职位', value: '高级工程师' },
-            { label: '部门', value: '工程部' },
-            { label: '年薪', value: '$185,000' },
-            { label: '入职日期', value: '2026年4月1日' },
-            { label: '期权', value: '10,000 期权 · 4年归属 · 1年锁定' },
-          ],
-          primary: '发送录用',
-          secondary: '预览',
-        },
-        {
-          id: 'slack',
-          index: '05 集成',
-          title: '在 Slack 上\n轻松办公',
-          bullets: ['Slack 机器人通知', '自动化 HR 工作流', '团队公告', '审批请求', '实时提醒'],
-          cardTitle: '# hr-notifications',
-          cardStatus: '已连接',
-          messages: [
-            { initial: 'N', author: 'Nexus Bot', time: '9:02 AM', text: '新员工 Jordan Williams 已完成入职。薪资、福利和合规文件均已设置完毕。', accent: true },
-            { initial: 'L', author: 'Lisa Park', time: '9:05 AM', text: '这也太快了！以前我们通常需要2天才能搞定所有事情。' },
-            { initial: 'N', author: 'Nexus Bot', time: '9:06 AM', text: '提醒：Q1 合规报告将在3天后到期。所有申报文件已准备就绪，等待审核。', accent: true },
-            { initial: 'D', author: 'David Cho', time: '9:08 AM', text: '太赞了，一切都自动处理好了。' },
-          ],
-        },
-      ],
-      trustTitleLeading: '备受快速成长的',
-      trustTitleAccent: '初创企业信赖',
-      testimonials: [
-        { tag: 'Nova + Nexus', quote: 'Nexus 彻底改变了我们在12个州的薪资处理方式。以前团队需要3天完成的工作，现在完全自动化，零错误。', initials: 'RT', author: 'Rachel Torres', role: '运营副总裁，Nova' },
-        { tag: '不只是软件', quote: '仅 AI 合规引擎每年就为我们节省了4万美元的咨询费。它能在监管变化成为问题之前提前捕捉到。', initials: 'BH', author: 'Ben Hartley', role: '首席财务官，Meridian Health' },
-        { tag: '极速支持', quote: '他们的支持团队每次都在5分钟内回复。每一次。在这个行业里简直闻所未闻。', initials: 'PS', author: 'Priya Sharma', role: 'HR 总监，Cobalt' },
-        { tag: '颠覆体验', quote: '入职流程是我见过最好的。新员工在一小时内就能完成薪资、福利和设备的全部设置。', initials: 'AV', author: 'Alex Voss', role: '人事负责人，Solaris' },
-        { tag: '零合规罚款', quote: '自从切换到 Nexus，我们没有收到过一次合规处罚。这是连续18个月的完美记录。', initials: 'DP', author: 'Diana Park', role: 'CEO，Lumen Systems' },
-        { tag: '简单至极', quote: '我完全不懂技术，但10分钟就搞定了整个薪资发放。就是这么直观。', initials: 'TK', author: 'Tom Keller', role: '创始人，Greenline' },
-        { tag: '无缝集成', quote: '与我们的财务系统对接非常顺畅。QuickBooks、Xero，所有工具开箱即用。', initials: 'MS', author: 'Maya Singh', role: '财务总监，Apex Ventures' },
-        { tag: '一站式方案', quote: '我们用 Nexus 替代了四个不同的供应商。一个平台搞定薪资、福利、合规和人力资源。真正的变革。', initials: 'CR', author: 'Carlos Reyes', role: '首席运营官，TidePool' },
-      ],
-      onboarding: {
-        titleLeading: '白手套',
-        titleAccent: '入驻与',
-        titleTail: '数据迁移',
-        steps: [
-          { index: '01', title: '快速设置', description: '连接您的银行账户并导入团队名册。我们的 AI 会根据您的州注册信息自动预填合规表单。' },
-          { index: '02', title: '选择福利方案', description: '浏览精选的健康、牙科和视力保险计划。我们处理所有文书工作和投保登记。' },
-          { index: '03', title: '正式上线', description: '几分钟内完成首次薪资发放。Nexus 自动处理税务计算、申报和直接存款。' },
-        ],
-        setupTitle: '公司设置',
-        fields: [
-          { label: '公司名称', value: 'Acme Corp' },
-          { label: 'EIN', value: '12-3456789' },
-          { label: '注册州', value: '特拉华州' },
-          { label: '员工人数', value: '42' },
-          { label: '发薪频率', value: '双周' },
-          { label: '下次发薪日', value: '2026年3月15日' },
-        ],
-        cta: '继续设置',
-      },
-      supportCards: [
-        { title: '真人极速支持', description: '专属 HR 顾问通过聊天、邮件和电话提供服务。平均响应时间不到5分钟。', meta: '您的专属顾问' },
-        { title: '原生集成', description: '即开即用对接 QuickBooks、Xero、Slack、BambooHR 等50多个工具。', meta: 'QB · Xero · Slack · GH · Okta' },
-        { title: '专属保险顾问', description: '持牌保险经纪人帮您为团队找到最适合的方案和预算。', meta: 'Marcus Chen · 持牌福利顾问 · 在线中' },
-        { title: '加密与安全', description: 'SOC 2 Type II 认证。AES-256 静态加密，TLS 1.3 传输加密。您的数据始终受到保护。', meta: 'SOC 2 Type II · AES-256 · GDPR · 99.99% 可用性' },
-      ],
-      closingTitle: '开始30天免费试用',
-      closingPrimary: '免费试用 Nexus',
-      closingSecondary: '联系专家',
-      footerTagline: 'AI 原生的薪资、人力资源、福利和合规平台。为现代团队而生。',
-      footerColumns: [
-        { title: '产品', links: ['薪资管理', '福利保险', '合规管理', 'HR 平台', '集成', '定价'] },
-        { title: '公司', links: ['关于我们', '招聘', '博客', '新闻', '联系我们'] },
-        { title: '法律', links: ['隐私政策', '服务条款', '安全', 'Cookie 政策'] },
-      ],
-      footerCopy: '© 2026 Nexus. 保留所有权利。',
-      footerSocial: ['Twitter', 'LinkedIn', 'GitHub'],
-      marqueeLabel: '创始人 免费',
-    }
-  : null;
-
-const localCommunityPreview = glowmindPreview ?? goosePreview ?? nexusPreview;
-const iframePreviewSrc = !localCommunityPreview ? media?.communityPreviewSrc ?? media?.templatePageSrc ?? null : null;
-const immersivePreview = Boolean(localCommunityPreview) || Boolean(iframePreviewSrc);
+const remixHref = `/web/login?redirectUrl=%2Fhome&prompt=${encodeURIComponent(`复刻 ${template.title}`)}`;
+const previewSrc = template.visitUrl || `https://${template.previewSlug}.superun.yun`;
+const narrativeBlocks = parseWebsiteIntroduction(template.websiteIntroduction);
+const defaultDevice = template.deviceType === 'mobile' ? 'mobile' : 'desktop';
+const titleMark = template.title.trim().charAt(0) || 'S';
+const iconDesktop = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.334 2H2.66732C1.93094 2 1.33398 2.59695 1.33398 3.33333V10C1.33398 10.7364 1.93094 11.3333 2.66732 11.3333H13.334C14.0704 11.3333 14.6673 10.7364 14.6673 10V3.33333C14.6673 2.59695 14.0704 2 13.334 2Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.33398 14H10.6673" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 11.332V13.9987" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg>`;
+const iconMobile = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M11.334 1.33203H4.66732C3.93094 1.33203 3.33398 1.92898 3.33398 2.66536V13.332C3.33398 14.0684 3.93094 14.6654 4.66732 14.6654H11.334C12.0704 14.6654 12.6673 14.0684 12.6673 13.332V2.66536C12.6673 1.92898 12.0704 1.33203 11.334 1.33203Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 12H8.00667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>`;
+const iconChevronDown = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4.5 6.25L8 9.75L11.5 6.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg>`;
+const iconRemix = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8.66797 2L10.1346 4.86667L13.3346 5.33333L11.0003 7.6L11.5346 10.8L8.66797 9.33333L5.8013 10.8L6.33464 7.6L4.0013 5.33333L7.2013 4.86667L8.66797 2Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 13H13" stroke="currentColor" stroke-linecap="round"></path></svg>`;
 ---
 
-<BaseLayout title="superun - 优势智设" hideHeader hideFooter>
-  <section class={`community-shell ${immersivePreview ? 'community-shell--immersive' : 'community-shell--local'}`.trim()}>
-    {!immersivePreview ? (
-      <div class="community-topbar">
-        <div class="community-topbar__left">
-          <div class="community-title-pill">
-            <Brand compact className="community-title-pill__brand" ariaLabel={copy.header.homeAria} />
-            <span class="community-title-pill__text">{template.title}</span>
-          </div>
-        </div>
+<BaseLayout title={`${template.title} - 优势智设`} hideHeader hideFooter>
+  <section class="community-runtime" data-community-root>
+    <div class="community-runtime__group">
+      <aside class="community-runtime__panel">
+        <header class="community-runtime__panel-header">
+          <button class="community-runtime__project" type="button" onclick="window.location.href='/home'">
+            <span class="community-runtime__project-mark" aria-hidden="true">{titleMark}</span>
+            <span class="community-runtime__project-label">{template.title}</span>
+          </button>
 
-        <div class="community-topbar__right">
-          <a class="community-recreate-button community-recreate-button--topbar" data-copy-key="community.recreate" href={remixHref}>{copy.community.recreate}</a>
-        </div>
-      </div>
-    ) : null}
+          <button class="community-runtime__collapse" type="button" title="折叠面板" aria-label="折叠面板">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M10 13L5 8L10 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+        </header>
 
-    <div class={`community-stage ${immersivePreview ? 'community-stage--immersive' : 'community-stage--local'}`.trim()}>
-      <div class={`community-stage__main ${immersivePreview ? 'community-stage__main--immersive' : 'community-stage__main--full'}`.trim()}>
-        <div class="community-preview-shell community-preview-shell--immersive">
-          <div class={`community-preview-frame ${localCommunityPreview ? 'community-preview-frame--local' : ''} ${immersivePreview ? 'community-preview-frame--immersive' : ''}`.trim()} id="preview-frame">
-            {glowmindPreview ? (
-              <article class="community-local community-local--glowmind">
-                <header class="glowmind-nav">
-                  <a class="glowmind-brand" href="#glowmind-hero">
-                    <span class="glowmind-brand__mark">{glowmindPreview.brand.mark}</span>
-                    <span>{glowmindPreview.brand.name}</span>
-                  </a>
-                  <nav class="glowmind-nav__links" aria-label="GlowMind navigation">
-                    {glowmindPreview.navigation.map((item) => (
-                      <a href={item.href}>{item.label}</a>
-                    ))}
-                    <a class="glowmind-nav__admin" href="/web/login?redirectUrl=%2Fhome">进入后台</a>
-                  </nav>
-                </header>
+        <div class="community-runtime__panel-body">
+          <div class="community-runtime__narrative">
+            <p class="community-runtime__lead">{template.description}</p>
 
-                <section class="glowmind-hero" id="glowmind-hero">
-                  <div class="glowmind-hero__copy">
-                    <span class="glowmind-eyebrow">{glowmindPreview.eyebrow}</span>
-                    <h1>
-                      <span>{glowmindPreview.titleLeading}</span>
-                      <span>
-                        {glowmindPreview.titlePrefix}
-                        <em>{glowmindPreview.titleAccent}</em>
-                      </span>
-                    </h1>
-                    <p>{glowmindPreview.description}</p>
-                    <div class="glowmind-actions">
-                      <a class="glowmind-button glowmind-button--primary" href={remixHref}>{glowmindPreview.primaryCta}</a>
-                      <a class="glowmind-button glowmind-button--secondary" href="#features">{glowmindPreview.secondaryCta}</a>
-                    </div>
-                    <div class="glowmind-trustmarks">
-                      {glowmindPreview.trustMarks.map((item) => (
-                        <span>{item}</span>
-                      ))}
-                    </div>
-                  </div>
-                  <div class="glowmind-hero__visual">
-                    <img src={glowmindPreview.heroImage} alt={glowmindPreview.heroImageAlt} loading="eager" decoding="async" />
-                    <div class="glowmind-chat-card">
-                      <span class="glowmind-chat-card__title">{glowmindPreview.chatTitle}</span>
-                      <p class="glowmind-chat-card__question">{glowmindPreview.chatQuestion}</p>
-                      <div class="glowmind-chat-card__answer">
-                        <span>AI 建议回复</span>
-                        <p>{glowmindPreview.chatAnswer}</p>
-                      </div>
-                      <div class="glowmind-chat-card__actions">
-                        <button type="button">发送</button>
-                        <button type="button">编辑</button>
-                      </div>
-                    </div>
-                  </div>
-                </section>
+            <div class="community-runtime__copy">
+              {narrativeBlocks.map((block) => {
+                if (block.type === 'heading') {
+                  return (
+                    <p class="community-runtime__copy-heading">
+                      <strong>{block.text}</strong>
+                    </p>
+                  );
+                }
 
-                <section class="glowmind-section" id="features">
-                  <div class="glowmind-section__heading">
-                    <span class="glowmind-section__eyebrow">Core Features</span>
-                    <h2>每一个功能，都为美妆场景量身定制</h2>
-                  </div>
-                  <div class="glowmind-feature-grid">
-                    {glowmindPreview.features.map((feature) => (
-                      <article class="glowmind-feature-card">
-                        <div class="glowmind-feature-card__top">
-                          <span>{feature.index}</span>
-                        </div>
-                        <h3>{feature.title}</h3>
-                        <p>{feature.description}</p>
-                      </article>
-                    ))}
-                  </div>
-                </section>
+                if (block.type === 'bullet') {
+                  return (
+                    <p class="community-runtime__copy-bullet">
+                      {block.label ? <strong>{block.label}</strong> : null}
+                      <span>{block.label ? ` - ${block.text}` : block.text}</span>
+                    </p>
+                  );
+                }
 
-                <section class="glowmind-section glowmind-section--warm" id="scenarios">
-                  <div class="glowmind-section__heading">
-                    <span class="glowmind-section__eyebrow">Use Cases</span>
-                    <h2>从品牌旗舰到新锐国货，都在用 GlowMind</h2>
-                  </div>
-                  <div class="glowmind-scenario-grid">
-                    {glowmindPreview.scenarios.map((item) => (
-                      <article class="glowmind-scenario-card">
-                        <img src={item.image} alt={item.imageAlt} loading="lazy" decoding="async" />
-                        <div class="glowmind-scenario-card__body">
-                          <span>{item.eyebrow}</span>
-                          <h3>{item.title}</h3>
-                          <p>{item.description}</p>
-                        </div>
-                      </article>
-                    ))}
-                  </div>
-                </section>
+                return <p class="community-runtime__copy-paragraph">{block.text}</p>;
+              })}
+            </div>
 
-                <section class="glowmind-section glowmind-section--dark" id="data">
-                  <div class="glowmind-section__heading glowmind-section__heading--center">
-                    <span class="glowmind-section__eyebrow">Data Impact</span>
-                    <h2>用数据证明 AI 的价值</h2>
-                  </div>
-                  <div class="glowmind-metric-grid">
-                    {glowmindPreview.metrics.map((item) => (
-                      <article class="glowmind-metric-card">
-                        <strong>{item.value}</strong>
-                        <span>{item.label}</span>
-                        <p>{item.description}</p>
-                      </article>
-                    ))}
-                  </div>
-                </section>
-
-                <section class="glowmind-section glowmind-segmentation" id="segmentation">
-                  <div class="glowmind-segmentation__copy">
-                    <span class="glowmind-section__eyebrow">Segmentation Logic</span>
-                    <h2>{glowmindPreview.segmentationTitle}</h2>
-                    <p>{glowmindPreview.segmentationDescription}</p>
-                  </div>
-                  <div class="glowmind-tier-list">
-                    {glowmindPreview.tiers.map((item) => (
-                      <article class="glowmind-tier-card">
-                        <div class="glowmind-tier-card__label">{item.name}</div>
-                        <div class="glowmind-tier-card__body">
-                          <div class="glowmind-tier-card__meta">
-                            <span>{item.rule}</span>
-                            <strong>{item.percent}</strong>
-                          </div>
-                          <p>{item.detail}</p>
-                        </div>
-                      </article>
-                    ))}
-                  </div>
-                </section>
-
-                <section class="glowmind-section glowmind-section--cta">
-                  <div class="glowmind-section__heading glowmind-section__heading--center">
-                    <h2>{glowmindPreview.closingTitle}</h2>
-                    <p>{glowmindPreview.closingDescription}</p>
-                  </div>
-                  <div class="glowmind-actions glowmind-actions--center">
-                    <a class="glowmind-button glowmind-button--primary" href={remixHref}>{glowmindPreview.primaryCta}</a>
-                    <button class="glowmind-button glowmind-button--secondary" type="button">{glowmindPreview.closingSecondary}</button>
-                  </div>
-                </section>
-
-                <footer class="glowmind-footer">
-                  <div class="glowmind-brand glowmind-brand--footer">
-                    <span class="glowmind-brand__mark">{glowmindPreview.brand.mark}</span>
-                    <span>{glowmindPreview.brand.name}</span>
-                  </div>
-                  <p>{glowmindPreview.footerCopy}</p>
-                </footer>
-
-                <a class="glowmind-built-with" href="https://www.superun.com">
-                  <span>Built with</span>
-                  <strong>superun</strong>
-                  <span aria-hidden="true">×</span>
-                </a>
-              </article>
-            ) : goosePreview ? (
-              <article class="community-local community-local--goose">
-                <aside class="goose-sidebar">
-                  <a class="goose-brand" href="#goose-dashboard">
-                    <span class="goose-brand__mark" aria-hidden="true"></span>
-                    <span class="goose-brand__copy">
-                      <strong>{goosePreview.brand.name}</strong>
-                      <span>{goosePreview.brand.subtitle}</span>
-                    </span>
-                  </a>
-
-                  <div class="goose-sidebar__sync">
-                    <div class="goose-sidebar__sync-pill">
-                      <span class="goose-sidebar__sync-dot" aria-hidden="true"></span>
-                      <span>{goosePreview.syncLabel}</span>
-                    </div>
-                    <p>{goosePreview.syncMeta}</p>
-                  </div>
-
-                  <button class="goose-secondary-button goose-secondary-button--sidebar" type="button">{goosePreview.importLabel}</button>
-
-                  <nav class="goose-sidebar__nav" aria-label="Goose Planet navigation">
-                    {goosePreview.navigation.map((item) => (
-                      <a class={`goose-nav-link ${item.active ? 'is-active' : ''}`.trim()} href={item.href}>
-                        <span class={`goose-nav-link__icon goose-nav-link__icon--${item.icon}`.trim()} aria-hidden="true"></span>
-                        <span>{item.label}</span>
-                      </a>
-                    ))}
-                  </nav>
-
-                  <p class="goose-sidebar__footer">Goose Planet © 2026</p>
-                </aside>
-
-                <div class="goose-main" id="goose-dashboard">
-                  <header class="goose-appbar">
-                    <div class="goose-appbar__brand">
-                      <span class="goose-brand__mark" aria-hidden="true"></span>
-                      <span class="goose-brand__copy">
-                        <strong>{goosePreview.brand.name}</strong>
-                        <span>{goosePreview.brand.subtitle}</span>
-                      </span>
-                    </div>
-                    <span class="goose-appbar__metric">
-                      <span class="goose-appbar__metric-dot" aria-hidden="true"></span>
-                      <span>{goosePreview.brand.metric}</span>
-                    </span>
-                  </header>
-
-                  <div class="goose-dashboard__header">
-                    <div class="goose-dashboard__copy">
-                      <h1>{goosePreview.greeting}</h1>
-                      <p>{goosePreview.summary}</p>
-                    </div>
-                    <button class="goose-secondary-button goose-secondary-button--refresh" type="button">
-                      <span>{goosePreview.refreshLabel}</span>
-                    </button>
-                  </div>
-
-                  <section class="goose-insight-grid" aria-label="洞察摘要">
-                    {goosePreview.insightCards.map((item) => (
-                      <article class="goose-insight-card">
-                        <div class="goose-insight-card__top">
-                          <span>{item.label}</span>
-                          <span class={`goose-insight-card__delta goose-insight-card__delta--${item.tone}`.trim()}>{item.delta}</span>
-                        </div>
-                        <strong>{item.value}</strong>
-                        <p>{item.detail}</p>
-                      </article>
-                    ))}
-                  </section>
-
-                  <section class="goose-panel-grid">
-                    <article class="goose-panel goose-panel--suggestions" id="goose-content">
-                      <div class="goose-panel__header">
-                        <h2>今日内容建议</h2>
-                        <span>AI 推荐</span>
-                      </div>
-                      <div class="goose-suggestion-list">
-                        {goosePreview.suggestions.map((item) => (
-                          <article class="goose-suggestion-row">
-                            <div class="goose-choice">
-                              <span class="goose-choice__dot" aria-hidden="true"></span>
-                              <div class="goose-suggestion-row__copy">
-                                <strong>{item.title}</strong>
-                                <span>
-                                  {item.source}
-                                  <em>{item.badge}</em>
-                                </span>
-                              </div>
-                            </div>
-                            <button class="goose-action-button" type="button">{item.action}</button>
-                          </article>
-                        ))}
-                      </div>
-                    </article>
-
-                    <article class="goose-panel goose-panel--questions" id="goose-questions">
-                      <div class="goose-panel__header goose-panel__header--questions">
-                        <h2>最新客户提问</h2>
-                        <a href="#goose-opportunities">全部 ›</a>
-                      </div>
-                      <div class="goose-filter-row">
-                        {goosePreview.questionFilters.map((item, index) => (
-                          <button class={`goose-filter-chip ${index === 0 ? 'is-active' : ''}`.trim()} type="button">{item}</button>
-                        ))}
-                      </div>
-                      <div class="goose-question-list">
-                        {goosePreview.questions.map((item) => (
-                          <article class="goose-question-row">
-                            <div class="goose-choice goose-choice--question">
-                              <span class="goose-choice__dot" aria-hidden="true"></span>
-                              <div class="goose-question-row__copy">
-                                <strong>{item.text}</strong>
-                                <span>{item.meta}</span>
-                              </div>
-                            </div>
-                            <span class="goose-question-row__arrow" aria-hidden="true">↗</span>
-                          </article>
-                        ))}
-                      </div>
-                    </article>
-                  </section>
-
-                  <section class="goose-weekly" id="goose-opportunities">
-                    <div class="goose-panel__header goose-panel__header--weekly">
-                      <h2>本周经营建议</h2>
-                    </div>
-                    <div class="goose-weekly-grid">
-                      {goosePreview.actions.map((item) => (
-                        <article class="goose-weekly-card">
-                          <span>{item.index}</span>
-                          <h3>{item.title}</h3>
-                          <p>{item.detail}</p>
-                        </article>
-                      ))}
-                    </div>
-                  </section>
-
-                  <nav class="goose-mobile-tabs" aria-label="Goose Planet tabs">
-                    {goosePreview.navigation.map((item) => (
-                      <a class={`goose-mobile-tab ${item.active ? 'is-active' : ''}`.trim()} href={item.href}>
-                        <span class={`goose-nav-link__icon goose-nav-link__icon--${item.icon}`.trim()} aria-hidden="true"></span>
-                        <span>{item.mobileLabel}</span>
-                      </a>
-                    ))}
-                  </nav>
-                </div>
-
-                <div class="goose-built-with" aria-label="Built with superun badge">
-                  <span>Built with</span>
-                  <strong>superun</strong>
-                  <button type="button" aria-label="dismiss">×</button>
-                </div>
-              </article>
-            ) : nexusPreview ? (
-              <article class="community-local community-local--nexus">
-                <header class="nexus-banner">{nexusPreview.banner}</header>
-
-                <div class="nexus-nav-shell">
-                  <nav class="nexus-nav" aria-label="Nexus navigation">
-                    <a class="nexus-brand" href="#nexus-hero">
-                      <span class="nexus-brand__mark">{nexusPreview.brand.mark}</span>
-                      <span>{nexusPreview.brand.name}</span>
-                    </a>
-                    <div class="nexus-nav__links">
-                      {nexusPreview.navigation.map((item) => (
-                        <a href={item.href}>{item.label}</a>
-                      ))}
-                    </div>
-                    <a class="nexus-nav__cta" href={remixHref}>开始使用</a>
-                    <button class="nexus-nav__menu" type="button" aria-label="open menu">☰</button>
-                  </nav>
-                </div>
-
-                <section class="nexus-hero" id="nexus-hero">
-                  <div class="nexus-hero__copy">
-                    <h1>
-                      <span>{nexusPreview.heroIntro}</span>
-                      {nexusPreview.heroTitle.map((line) => (
-                        <span>{line}</span>
-                      ))}
-                    </h1>
-                    <p>{nexusPreview.heroDescription}</p>
-                    <div class="nexus-hero__actions">
-                      <a class="nexus-button nexus-button--primary" href={remixHref}>{nexusPreview.heroPrimary}</a>
-                    </div>
-                    <span class="nexus-hero__meta">{nexusPreview.heroMeta}</span>
-                  </div>
-                </section>
-
-                <section class="nexus-logo-strip" aria-label="trusted by logos">
-                  {nexusPreview.logos.map((item) => (
-                    <span>{item}</span>
-                  ))}
-                </section>
-
-                <section class="nexus-proof">
-                  <div class="nexus-proof__media"></div>
-                  <article class="nexus-quote-card">
-                    <h2>{nexusPreview.featured.title}</h2>
-                    <p>{nexusPreview.featured.quote}</p>
-                    <div class="nexus-quote-card__meta">
-                      <strong>{nexusPreview.featured.author}</strong>
-                      <span>{nexusPreview.featured.role}</span>
-                    </div>
-                    <a href="#nexus-testimonials">{nexusPreview.featured.cta}</a>
-                  </article>
-                </section>
-
-                <section class="nexus-feature-list" id="nexus-features">
-                  {nexusPreview.features.map((feature) => (
-                    <section class="nexus-feature-row" id={`nexus-${feature.id}`}>
-                      <div class="nexus-feature-row__copy">
-                        <span>{feature.index}</span>
-                        <h2>{feature.title}</h2>
-                        <div class="nexus-chip-list">
-                          {feature.bullets.map((item) => (
-                            <button type="button">{item}</button>
-                          ))}
-                        </div>
-                      </div>
-
-                      <article class={`nexus-app-card nexus-app-card--${feature.id}`.trim()}>
-                        <div class="nexus-app-card__top">
-                          <strong>{feature.cardTitle}</strong>
-                          <span>{feature.cardStatus}</span>
-                        </div>
-
-                        {'metricLabel' in feature && (
-                          <div class="nexus-payroll-card__summary">
-                            <p>{feature.metricLabel}</p>
-                            <strong>{feature.metricValue}</strong>
-                            <span>{feature.metricMeta}</span>
-                          </div>
-                        )}
-
-                        {'people' in feature && feature.people && (
-                          <div class="nexus-payroll-card__list">
-                            {feature.people.map((person) => (
-                              <div class="nexus-person-row">
-                                <div class="nexus-person-row__profile">
-                                  <span>{person.initials}</span>
-                                  <div>
-                                    <strong>{person.name}</strong>
-                                    <small>{person.team}</small>
-                                  </div>
-                                </div>
-                                <strong>{person.value}</strong>
-                              </div>
-                            ))}
-                          </div>
-                        )}
-
-                        {'primary' in feature && feature.primary && !('secondary' in feature) && (
-                          <button class="nexus-button nexus-button--danger" type="button">{feature.primary}</button>
-                        )}
-
-                        {'focusTitle' in feature && feature.stats && (
-                          <div class="nexus-compliance-card">
-                            <div class="nexus-compliance-card__focus">
-                              <strong>{feature.focusTitle}</strong>
-                              <span>{feature.focusMeta}</span>
-                              <p>{feature.focusStatus}</p>
-                            </div>
-                            <div class="nexus-stat-grid">
-                              {feature.stats.map((item) => (
-                                <div>
-                                  <strong>{item.value}</strong>
-                                  <span>{item.label}</span>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-
-                        {'plans' in feature && feature.plans && (
-                          <div class="nexus-benefits-card">
-                            <div class="nexus-plan-list">
-                              {feature.plans.map((plan) => (
-                                <div class="nexus-plan-row">
-                                  <div>
-                                    <strong>{plan.name}</strong>
-                                    <span>{plan.detail}</span>
-                                  </div>
-                                  <div>
-                                    <strong>{plan.value}</strong>
-                                    {plan.badge && <small>{plan.badge}</small>}
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
-                            <div class="nexus-benefits-card__footer">
-                              <span>{feature.contributionLabel}</span>
-                              <strong>{feature.contributionValue}</strong>
-                            </div>
-                          </div>
-                        )}
-
-                        {'fields' in feature && feature.fields && (
-                          <div class="nexus-offer-card">
-                            <div class="nexus-offer-card__grid">
-                              {feature.fields.map((field) => (
-                                <div>
-                                  <span>{field.label}</span>
-                                  <strong>{field.value}</strong>
-                                </div>
-                              ))}
-                            </div>
-                            <div class="nexus-offer-card__actions">
-                              <button class="nexus-button nexus-button--danger" type="button">{feature.primary}</button>
-                              <button class="nexus-button nexus-button--secondary" type="button">{feature.secondary}</button>
-                            </div>
-                          </div>
-                        )}
-
-                        {'messages' in feature && feature.messages && (
-                          <div class="nexus-slack-card">
-                            {feature.messages.map((message) => (
-                              <div class="nexus-message-row">
-                                <span class={`nexus-message-row__avatar ${message.accent ? 'is-accent' : ''}`.trim()}>{message.initial}</span>
-                                <div>
-                                  <div class="nexus-message-row__meta">
-                                    <strong>{message.author}</strong>
-                                    <span>{message.time}</span>
-                                  </div>
-                                  <p>{message.text}</p>
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                      </article>
-                    </section>
-                  ))}
-                </section>
-
-                <section class="nexus-testimonials" id="nexus-testimonials">
-                  <div class="nexus-section-heading nexus-section-heading--center">
-                    <h2>
-                      <span>{nexusPreview.trustTitleLeading}</span>
-                      <span>{nexusPreview.trustTitleAccent}</span>
-                    </h2>
-                  </div>
-                  <div class="nexus-testimonials__grid">
-                    {nexusPreview.testimonials.map((item) => (
-                      <article class="nexus-testimonial-card">
-                        <span>{item.tag}</span>
-                        <p>{item.quote}</p>
-                        <div class="nexus-testimonial-card__author">
-                          <strong>{item.initials}</strong>
-                          <div>
-                            <b>{item.author}</b>
-                            <small>{item.role}</small>
-                          </div>
-                        </div>
-                      </article>
-                    ))}
-                  </div>
-                </section>
-
-                <section class="nexus-onboard" id="nexus-onboard">
-                  <div class="nexus-onboard__copy">
-                    <h2>
-                      <span>{nexusPreview.onboarding.titleLeading}</span>
-                      <span>{nexusPreview.onboarding.titleAccent}</span>
-                      <span>{nexusPreview.onboarding.titleTail}</span>
-                    </h2>
-                    <div class="nexus-step-list">
-                      {nexusPreview.onboarding.steps.map((item) => (
-                        <article class="nexus-step-row">
-                          <span>{item.index}</span>
-                          <div>
-                            <h3>{item.title}</h3>
-                            <p>{item.description}</p>
-                          </div>
-                        </article>
-                      ))}
-                    </div>
-                  </div>
-
-                  <article class="nexus-setup-card">
-                    <span>{nexusPreview.onboarding.setupTitle}</span>
-                    <div class="nexus-setup-card__grid">
-                      {nexusPreview.onboarding.fields.map((field) => (
-                        <div>
-                          <p>{field.label}</p>
-                          <strong>{field.value}</strong>
-                        </div>
-                      ))}
-                    </div>
-                    <button class="nexus-button nexus-button--danger" type="button">{nexusPreview.onboarding.cta}</button>
-                  </article>
-                </section>
-
-                <section class="nexus-support" id="nexus-support">
-                  {nexusPreview.supportCards.map((item) => (
-                    <article class="nexus-support-card">
-                      <span class="nexus-support-card__icon" aria-hidden="true"></span>
-                      <h3>{item.title}</h3>
-                      <p>{item.description}</p>
-                      <small>{item.meta}</small>
-                    </article>
-                  ))}
-                </section>
-
-                <section class="nexus-closing" id="get-started">
-                  <h2>{nexusPreview.closingTitle}</h2>
-                  <div class="nexus-closing__actions">
-                    <a class="nexus-button nexus-button--primary" href={remixHref}>{nexusPreview.closingPrimary}</a>
-                    <button class="nexus-button nexus-button--secondary" type="button">{nexusPreview.closingSecondary}</button>
-                  </div>
-                </section>
-
-                <footer class="nexus-footer">
-                  <div class="nexus-footer__top">
-                    <div class="nexus-footer__brand">
-                      <div class="nexus-brand">
-                        <span class="nexus-brand__mark">{nexusPreview.brand.mark}</span>
-                        <span>{nexusPreview.brand.name}</span>
-                      </div>
-                      <p>{nexusPreview.footerTagline}</p>
-                    </div>
-                    <div class="nexus-footer__columns">
-                      {nexusPreview.footerColumns.map((column) => (
-                        <div>
-                          <h4>{column.title}</h4>
-                          <ul>
-                            {column.links.map((item) => (
-                              <li><a href="#">{item}</a></li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div class="nexus-footer__bottom">
-                    <p>{nexusPreview.footerCopy}</p>
-                    <div>
-                      {nexusPreview.footerSocial.map((item) => (
-                        <a href="#">{item}</a>
-                      ))}
-                    </div>
-                  </div>
-                </footer>
-
-                <div class="nexus-marquee" aria-hidden="true">
-                  {Array.from({ length: 6 }).map(() => (
-                    <span>{nexusPreview.marqueeLabel}</span>
-                  ))}
-                </div>
-
-                <a class="nexus-built-with" href="https://www.superun.com">
-                  <span>Built with</span>
-                  <strong>superun</strong>
-                  <span aria-hidden="true">×</span>
-                </a>
-              </article>
-            ) : iframePreviewSrc ? (
-              <div class="community-iframe-host" data-iframe-host>
-                <div class="community-iframe-loader" data-iframe-loader>
-                  <div class="community-iframe-loader__pulse" aria-hidden="true"></div>
-                </div>
-                <iframe
-                  class="community-iframe"
-                  id="community-preview-iframe"
-                  src={iframePreviewSrc}
-                  title={template.title}
-                  loading="eager"
-                  referrerpolicy="no-referrer"
-                ></iframe>
-              </div>
-            ) : media ? (
-              <img class="community-preview-fallback" src={media.image} alt={template.title} loading="eager" decoding="async" />
+            {template.previewImage ? (
+              <a class="community-runtime__panel-image-link" href={previewSrc} target="_blank" rel="noopener noreferrer">
+                <img class="community-runtime__panel-image" src={template.previewImage} alt={`${template.title} 预览图`} loading="eager" decoding="async" />
+              </a>
             ) : null}
+          </div>
+
+          <button class="community-runtime__remix" type="button" onclick={`window.location.href='${remixHref}'`} data-copy-key="community.recreate">
+            <span set:html={iconRemix}></span>
+            <span>{copy.community.recreate}</span>
+          </button>
+        </div>
+      </aside>
+
+      <div class="community-runtime__separator" aria-hidden="true"></div>
+
+      <div class="community-runtime__preview">
+        <div class="community-runtime__toolbar">
+          <div class="community-runtime__device-switch" role="tablist" aria-label="预览设备">
+            <button class={`community-runtime__device-button ${defaultDevice === 'mobile' ? 'is-active' : ''}`} type="button" data-device="mobile">
+              <span set:html={iconMobile}></span>
+              <span data-copy-key="community.mobile">{copy.community.mobile}</span>
+            </button>
+            <button class={`community-runtime__device-button ${defaultDevice === 'desktop' ? 'is-active' : ''}`} type="button" data-device="desktop">
+              <span set:html={iconDesktop}></span>
+              <span data-copy-key="community.desktop">{copy.community.desktop}</span>
+            </button>
+          </div>
+
+          <button class="community-runtime__surface" type="button">
+            <span>主页端</span>
+            <span set:html={iconChevronDown}></span>
+          </button>
+        </div>
+
+        <div class="community-runtime__canvas" data-device-host>
+          <div class="community-runtime__frame">
+            <iframe
+              class="community-runtime__iframe"
+              src={previewSrc}
+              title={copy.community.previewAria}
+              loading="eager"
+              sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals allow-downloads"
+              allow="clipboard-read; clipboard-write"
+            ></iframe>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <script is:inline define:vars={{ locales }}>
+  <script is:inline define:vars={{ defaultDevice }}>
     (() => {
-      const currentDevice = new URL(window.location.href).searchParams.get('device');
-      const previewFrame = document.querySelector('#preview-frame');
-      const previewIframe = document.querySelector('#community-preview-iframe');
-      const iframeHost = document.querySelector('[data-iframe-host]');
-      const iframeLoader = document.querySelector('[data-iframe-loader]');
-      const toggleButtons = Array.from(document.querySelectorAll('[data-device-toggle]'));
-      const copy = JSON.parse(locales);
-      const localeAliases = {
-        'zh-CN': 'zh-CN',
-        'zh-TW': 'zh-CN',
-        yue: 'zh-CN',
-        ja: 'zh-CN',
-        ko: 'zh-CN',
-        en: 'en',
-        global: 'en',
-      };
+      const root = document.querySelector('[data-community-root]');
+      const deviceHost = document.querySelector('[data-device-host]');
+      const deviceButtons = Array.from(document.querySelectorAll('[data-device]'));
+      const collapseButton = document.querySelector('.community-runtime__collapse');
 
-      const applyCopy = (locale) => {
-        const nextLocale = localeAliases[locale] || 'zh-CN';
-        const nextCopy = copy[nextLocale] || copy['zh-CN'];
-        document.querySelectorAll('[data-copy-key]').forEach((node) => {
-          const key = node.getAttribute('data-copy-key');
-          if (!key) return;
-          const [scope, field] = key.split('.');
-          const value = nextCopy?.[scope]?.[field];
-          if (typeof value === 'string') node.textContent = value;
-        });
-        document.querySelectorAll('[data-copy-aria]').forEach((node) => {
-          const key = node.getAttribute('data-copy-aria');
-          if (!key) return;
-          const [scope, field] = key.split('.');
-          const value = nextCopy?.[scope]?.[field];
-          if (typeof value === 'string') node.setAttribute('aria-label', value);
+      const setDevice = (device) => {
+        const nextDevice = device === 'mobile' ? 'mobile' : 'desktop';
+        root?.setAttribute('data-device', nextDevice);
+        deviceHost?.setAttribute('data-device', nextDevice);
+        deviceButtons.forEach((button) => {
+          if (!(button instanceof HTMLButtonElement)) return;
+          button.classList.toggle('is-active', button.getAttribute('data-device') === nextDevice);
         });
       };
 
-      const applyDevice = (device) => {
-        const isMobile = device === 'mobile';
-        previewFrame?.classList.toggle('is-mobile', isMobile);
-        iframeHost?.classList.toggle('is-mobile', isMobile);
-        if (previewIframe instanceof HTMLIFrameElement) {
-          previewIframe.dataset.device = isMobile ? 'mobile' : 'desktop';
-        }
-        toggleButtons.forEach((button) => {
-          const active = button.getAttribute('data-device-toggle') === device;
-          button.classList.toggle('is-active', active);
-        });
-        const nextUrl = new URL(window.location.href);
-        if (isMobile) nextUrl.searchParams.set('device', 'mobile');
-        else nextUrl.searchParams.delete('device');
-        window.history.replaceState({}, '', `${nextUrl.pathname}${nextUrl.search}${nextUrl.hash}`);
-      };
-
-      applyCopy(document.documentElement.dataset.publicLocale || 'zh-CN');
-      applyDevice(currentDevice === 'mobile' ? 'mobile' : 'desktop');
-
-      toggleButtons.forEach((button) => {
+      deviceButtons.forEach((button) => {
+        if (!(button instanceof HTMLButtonElement)) return;
         button.addEventListener('click', () => {
-          const device = button.getAttribute('data-device-toggle') === 'mobile' ? 'mobile' : 'desktop';
-          applyDevice(device);
+          setDevice(button.getAttribute('data-device') || 'desktop');
         });
       });
 
-      if (previewIframe instanceof HTMLIFrameElement && iframeLoader instanceof HTMLElement) {
-        const hideLoader = () => {
-          iframeLoader.setAttribute('hidden', '');
-          iframeHost?.classList.add('is-ready');
-        };
-        previewIframe.addEventListener('load', hideLoader, { once: true });
+      if (collapseButton instanceof HTMLButtonElement) {
+        collapseButton.addEventListener('click', () => {
+          root?.classList.toggle('is-collapsed');
+        });
       }
 
-      window.addEventListener('public-locale-change', (event) => {
-        const locale = event.detail?.locale || 'zh-CN';
-        applyCopy(locale);
-      });
+      setDevice(defaultDevice);
     })();
   </script>
 </BaseLayout>

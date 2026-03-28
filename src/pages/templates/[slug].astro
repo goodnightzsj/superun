@@ -1,0 +1,105 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import {
+  formatTemplatePublishedAt,
+  splitWebsiteIntroduction,
+  templateCatalog,
+} from '@/data/template-directory';
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  return templateCatalog.map((template) => ({
+    params: { slug: template.templateSlug },
+    props: { template },
+  }));
+}
+
+const { template } = Astro.props;
+const detailParagraphs = splitWebsiteIntroduction(template.websiteIntroduction);
+const publishedAt = formatTemplatePublishedAt(template.publishedAt);
+const publishedDatetime = template.publishedAt ? new Date(template.publishedAt).toISOString().slice(0, 10) : '';
+---
+
+<BaseLayout
+  title={`${template.title}模板 - 快速生成 - superun AI制作 - 优势智设`}
+  description={`使用 superun AI 快速生成模板，${template.description}`}
+  hideHeader
+  hideFooter
+>
+  <div class="template-hub-page">
+    <header class="template-hub-nav">
+      <div class="template-hub-nav__inner">
+        <nav class="template-hub-nav__bar" aria-label="模板详情导航">
+          <a class="template-hub-nav__logo" href="/">superun</a>
+          <div class="template-hub-nav__links">
+            <a href="/">首页</a>
+            <a href="/docs/what-is-superun">文档中心</a>
+            <a href="/templates">模板中心</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="template-detail-page">
+      <div class="template-hub-container">
+        <div class="template-detail-breadcrumb">
+          <a href="/">首页</a>
+          <span>&gt;</span>
+          <a href="/templates">模板中心</a>
+          <span>&gt;</span>
+          <span>{template.title}</span>
+        </div>
+
+        <article class="template-detail-content">
+          <h1>{template.title}</h1>
+
+          {publishedAt ? (
+            <div class="template-detail-meta">
+              <time datetime={publishedDatetime}>
+                发布日期：{publishedAt}
+              </time>
+            </div>
+          ) : null}
+
+          {template.previewImage ? (
+            <img
+              class="template-detail-image"
+              src={template.previewImage}
+              alt={`${template.title} - superun AI 模板预览`}
+              loading="eager"
+              decoding="async"
+            />
+          ) : null}
+
+          <h2>介绍</h2>
+          <p>{template.description}</p>
+
+          <h3>模板详情</h3>
+          {(detailParagraphs.length > 0 ? detailParagraphs : [template.description]).map((paragraph) => (
+            <p>{paragraph}</p>
+          ))}
+
+          <div class="template-detail-actions">
+            {template.visitUrl ? (
+              <a class="template-detail-button" href={template.visitUrl} target="_blank" rel="nofollow noreferrer">
+                访问模板
+              </a>
+            ) : null}
+            <a class="template-detail-button template-detail-button--secondary" href="/">
+              创建类似应用
+            </a>
+          </div>
+
+          <a class="template-detail-back" href="/templates">← 返回模板列表</a>
+        </article>
+      </div>
+    </main>
+
+    <footer class="template-hub-footer">
+      <div class="template-hub-container">
+        <p>© 2026 superun Inc. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+</BaseLayout>

@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-03-28T21:03:40+0800",
+  "workerUrl": "https://superun-public-site.sub-store.workers.dev",
+  "currentLiveVersion": {
+    "deploymentId": "bf973d81-9fc3-4e5c-a3d0-c8cb90f44e7f",
+    "versionId": "1c52d8fa-9322-4a42-ad6a-e9841304326d",
+    "percentage": 100,
+    "createdOn": "2026-03-28T13:02:48.970368Z"
+  },
+  "docsSource": {
+    "runtimeSource": "src/data/site.ts",
+    "legacyAstroContentRemoved": true
+  },
+  "validation": {
+    "check": "pass",
+    "build": "pass",
+    "parity": {
+      "homeHtml": true,
+      "loginHtml": true,
+      "localCommunityHtml": true,
+      "iframeCommunityHtml": true,
+      "docHtml": true,
+      "mainCss": true
+    }
+  },
+  "notes": [
+    "Pass-9 raw deploy evidence under 20260327-superun-ui-fidelity-pass-9-epic remains historical evidence for cbfb4aff-ab40-4390-a7a5-dc90855f5ad1.",
+    "Current live now serves the corrected /home -> /web/community-view/<preview-slug> route chain, hides the runtime-invisible home sort control, and uses the detailed community intro shell.",
+    "The latest deploy evidence is mirrored in 20260328-home-community-route-recovery/raw/deploy-status.json."
+  ]
+}

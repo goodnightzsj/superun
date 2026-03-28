@@ -1,29 +1,39 @@
 ---
-import type { TemplateRecord } from '@/data/site';
-import { templateMedia } from '@/data/fidelity';
+import { getTemplateCommunityPath, type TemplateDirectoryRecord } from '@/data/template-directory';
 
 interface Props {
-  template: TemplateRecord;
+  template: TemplateDirectoryRecord;
 }
 
 const { template } = Astro.props;
-const media = templateMedia[template.slug];
+const href = getTemplateCommunityPath(template);
+const previewTheme = template.deviceType === 'mobile' ? 'mobile' : 'light';
+const chevronIcon = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5.25 2.75L9.25 7L5.25 11.25" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>`;
 ---
 
-<a class="template-card" data-category={template.category} data-preview-theme={template.previewTheme} href={`/web/community-view/${template.slug}`}>
+<a
+  class="template-card"
+  data-category={template.category}
+  data-preview-theme={previewTheme}
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={`${template.title} ${template.description}`}
+>
   <div class="template-card__media">
-    {media ? (
-      <img class="template-card__image" src={media.image} alt={template.title} loading="lazy" decoding="async" />
-    ) : null}
+    <img class="template-card__image" src={template.previewImage} alt={`${template.title} - superun AI 创建的项目预览`} loading="lazy" decoding="async" />
     <div class="template-card__hover-cta-wrap" aria-hidden="true">
       <span class="template-card__hover-cta" data-copy-key="home.cardRecreate">复刻</span>
     </div>
   </div>
 
   <div class="template-card__meta">
-    <div class="template-card__title-row">
-      <h3>{template.title}</h3>
+    <div class="template-card__copy">
+      <div class="template-card__title-row">
+        <span class="template-card__title">{template.title}</span>
+        <span class="template-card__title-chevron" set:html={chevronIcon}></span>
+      </div>
+      <div class="template-card__description">{template.description}</div>
     </div>
-    <p>{template.description}</p>
   </div>
 </a>
