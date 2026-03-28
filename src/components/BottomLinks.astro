@@ -1,25 +1,36 @@
 ---
 import type { DocRecord } from '@/data/site';
+import type { TemplateCatalogRecord } from '@/data/template-directory';
 import { publicPageCopy } from '@/data/fidelity';
 
 interface Props {
   docs: DocRecord[];
+  templates: Pick<TemplateCatalogRecord, 'templateSlug' | 'title'>[];
 }
 
-const { docs } = Astro.props;
+const { docs, templates } = Astro.props;
 const copy = publicPageCopy['zh-CN'];
 ---
 
 <section class="bottom-links" aria-label="帮助文档与延伸阅读">
   <div class="bottom-links__panel">
+    <input type="radio" name="bottom-links-tab" id="bottom-links-tab-docs" checked hidden />
+    <input type="radio" name="bottom-links-tab" id="bottom-links-tab-templates" hidden />
+
     <div class="bottom-links__tabs">
-      <span data-copy-key="home.bottomLatest">{copy.home.bottomLatest}</span>
-      <span data-copy-key="home.bottomTemplates">{copy.home.bottomTemplates}</span>
+      <label class="bottom-links__tab" for="bottom-links-tab-docs" data-copy-key="home.bottomLatest">{copy.home.bottomLatest}</label>
+      <label class="bottom-links__tab" for="bottom-links-tab-templates" data-copy-key="home.bottomTemplates">{copy.home.bottomTemplates}</label>
     </div>
 
-    <nav class="bottom-links__list" aria-label="帮助文档">
+    <nav class="bottom-links__list bottom-links__nav bottom-links__nav--docs" aria-label="帮助文档">
       {docs.map((doc) => (
         <a href={`/docs/${doc.slug}`}>{doc.title}</a>
+      ))}
+    </nav>
+
+    <nav class="bottom-links__list bottom-links__nav bottom-links__nav--templates" aria-label="推荐模板">
+      {templates.map((template) => (
+        <a href={`/templates/${template.templateSlug}`}>{template.title}</a>
       ))}
     </nav>
   </div>

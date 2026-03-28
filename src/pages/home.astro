@@ -5,7 +5,7 @@ import BottomLinks from '@/components/BottomLinks.astro';
 import TemplateCard from '@/components/TemplateCard.astro';
 import { docs, galleryCategories } from '@/data/site';
 import { homePlaceholderSequences, publicPageCopy } from '@/data/fidelity';
-import { homeTemplateDirectory } from '@/data/template-directory';
+import { homeTemplateDirectory, templateCatalog } from '@/data/template-directory';
 
 const copy = publicPageCopy['zh-CN'];
 const locales = JSON.stringify(publicPageCopy);
@@ -36,6 +36,7 @@ const homeDocs = [
   ...homeDocOrder.flatMap((slug) => docs.find((item) => item.slug === slug) ?? []),
   ...docs.filter((doc) => !homeDocOrder.includes(doc.slug)),
 ];
+const homeBottomTemplates = templateCatalog.slice(0, 15);
 ---
 
 <BaseLayout title={copy.home.title} hideFooter>
@@ -95,7 +96,7 @@ const homeDocs = [
   </section>
 
   <Footer />
-  <BottomLinks docs={homeDocs} />
+  <BottomLinks docs={homeDocs} templates={homeBottomTemplates} />
 
   <script is:inline define:vars={{ locales, placeholderSequences, defaultCategories }}>
     (() => {

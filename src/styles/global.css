@@ -4707,7 +4707,35 @@ body {
   line-height: 20px;
 }
 
-.bottom-links__tabs span:first-child {
+.bottom-links__tab {
+  cursor: pointer;
+  color: #6b7280;
+  transition: color 0.2s var(--ease-out-quart);
+}
+
+.bottom-links__tab:hover {
+  color: #1f2937;
+}
+
+#bottom-links-tab-docs:checked ~ .bottom-links__tabs label[for='bottom-links-tab-docs'],
+#bottom-links-tab-templates:checked ~ .bottom-links__tabs label[for='bottom-links-tab-templates'] {
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.bottom-links__nav--templates {
+  display: none;
+}
+
+#bottom-links-tab-templates:checked ~ .bottom-links__nav--docs {
+  display: none;
+}
+
+#bottom-links-tab-templates:checked ~ .bottom-links__nav--templates {
+  display: flex;
+}
+
+#bottom-links-tab-docs:checked ~ .bottom-links__tabs label[for='bottom-links-tab-docs'] {
   color: #333333;
 }
 
