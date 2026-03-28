@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import BottomLinks from '@/components/BottomLinks.astro';
 import Footer from '@/components/Footer.astro';
+import BottomLinks from '@/components/BottomLinks.astro';
 import TemplateCard from '@/components/TemplateCard.astro';
 import { docs, galleryCategories } from '@/data/site';
 import { homePlaceholderSequences, publicPageCopy } from '@/data/fidelity';
@@ -62,14 +62,26 @@ const homeDocs = [
   </section>
 
   <section class="home-gallery" id="recommended-templates">
-    <div class="home-gallery__header">
-      <h2 data-copy-key="home.galleryTitle">{copy.home.galleryTitle}</h2>
-      <div class="home-gallery__controls">
-        <div class="home-gallery__tabs" aria-label="模板分类">
-          {galleryCategories.map((category, index) => (
-            <button class={`home-gallery__tab ${index === 0 ? 'is-active' : ''}`} data-category={category} data-category-index={index} type="button">{category}</button>
-          ))}
+    <div class="home-gallery__sticky">
+      <div class="home-gallery__header">
+        <h2 data-copy-key="home.galleryTitle">{copy.home.galleryTitle}</h2>
+        <div class="home-gallery__controls">
+          <div class="home-gallery__tabs home-gallery__tabs--desktop" aria-label="模板分类">
+            {galleryCategories.map((category, index) => (
+              <button class={`home-gallery__tab ${index === 0 ? 'is-active' : ''}`} data-category={category} data-category-index={index} type="button">{category}</button>
+            ))}
+          </div>
         </div>
+      </div>
+
+      <div class="home-gallery__tabs home-gallery__tabs--mobile" aria-label="模板分类">
+        {galleryCategories.map((category, index) => (
+          <button class={`home-gallery__tab ${index === 0 ? 'is-active' : ''}`} data-category={category} data-category-index={index} type="button">{category}</button>
+        ))}
+      </div>
+
+      <div class="home-gallery__sort" hidden aria-hidden="true">
+        <button type="button">Created At</button>
       </div>
     </div>
 

@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-03-28T06:47:29+0800",
+  "workerUrl": "https://superun-public-site.sub-store.workers.dev",
+  "deployment": {
+    "deploymentId": "092539cc-06e6-4ea8-8cc3-67b7e7766963",
+    "versionId": "9a89302d-f18d-4175-ba51-c69b88f01cbe",
+    "percentage": 100,
+    "createdOn": "2026-03-27T22:46:01.887146Z"
+  },
+  "validation": {
+    "rootRedirectTo": "https://superun-public-site.sub-store.workers.dev/home",
+    "parity": {
+      "homeHtml": true,
+      "loginHtml": true,
+      "glowmindHtml": true,
+      "healthGuideHtml": true,
+      "docHtml": true,
+      "mainCss": true
+    },
+    "homeLeadingSlugs": [
+      "snapshot-sales-incentive-platform",
+      "snapshot-performance-star",
+      "snapshot-recruitment-flow",
+      "snapshot-health-guide",
+      "snapshot-ai-growth-workbench",
+      "snapshot-glowmind",
+      "snapshot-hr-payroll-suite",
+      "snapshot-sales-visit-assistant",
+      "snapshot-ai-coworker-platform",
+      "snapshot-workforce-engine",
+      "snapshot-performance-center",
+      "snapshot-smart-recruiting-platform"
+    ]
+  }
+}

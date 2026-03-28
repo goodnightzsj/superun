@@ -1,0 +1,10 @@
+{
+  "home_original": "https://www.superun.com/home",
+  "home_local": "http://127.0.0.1:4332/home",
+  "login_original": "https://www.superun.com/web/login?redirectUrl=%2Fhome&prompt=%E5%A4%8D%E5%88%BB%20%E8%96%AA%E6%93%8E",
+  "login_local": "http://127.0.0.1:4332/web/login?redirectUrl=%2Fhome&prompt=%E5%A4%8D%E5%88%BB%20%E8%96%AA%E6%93%8E",
+  "template_original": "https://www.superun.com/templates/xin-qing-ye-ji-ti-cheng-ji-xiao-guan-li-ping-tai",
+  "template_local": "http://127.0.0.1:4332/templates/xin-qing-ye-ji-ti-cheng-ji-xiao-guan-li-ping-tai",
+  "community_original": "https://www.superun.com/web/community-view/snapshot-health-guide",
+  "community_local": "http://127.0.0.1:4332/web/community-view/snapshot-health-guide"
+}

@@ -1,0 +1,11 @@
+{
+  "local_screenshot": ".codex-tasks/20260328-home-data-fidelity/raw/screenshots/home_local_after.png",
+  "live_screenshot": ".codex-tasks/20260328-home-data-fidelity/raw/screenshots/home_upstream_live.png",
+  "local_size": [1440, 4339],
+  "live_size": [1440, 4368],
+  "crop_size": [1440, 4339],
+  "full_mean_abs_diff": 7.96,
+  "hero": 0.56,
+  "cards": 10.08,
+  "footer": 7.29
+}

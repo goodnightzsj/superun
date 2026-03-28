@@ -1,0 +1,321 @@
+{
+  "name": "templates-index",
+  "url": "https://www.superun.com/templates",
+  "status": 200,
+  "title": "",
+  "h1": "",
+  "styles": [],
+  "template_links": [
+    {
+      "text": "superun — AI 产品设计平台，从灵感到现实\n用自然语言描述你的想法，superun AI 帮你直接生成网站和应用。零代码、零设计门槛，几分钟内将创意变为可上线的产品。适合创业者、中小企业、设计师和产品经理。",
+      "href": "https://www.superun.com/templates/superun-ai-chan-pin-she-ji-ping-tai-cong-ling-gan"
+    },
+    {
+      "text": "薪擎 - 业绩提成绩效管理平台\n面向中型企业的销售绩效管理平台，三端联动管理提成规则、核算审批与团队人效",
+      "href": "https://www.superun.com/templates/xin-qing-ye-ji-ti-cheng-ji-xiao-guan-li-ping-tai"
+    },
+    {
+      "text": "绩效星\n面向中大型企业的一站式绩效管理平台，覆盖目标制定、过程跟踪到绩效评估的完整闭环并支持三端协同与移动适配",
+      "href": "https://www.superun.com/templates/ji-xiao-xing"
+    },
+    {
+      "text": "招聘流程管理\n招聘流程管理：HR面试、人才评估与入职流程工作台",
+      "href": "https://www.superun.com/templates/zhao-pin-liu-cheng-guan-li"
+    },
+    {
+      "text": "养生之道：每日健康手册\n为追求健康生活的人士提供日常养生指导和实践方法。它能帮助用户轻松执行健康计划，提升生活品质。",
+      "href": "https://www.superun.com/templates/yang-sheng-zhi-dao-mei-ri-jian-kang-shou-ce"
+    },
+    {
+      "text": "AI 私域增长工作台\n为企业提供AI驱动的私域增长解决方案，助力客户管理和营销自动化。通过智能工具提升用户互动和转化效率。",
+      "href": "https://www.superun.com/templates/ai-si-yu-zeng-chang-gong-zuo-tai"
+    },
+    {
+      "text": "GlowMind: 面向美妆电商的 AI 客服与客户分层运营平台。\n一站式美妆智能客服与客户运营平台：知识库、客户分层、自动化规则与数据看板",
+      "href": "https://www.superun.com/templates/glowmind-mian-xiang-mei-zhuang-dian-shang-de-ai-ke"
+    },
+    {
+      "text": "AI 薪酬管理、人力资源与合规系统\n复刻单页落地页模板，支持中英双语、暗亮切换、粘性导航与演示组件",
+      "href": "https://www.superun.com/templates/ai-xin-chou-guan-li-ren-li-zi-yuan-yu-he-gui-xi-to"
+    },
+    {
+      "text": "销售拜访助手\n面向外勤销售的拜访与客户管理助手，支持本地运行与智能日报，含消息通知与主题定制",
+      "href": "https://www.superun.com/templates/xiao-shou-bai-fang-zhu-shou"
+    },
+    {
+      "text": "AI虚拟同事平台\n面向企业的AI同事管理平台，集中管理AI角色、流程与运营数据并支持可视化与移动适配",
+      "href": "https://www.superun.com/templates/ai-xu-ni-tong-shi-ping-tai"
+    },
+    {
+      "text": "人效决策引擎\n人效预测与招聘成本分析平台，涵盖离职风险、智能洞察及移动视图",
+      "href": "https://www.superun.com/templates/ren-xiao-jue-ce-yin-qing"
+    },
+    {
+      "text": "绩效校准中心（企业绩效评分分析与薪酬决策系统）\n一站式绩效薪酬管理平台，流程可视、任务优先、移动即办并支持校准与审批归档",
+      "href": "https://www.superun.com/templates/ji-xiao-xiao-zhun-zhong-xin-qi-ye-ji-xiao-ping-fen"
+    },
+    {
+      "text": "智能招聘管理平台\n智聘——智能招聘管理平台，简化流程并支持AI岗位描述生成",
+      "href": "https://www.superun.com/templates/zhi-neng-zhao-pin-guan-li-ping-tai"
+    },
+    {
+      "text": "OnboardAI - 员工生命周期管理\nOnboardAI旨在为企业提供全面的员工生命周期管理解决方案。它能优化员工入职、发展和离职流程，提升管理效率。",
+      "href": "https://www.superun.com/templates/onboardai-yuan-gong-sheng-ming-zhou-qi-guan-li"
+    },
+    {
+      "text": "TalentOS - 智能招聘系统\n为企业提供智能招聘工作流解决方案，提升招聘效率与质量。涵盖简历筛选、面试安排、人才管理等功能。",
+      "href": "https://www.superun.com/templates/talentos-zhi-neng-zhao-pin-xi-tong"
+    },
+    {
+      "text": "HR决策驾驶舱\n企业人力资源AI驾驶舱，覆盖招聘、入职、培养、绩效与保留的全流程智能决策平台",
+      "href": "https://www.superun.com/templates/hr-jue-ce-jia-shi-cang"
+    },
+    {
+      "text": "客户管理系统\n面向销售与客户成功团队的CRM演示平台，含线索、续约与AI洞察",
+      "href": "https://www.superun.com/templates/ke-hu-guan-li-xi-tong"
+    },
+    {
+      "text": "墨研 · 10行投研卡片可行动摘要\n墨研（MOYAN）用极简卡片呈现公司投研要点，支持搜索、对比、复制与导出",
+      "href": "https://www.superun.com/templates/mo-yan-10-hang-tou-yan-ka-pian-ke-hang-dong-zhai-y"
+    },
+    {
+      "text": "ThesisTerminal - 组合自证仪表盘\n深色投研风格的组合自证仪表盘，实时监控持仓状态并支持新增导入导出",
+      "href": "https://www.superun.com/templates/thesisterminal-zu-he-zi-zheng-yi-biao-pan"
+    },
+    {
+      "text": "A股事件日历\n面向A股投资者的催化剂日历，按市场与行业筛选事件，查看事件详情与数据总览",
+      "href": "https://www.superun.com/templates/a-gu-shi-jian-ri-li"
+    },
+    {
+      "text": "番茄钟\n暖沙手帐风番茄钟，任务关联、沉浸模式、统计、多主题音效与成就目标",
+      "href": "https://www.superun.com/templates/fan-qie-zhong"
+    },
+    {
+      "text": "大客户跟进系统\n一站式客户成功工作台，覆盖数据概览、客户管理、拜访计划与盘客分析",
+      "href": "https://www.superun.com/templates/da-ke-hu-gen-jin-xi-tong"
+    },
+    {
+      "text": "聚才云\n聚才云：聚才云智能招聘系统，含职位、候选人、面试与数据分析",
+      "href": "https://www.superun.com/templates/ju-cai-yun"
+    },
+    {
+      "text": "客满中心\n星辰科技·服务云：客服与监控中心，含交互示例与移动适配",
+      "href": "https://www.superun.com/templates/ke-man-zhong-xin"
+    },
+    {
+      "text": "供应链核心功能\n移动端供应链工作台，整合订单、库存、审批与物流管理，提供实时监控与异常预警",
+      "href": "https://www.superun.com/templates/gong-ying-lian-he-xin-gong-neng"
+    },
+    {
+      "text": "AI时代的未来教育\n面向哈佛系校友，探讨AI对未来教育的影响与变革。提供深度交流与思想碰撞的平台。",
+      "href": "https://www.superun.com/templates/ai-shi-dai-de-wei-lai-jiao-yu"
+    },
+    {
+      "text": "径山野趣｜杭州70亩亲子户外休闲基地\n杭州径山70亩亲子营地，集露营、烧烤、钓沼虾与婚礼定制及研学活动于一体",
+      "href": "https://www.superun.com/templates/jing-shan-ye-qu-hang-zhou-70-mu-qin-zi-hu-wai-xiu"
+    },
+    {
+      "text": "全栈工程师作品与履历\n面向招聘方的工业瑞士风格专业个人主页，涵盖简介、技能、经历与作品集",
+      "href": "https://www.superun.com/templates/quan-zhan-gong-cheng-shi-zuo-pin-yu-lv-li"
+    },
+    {
+      "text": "音乐节奏游戏\n赛博朋克风4键移动节奏游戏演示：含歌曲选择、快速制谱与触控优化",
+      "href": "https://www.superun.com/templates/yin-le-jie-zou-you-xi"
+    },
+    {
+      "text": "好品味词典：十二个判断原则\n好品味词典，帮你发现、记录并分享生活美学、设计与风格的精选词汇与灵感。",
+      "href": "https://www.superun.com/templates/hao-pin-wei-ci-dian-shi-er-ge-pan-duan-yuan-ze"
+    },
+    {
+      "text": "RETAIL LAB：门店用户画像分析系统\n企业用户画像平台，帮助团队整合、管理与可视化用户数据，快速产出画像洞察",
+      "href": "https://www.superun.com/templates/retail-lab-men-dian-yong-hu-hua-xiang-fen-xi-xi-to"
+    },
+    {
+      "text": "格陵兰国家介绍\n介绍格陵兰共和国的基本信息。提供国家名称的中文和英文对照。",
+      "href": "https://www.superun.com/templates/ge-ling-lan-guo-jia-jie-shao"
+    },
+    {
+      "text": "专业毛圈袜电商网站\n左右袜业专注于生产专业毛圈袜。提供高品质、舒适耐用的毛圈袜产品。",
+      "href": "https://www.superun.com/templates/zhuan-ye-mao-quan-wa-dian-shang-wang-zhan"
+    },
+    {
+      "text": "建筑设计事务所官网\n福州锐思建筑设计官网，展示设计理念、代表项目、改造案例与团队信息",
+      "href": "https://www.superun.com/templates/jian-zhu-she-ji-shi-wu-suo-guan-wang"
+    },
+    {
+      "text": "毛孩之家领养平台\n为宠物提供一个被温柔对待的家园，致力于保障每一个生命的福祉。提供宠物领养、寄养及相关服务。",
+      "href": "https://www.superun.com/templates/mao-hai-zhi-jia-ling-yang-ping-tai"
+    },
+    {
+      "text": "绩效管理系统\n面向企业的绩效管理与可视化看板，助力人力与管理层与员工高效协同",
+      "href": "https://www.superun.com/templates/ji-xiao-guan-li-xi-tong"
+    },
+    {
+      "text": "2026顶级夏校指南｜5–8年级美国与瑞士精选项目\n移动端学术风夏校库，一站式汇集美国与瑞士优质夏令营信息与选校指南",
+      "href": "https://www.superun.com/templates/2026-ding-ji-xia-xiao-zhi-nan-5-8-nian-ji-mei-guo"
+    },
+    {
+      "text": "像素3D沙盒\n交互式像素3D沙盒演示，体验可破坏方块、生存探索与菜单沉浸感视觉效果",
+      "href": "https://www.superun.com/templates/xiang-su-3d-sha-he"
+    },
+    {
+      "text": "赛康眼科\n赛康眼科医院官网，提供专家介绍、特色治疗与在线预约服务",
+      "href": "https://www.superun.com/templates/sai-kang-yan-ke"
+    },
+    {
+      "text": "高端适老旅居平台\n为长者提供安全舒适的旅游与长住选项和贴心服务信息一站式预约咨询平台",
+      "href": "https://www.superun.com/templates/gao-duan-shi-lao-lv-ju-ping-tai"
+    },
+    {
+      "text": "猫狗日常追剧\n为宠物爱好者提供治愈系萌宠日常内容。分享宠物生活点滴，带来温馨与快乐。",
+      "href": "https://www.superun.com/templates/mao-gou-ri-chang-zhui-ju"
+    },
+    {
+      "text": "NEON SYNAPSE | 音乐节奏游戏\n四轨霓虹节奏游戏演示，支持快速/精细制谱与音符精准同步、多首曲库、判定友好与粒子特效",
+      "href": "https://www.superun.com/templates/neon-synapse-yin-le-jie-zou-you-xi"
+    },
+    {
+      "text": "图片版权合规查询\n图片版权速查，提供一键上传识别、合规状态与置信度提示，并推荐免费替代图片资源",
+      "href": "https://www.superun.com/templates/tu-pian-ban-quan-he-gui-cha-xun"
+    },
+    {
+      "text": "行政满意度报告\n行政服务满意度可视化分析平台，提供城市/部门/题目多维洞察与建议跟踪",
+      "href": "https://www.superun.com/templates/hang-zheng-man-yi-du-bao-gao"
+    },
+    {
+      "text": "工业设计智能需求对话系统\n为工业设计团队提供从需求采集到成果导出的智能PRD与协作工具",
+      "href": "https://www.superun.com/templates/gong-ye-she-ji-zhi-neng-xu-qiu-dui-hua-xi-tong"
+    },
+    {
+      "text": "AI 理性消费决策器\nAI理性消费平台：可视化仪表盘评估消费风险与杠杆，提供智能决策与课堂演示模式",
+      "href": "https://www.superun.com/templates/ai-li-xing-xiao-fei-jue-ce-qi"
+    },
+    {
+      "text": "复古拍立得相机\n复古宝丽来相机主题，呈现沉浸式多层动态相片墙视觉特效与氛围感",
+      "href": "https://www.superun.com/templates/fu-gu-pai-li-de-xiang-ji"
+    },
+    {
+      "text": "企业一体化管理平台\nCENTRALE：一体化企业管理平台，整合决策支持、六大模块与可预约演示功能",
+      "href": "https://www.superun.com/templates/qi-ye-yi-ti-hua-guan-li-ping-tai"
+    },
+    {
+      "text": "智创她未来：AI赋能增长\n面向新时代女性，利用AI技术实现个人与事业的增长。通过智能创新，助力女性把握未来机遇，提升竞争力。",
+      "href": "https://www.superun.com/templates/zhi-chuang-ta-wei-lai-ai-fu-neng-zeng-chang"
+    },
+    {
+      "text": "猫砂直销站\n猫砂直销站，直供优质猫砂并提供完整的巴西葡萄牙语本地化购物体验",
+      "href": "https://www.superun.com/templates/mao-sha-zhi-xiao-zhan"
+    },
+    {
+      "text": "绩效管理系统\n面向销售团队的指标化绩效管理系统，覆盖目标下发、业绩填报、审核定分全流程，管理端与员工端双向联动",
+      "href": "https://www.superun.com/templates/ji-xiao-guan-li-xi-tong-1"
+    },
+    {
+      "text": "绩刻\n面向互联网/科技公司的全流程绩效管理平台，覆盖目标设定、多维评估、校准分析与结果发布，支持员工/TL/HR多角色协同",
+      "href": "https://www.superun.com/templates/ji-ke"
+    },
+    {
+      "text": "红十字会志愿者管理系统\n红十字会志愿者注册与后台一体化管理平台，含服务队、荣誉统计与数据概览",
+      "href": "https://www.superun.com/templates/hong-shi-zi-hui-zhi-yuan-zhe-guan-li-xi-tong"
+    },
+    {
+      "text": "美通香薰官网\n美通香薰官网：以叙事化视觉呈现香氛产品、ODM/OEM合作与在线询盘平台",
+      "href": "https://www.superun.com/templates/mei-tong-xiang-xun-guan-wang"
+    },
+    {
+      "text": "PDF智能拼接工具\n在本地浏览器可视化智能拼接、复制合并PDF并导出，支持空白检测与中文渲染",
+      "href": "https://www.superun.com/templates/pdf-zhi-neng-pin-jie-gong-ju"
+    },
+    {
+      "text": "陶小开AI客服运营指南\n陶小开AI决策局：纸质编辑风与AI工具，帮你高效梳理信息、支持决策",
+      "href": "https://www.superun.com/templates/tao-xiao-kai-ai-ke-fu-yun-ying-zhi-nan"
+    },
+    {
+      "text": "像素风番茄钟\n可复刻的像素风番茄钟应用，拥有丰富动画、PWA离线安装、目标与成就激励",
+      "href": "https://www.superun.com/templates/xiang-su-feng-fan-qie-zhong"
+    },
+    {
+      "text": "清瑜拾光馆 | 城市照明规划\n以诗意光影呈现城市与公共空间的专业照明设计案例与品牌创作服务",
+      "href": "https://www.superun.com/templates/qing-yu-shi-guang-guan-cheng-shi-zhao-ming-gui-hua"
+    },
+    {
+      "text": "浙江省未来科普教育研究院\n浙江省未来科普教育研究院官网演示，聚焦沉浸式科普资源与交互体验",
+      "href": "https://www.superun.com/templates/zhe-jiang-sheng-wei-lai-ke-pu-jiao-yu-yan-jiu-yuan"
+    },
+    {
+      "text": "健身房设备管理平台\n统一管理健身器材的状态、维护与预约，实时掌握设备使用与安全情况。支持故障告警、保养排期和数据看板，帮助场馆降低故障率、提升运营效率。",
+      "href": "https://www.superun.com/templates/jian-shen-fang-she-bei-guan-li-ping-tai"
+    },
+    {
+      "text": "实时地球观测地图\nInteractive mobile globe with layered maps, live locations, weather, and customizable themes.",
+      "href": "https://www.superun.com/templates/shi-shi-di-qiu-guan-ce-di-tu"
+    },
+    {
+      "text": "智能衣橱：每日穿搭推荐\n衣橱搭配助手提供结合实时天气与场合的智能穿搭建议，让你轻松挑选每日造型与风格",
+      "href": "https://www.superun.com/templates/zhi-neng-yi-chu-mei-ri-chuan-da-tui-jian"
+    },
+    {
+      "text": "Personal Portfolio\nA warm, editorial personal portfolio showcasing skills, projects, and a downloadable resume.",
+      "href": "https://www.superun.com/templates/personal-portfolio"
+    },
+    {
+      "text": "汉字动效灵感库\n沉浸式每日單字展示，結合互動排版與情緒圖像，可收藏、瀏覽檔案抽屜並支援鍵盤導航",
+      "href": "https://www.superun.com/templates/han-zi-dong-xiao-ling-gan-ku"
+    },
+    {
+      "text": "陶小开AI决策局：客服指南伴读\n陶小开的决策局，书籍化课程与沉浸式阅读，逐章提供实战级观点与洞察",
+      "href": "https://www.superun.com/templates/tao-xiao-kai-ai-jue-ce-ju-ke-fu-zhi-nan-ban-du"
+    },
+    {
+      "text": "傣族纹样万花筒\n傣族纹样驱动的交互式万花筒生成与演示平台，支持AI语义配色与实时控制",
+      "href": "https://www.superun.com/templates/dai-zu-wen-yang-wan-hua-tong"
+    },
+    {
+      "text": "乌拉圭国际海报双年展\n个人设计师作品集，暗色侘寂风格，动感标题、互动预览与时间线履历，支持PWA安装",
+      "href": "https://www.superun.com/templates/wu-la-gui-guo-ji-hai-bao-shuang-nian-zhan"
+    },
+    {
+      "text": "AI分析总结\n沉浸式可视化人工智能分析报告，呈现使用趋势、成本与模型排行洞察",
+      "href": "https://www.superun.com/templates/ai-fen-xi-zong-jie"
+    },
+    {
+      "text": "太阳系星际档案馆\n交互式三维太阳系探秘平台，可调节时间与视角，查看高分辨率行星细节与动态",
+      "href": "https://www.superun.com/templates/tai-yang-xi-xing-ji-dang-an-guan"
+    },
+    {
+      "text": "地铁路线规划\n为多站点出行提供可比较的地铁路线规划与优化推荐，含批量导入、路线对比与多策略选择",
+      "href": "https://www.superun.com/templates/di-tie-lu-xian-gui-hua"
+    },
+    {
+      "text": "AI智能作业辅导平台\n面向小学生的作业辅导平台，提供AI步骤解析、拍照上传、错题本与家长学习分析",
+      "href": "https://www.superun.com/templates/ai-zhi-neng-zuo-ye-fu-dao-ping-tai"
+    },
+    {
+      "text": "中考数学知识图谱\n中考数学知识图谱可视化平台，整合考点题型与学习资源，卡片式浏览与掌握标记",
+      "href": "https://www.superun.com/templates/zhong-kao-shu-xue-zhi-shi-tu-pu"
+    },
+    {
+      "text": "钢铁军团策略对战游戏\n沉浸式现代军事策略模拟，管理部队与城镇扩张、动态战场与昼夜天气系统，体验无尽战争",
+      "href": "https://www.superun.com/templates/gang-tie-jun-tuan-ce-lve-dui-zhan-you-xi"
+    },
+    {
+      "text": "仙都景区官网\n仙都景区官方网站，提供景区介绍、实时看板、在线票务、攻略推荐与活动线路一站式服务",
+      "href": "https://www.superun.com/templates/xian-du-jing-qu-guan-wang"
+    },
+    {
+      "text": "Łukasz Łagocki Music\nMinimal portfolio site for Łukasz Łagocki — electronic and improvised music.",
+      "href": "https://www.superun.com/templates/ukasz-agocki-music"
+    },
+    {
+      "text": "数据架构图\n可视化智慧商业四层数据架构图，支持交互、导出与技术栈查看，并适配商场场景需求",
+      "href": "https://www.superun.com/templates/shu-ju-jia-gou-tu"
+    }
+  ],
+  "community_links": [],
+  "login_links": [],
+  "buttons": [],
+  "contains_missing_session": false,
+  "contains_auto_remix": false,
+  "contains_fold_panel": false,
+  "html_length": 50796
+}

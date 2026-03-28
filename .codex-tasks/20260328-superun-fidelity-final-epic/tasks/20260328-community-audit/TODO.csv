@@ -1,0 +1,5 @@
+id,task,status,acceptance_criteria,validation_command,completed_at,retry_count,notes
+1,Capture local-recreation route evidence,DONE,Representative local-recreation evidence is saved,echo SKIP,2026-03-28,0,GlowMind local evidence is summarized in raw/metrics.md.
+2,Capture iframe-backed route evidence,DONE,Representative iframe route evidence is saved,echo SKIP,2026-03-28,0,Health Guide iframe evidence is summarized in raw/metrics.md.
+3,Extract concrete fidelity gaps,DONE,A route-type gap list exists,echo SKIP,2026-03-28,0,Gap list is summarized in PROGRESS.md.
+4,Write implementation-facing audit summary,DONE,A concise audit summary exists in PROGRESS.md,echo SKIP,2026-03-28,0,Summary explicitly marks upstream architecture drift.

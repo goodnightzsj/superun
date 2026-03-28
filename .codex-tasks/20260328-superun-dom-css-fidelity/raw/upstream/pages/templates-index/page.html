@@ -1,0 +1,1098 @@
+<html lang="zh-CN"><head><link rel="icon" type="image/svg+xml" href="https://b.ux-cdn.com/superun/20250912/favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="https://b.ux-cdn.com/superun/2025915/favicon.png"><meta name="theme-color" content="#24A50D"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>模板中心 - 优势智设</title><meta name="description" content="浏览 superun 平台的精选模板，快速开始您的项目"><meta name="keywords" content="superun,优势智设,AI网站构建,AI应用构建,无代码平台,网站开发,AI开发,快速原型,可视化编辑,代码编辑,网页应用,智能建站"><meta property="og:title" content="模板中心 - 优势智设"><meta property="og:description" content="浏览 superun 平台的精选模板，快速开始您的项目"><meta property="og:url" content="https://www.superun.com/templates"><meta property="og:locale" content="zh_CN"><meta property="og:type" content="website"><style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #fff;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      header {
+        background-color: #fff;
+        border-bottom: 1px solid #e0e0e0;
+        padding: 1rem 0;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+        text-decoration: none;
+      }
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+      .nav-links a {
+        color: #666;
+        text-decoration: none;
+      }
+      .nav-links a:hover {
+        color: #333;
+      }
+      main {
+        padding: 2rem 0;
+        min-height: 60vh;
+      }
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #333;
+      }
+      h2 {
+        font-size: 2rem;
+        margin: 2rem 0 1rem;
+        color: #333;
+      }
+      h3 {
+        font-size: 1.5rem;
+        margin: 1.5rem 0 0.75rem;
+        color: #333;
+      }
+      p {
+        margin-bottom: 1rem;
+        color: #666;
+      }
+      .breadcrumb {
+        margin-bottom: 2rem;
+        color: #999;
+        font-size: 0.9rem;
+      }
+      .breadcrumb a {
+        color: #666;
+        text-decoration: none;
+      }
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+      .article-grid, .template-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+      .article-card, .template-card {
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 1.5rem;
+        background-color: #fff;
+        transition: box-shadow 0.3s;
+      }
+      .article-card:hover, .template-card:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .article-card a, .template-card a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .article-card h3, .template-card h3 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        font-size: 1.25rem;
+      }
+      .article-card p, .template-card p {
+        margin-bottom: 0.5rem;
+        color: #666;
+        font-size: 0.9rem;
+      }
+      .keywords {
+        font-size: 0.85rem;
+        color: #999;
+        margin-top: 0.5rem;
+      }
+      .template-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+      }
+      .content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .content img {
+        max-width: 100%;
+        height: auto;
+        margin: 1rem 0;
+      }
+      .content ul {
+        margin: 1rem 0;
+        padding-left: 2rem;
+      }
+      .content li {
+        margin-bottom: 0.5rem;
+      }
+      .content hr {
+        margin: 2rem 0;
+        border: none;
+        border-top: 1px solid #e0e0e0;
+      }
+      .cta-buttons {
+        margin-top: 2rem;
+        display: flex;
+        gap: 1rem;
+      }
+      .btn {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
+      .btn:hover {
+        background-color: #0056b3;
+      }
+      .btn-secondary {
+        background-color: #6c757d;
+      }
+      .btn-secondary:hover {
+        background-color: #545b62;
+      }
+      footer {
+        background-color: #f8f9fa;
+        border-top: 1px solid #e0e0e0;
+        padding: 2rem 0;
+        margin-top: 4rem;
+        text-align: center;
+        color: #666;
+      }
+      .back-link {
+        display: inline-block;
+        margin-top: 2rem;
+        color: #666;
+        text-decoration: none;
+      }
+      .back-link:hover {
+        text-decoration: underline;
+      }
+      .related-articles {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid #e0e0e0;
+      }
+    </style><meta name="twitter:title" content="模板中心 - 优势智设"><link rel="canonical" href="https://www.superun.com/templates"><meta name="twitter:description" content="浏览 superun 平台的精选模板，快速开始您的项目"></head><body>
+    <header><div class="container">
+        <nav><a href="https://www.superun.com/" class="logo">superun</a>
+          <ul class="nav-links"><li><a href="https://www.superun.com/">首页</a></li>
+            <li><a href="https://www.superun.com/docs">文档中心</a></li>
+            <li><a href="https://www.superun.com/templates">模板中心</a></li>
+          </ul></nav></div>
+    </header><main><div class="container">
+        
+    <h1>模板中心</h1>
+    <p>浏览 superun 平台的精选模板，快速开始您的项目</p>
+    <div class="template-grid">
+      
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/superun-ai-chan-pin-she-ji-ping-tai-cong-ling-gan">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260303174946/f1xltnap.jpeg" alt="superun — AI 产品设计平台，从灵感到现实 - superun AI 模板预览" class="template-image"><h3>superun — AI 产品设计平台，从灵感到现实</h3>
+        <p>用自然语言描述你的想法，superun AI 帮你直接生成网站和应用。零代码、零设计门槛，几分钟内将创意变为可上线的产品。适合创业者、中小企业、设计师和产品经理。</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/xin-qing-ye-ji-ti-cheng-ji-xiao-guan-li-ping-tai">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260325165147/1supk66e.png" alt="薪擎 - 业绩提成绩效管理平台 - superun AI 模板预览" class="template-image"><h3>薪擎 - 业绩提成绩效管理平台</h3>
+        <p>面向中型企业的销售绩效管理平台，三端联动管理提成规则、核算审批与团队人效</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ji-xiao-xing">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260321172152/ngs8ngmo.png" alt="绩效星 - superun AI 模板预览" class="template-image"><h3>绩效星</h3>
+        <p>面向中大型企业的一站式绩效管理平台，覆盖目标制定、过程跟踪到绩效评估的完整闭环并支持三端协同与移动适配</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/zhao-pin-liu-cheng-guan-li">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260326201853/h3s1zdym.png" alt="招聘流程管理 - superun AI 模板预览" class="template-image"><h3>招聘流程管理</h3>
+        <p>招聘流程管理：HR面试、人才评估与入职流程工作台</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/yang-sheng-zhi-dao-mei-ri-jian-kang-shou-ce">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260226112337/woyh84e8.png" alt="养生之道：每日健康手册 - superun AI 模板预览" class="template-image"><h3>养生之道：每日健康手册</h3>
+        <p>为追求健康生活的人士提供日常养生指导和实践方法。它能帮助用户轻松执行健康计划，提升生活品质。</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ai-si-yu-zeng-chang-gong-zuo-tai">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260317121854/pxzh69hr.png" alt="AI 私域增长工作台 - superun AI 模板预览" class="template-image"><h3>AI 私域增长工作台</h3>
+        <p>为企业提供AI驱动的私域增长解决方案，助力客户管理和营销自动化。通过智能工具提升用户互动和转化效率。</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/glowmind-mian-xiang-mei-zhuang-dian-shang-de-ai-ke">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260310185501/anxvm1i8.png" alt="GlowMind: 面向美妆电商的 AI 客服与客户分层运营平台。 - superun AI 模板预览" class="template-image"><h3>GlowMind: 面向美妆电商的 AI 客服与客户分层运营平台。</h3>
+        <p>一站式美妆智能客服与客户运营平台：知识库、客户分层、自动化规则与数据看板</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ai-xin-chou-guan-li-ren-li-zi-yuan-yu-he-gui-xi-to">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260309225929/9fzcd53g.png" alt="AI 薪酬管理、人力资源与合规系统 - superun AI 模板预览" class="template-image"><h3>AI 薪酬管理、人力资源与合规系统</h3>
+        <p>复刻单页落地页模板，支持中英双语、暗亮切换、粘性导航与演示组件</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/xiao-shou-bai-fang-zhu-shou">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260326204604/wkgg9ddy.png" alt="销售拜访助手 - superun AI 模板预览" class="template-image"><h3>销售拜访助手</h3>
+        <p>面向外勤销售的拜访与客户管理助手，支持本地运行与智能日报，含消息通知与主题定制</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ai-xu-ni-tong-shi-ping-tai">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260309223354/xpu68e6v.png" alt="AI虚拟同事平台 - superun AI 模板预览" class="template-image"><h3>AI虚拟同事平台</h3>
+        <p>面向企业的AI同事管理平台，集中管理AI角色、流程与运营数据并支持可视化与移动适配</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ren-xiao-jue-ce-yin-qing">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260309181218/1nhe22gt.png" alt="人效决策引擎 - superun AI 模板预览" class="template-image"><h3>人效决策引擎</h3>
+        <p>人效预测与招聘成本分析平台，涵盖离职风险、智能洞察及移动视图</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ji-xiao-xiao-zhun-zhong-xin-qi-ye-ji-xiao-ping-fen">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260309180302/ukzoq7gk.png" alt="绩效校准中心（企业绩效评分分析与薪酬决策系统） - superun AI 模板预览" class="template-image"><h3>绩效校准中心（企业绩效评分分析与薪酬决策系统）</h3>
+        <p>一站式绩效薪酬管理平台，流程可视、任务优先、移动即办并支持校准与审批归档</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/zhi-neng-zhao-pin-guan-li-ping-tai">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260326221513/v9w44mqm.png" alt="智能招聘管理平台 - superun AI 模板预览" class="template-image"><h3>智能招聘管理平台</h3>
+        <p>智聘——智能招聘管理平台，简化流程并支持AI岗位描述生成</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/onboardai-yuan-gong-sheng-ming-zhou-qi-guan-li">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260309180645/sre6krkr.png" alt="OnboardAI - 员工生命周期管理 - superun AI 模板预览" class="template-image"><h3>OnboardAI - 员工生命周期管理</h3>
+        <p>OnboardAI旨在为企业提供全面的员工生命周期管理解决方案。它能优化员工入职、发展和离职流程，提升管理效率。</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/talentos-zhi-neng-zhao-pin-xi-tong">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260309193600/hja1wts1.png" alt="TalentOS - 智能招聘系统 - superun AI 模板预览" class="template-image"><h3>TalentOS - 智能招聘系统</h3>
+        <p>为企业提供智能招聘工作流解决方案，提升招聘效率与质量。涵盖简历筛选、面试安排、人才管理等功能。</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/hr-jue-ce-jia-shi-cang">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260309191228/a4jt3ohe.png" alt="HR决策驾驶舱 - superun AI 模板预览" class="template-image"><h3>HR决策驾驶舱</h3>
+        <p>企业人力资源AI驾驶舱，覆盖招聘、入职、培养、绩效与保留的全流程智能决策平台</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ke-hu-guan-li-xi-tong">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260326213533/dk57nx3c.png" alt="客户管理系统 - superun AI 模板预览" class="template-image"><h3>客户管理系统</h3>
+        <p>面向销售与客户成功团队的CRM演示平台，含线索、续约与AI洞察</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/mo-yan-10-hang-tou-yan-ka-pian-ke-hang-dong-zhai-y">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260225184736/goza000s.png" alt="墨研 · 10行投研卡片可行动摘要 - superun AI 模板预览" class="template-image"><h3>墨研 · 10行投研卡片可行动摘要</h3>
+        <p>墨研（MOYAN）用极简卡片呈现公司投研要点，支持搜索、对比、复制与导出</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/thesisterminal-zu-he-zi-zheng-yi-biao-pan">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260307212414/ujh8lpyo.png" alt="ThesisTerminal - 组合自证仪表盘 - superun AI 模板预览" class="template-image"><h3>ThesisTerminal - 组合自证仪表盘</h3>
+        <p>深色投研风格的组合自证仪表盘，实时监控持仓状态并支持新增导入导出</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/a-gu-shi-jian-ri-li">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260225103934/tb6k63i7.png" alt="A股事件日历 - superun AI 模板预览" class="template-image"><h3>A股事件日历</h3>
+        <p>面向A股投资者的催化剂日历，按市场与行业筛选事件，查看事件详情与数据总览</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/fan-qie-zhong">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260312174006/0iaocepf.png" alt="番茄钟 - superun AI 模板预览" class="template-image"><h3>番茄钟</h3>
+        <p>暖沙手帐风番茄钟，任务关联、沉浸模式、统计、多主题音效与成就目标</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/da-ke-hu-gen-jin-xi-tong">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260309170712/80w523wm.png" alt="大客户跟进系统 - superun AI 模板预览" class="template-image"><h3>大客户跟进系统</h3>
+        <p>一站式客户成功工作台，覆盖数据概览、客户管理、拜访计划与盘客分析</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ju-cai-yun">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260309171657/wnwde2ww.png" alt="聚才云 - superun AI 模板预览" class="template-image"><h3>聚才云</h3>
+        <p>聚才云：聚才云智能招聘系统，含职位、候选人、面试与数据分析</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ke-man-zhong-xin">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260309171152/j2d454hw.png" alt="客满中心 - superun AI 模板预览" class="template-image"><h3>客满中心</h3>
+        <p>星辰科技·服务云：客服与监控中心，含交互示例与移动适配</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/gong-ying-lian-he-xin-gong-neng">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260212201859/fagh39ej.png" alt="供应链核心功能 - superun AI 模板预览" class="template-image"><h3>供应链核心功能</h3>
+        <p>移动端供应链工作台，整合订单、库存、审批与物流管理，提供实时监控与异常预警</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ai-shi-dai-de-wei-lai-jiao-yu">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260226184025/jscw0adn.png" alt="AI时代的未来教育 - superun AI 模板预览" class="template-image"><h3>AI时代的未来教育</h3>
+        <p>面向哈佛系校友，探讨AI对未来教育的影响与变革。提供深度交流与思想碰撞的平台。</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/jing-shan-ye-qu-hang-zhou-70-mu-qin-zi-hu-wai-xiu">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260130154448/88fgmnbi.png" alt="径山野趣｜杭州70亩亲子户外休闲基地 - superun AI 模板预览" class="template-image"><h3>径山野趣｜杭州70亩亲子户外休闲基地</h3>
+        <p>杭州径山70亩亲子营地，集露营、烧烤、钓沼虾与婚礼定制及研学活动于一体</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/quan-zhan-gong-cheng-shi-zuo-pin-yu-lv-li">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260130000713/wwvhrpi2.png" alt="全栈工程师作品与履历 - superun AI 模板预览" class="template-image"><h3>全栈工程师作品与履历</h3>
+        <p>面向招聘方的工业瑞士风格专业个人主页，涵盖简介、技能、经历与作品集</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/yin-le-jie-zou-you-xi">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260212180007/j1v2wjhc.png" alt="音乐节奏游戏 - superun AI 模板预览" class="template-image"><h3>音乐节奏游戏</h3>
+        <p>赛博朋克风4键移动节奏游戏演示：含歌曲选择、快速制谱与触控优化</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/hao-pin-wei-ci-dian-shi-er-ge-pan-duan-yuan-ze">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260128225540/p2bip9d8.png" alt="好品味词典：十二个判断原则 - superun AI 模板预览" class="template-image"><h3>好品味词典：十二个判断原则</h3>
+        <p>好品味词典，帮你发现、记录并分享生活美学、设计与风格的精选词汇与灵感。</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/retail-lab-men-dian-yong-hu-hua-xiang-fen-xi-xi-to">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260127154212/r7fyz16r.png" alt="RETAIL LAB：门店用户画像分析系统 - superun AI 模板预览" class="template-image"><h3>RETAIL LAB：门店用户画像分析系统</h3>
+        <p>企业用户画像平台，帮助团队整合、管理与可视化用户数据，快速产出画像洞察</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ge-ling-lan-guo-jia-jie-shao">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260120211406/k6wmzdzv.png" alt="格陵兰国家介绍 - superun AI 模板预览" class="template-image"><h3>格陵兰国家介绍</h3>
+        <p>介绍格陵兰共和国的基本信息。提供国家名称的中文和英文对照。</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/zhuan-ye-mao-quan-wa-dian-shang-wang-zhan">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260209212741/2jigs8x7.png" alt="专业毛圈袜电商网站 - superun AI 模板预览" class="template-image"><h3>专业毛圈袜电商网站</h3>
+        <p>左右袜业专注于生产专业毛圈袜。提供高品质、舒适耐用的毛圈袜产品。</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/jian-zhu-she-ji-shi-wu-suo-guan-wang">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260118175001/6nxnk2h8.png" alt="建筑设计事务所官网 - superun AI 模板预览" class="template-image"><h3>建筑设计事务所官网</h3>
+        <p>福州锐思建筑设计官网，展示设计理念、代表项目、改造案例与团队信息</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/mao-hai-zhi-jia-ling-yang-ping-tai">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260201214724/01b2wp2i.png" alt="毛孩之家领养平台 - superun AI 模板预览" class="template-image"><h3>毛孩之家领养平台</h3>
+        <p>为宠物提供一个被温柔对待的家园，致力于保障每一个生命的福祉。提供宠物领养、寄养及相关服务。</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ji-xiao-guan-li-xi-tong">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260306114245/tpnngq6l.png" alt="绩效管理系统 - superun AI 模板预览" class="template-image"><h3>绩效管理系统</h3>
+        <p>面向企业的绩效管理与可视化看板，助力人力与管理层与员工高效协同</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/2026-ding-ji-xia-xiao-zhi-nan-5-8-nian-ji-mei-guo">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260205150944/prztdcl3.png" alt="2026顶级夏校指南｜5–8年级美国与瑞士精选项目 - superun AI 模板预览" class="template-image"><h3>2026顶级夏校指南｜5–8年级美国与瑞士精选项目</h3>
+        <p>移动端学术风夏校库，一站式汇集美国与瑞士优质夏令营信息与选校指南</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/xiang-su-3d-sha-he">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260224212130/877f6cib.png" alt="像素3D沙盒 - superun AI 模板预览" class="template-image"><h3>像素3D沙盒</h3>
+        <p>交互式像素3D沙盒演示，体验可破坏方块、生存探索与菜单沉浸感视觉效果</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/sai-kang-yan-ke">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260130144043/60inbzyf.png" alt="赛康眼科 - superun AI 模板预览" class="template-image"><h3>赛康眼科</h3>
+        <p>赛康眼科医院官网，提供专家介绍、特色治疗与在线预约服务</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/gao-duan-shi-lao-lv-ju-ping-tai">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260124172932/xzgeznht.png" alt="高端适老旅居平台 - superun AI 模板预览" class="template-image"><h3>高端适老旅居平台</h3>
+        <p>为长者提供安全舒适的旅游与长住选项和贴心服务信息一站式预约咨询平台</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/mao-gou-ri-chang-zhui-ju">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260120165539/9g6ktvmr.png" alt="猫狗日常追剧 - superun AI 模板预览" class="template-image"><h3>猫狗日常追剧</h3>
+        <p>为宠物爱好者提供治愈系萌宠日常内容。分享宠物生活点滴，带来温馨与快乐。</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/neon-synapse-yin-le-jie-zou-you-xi">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260121151416/8en5g157.png" alt="NEON SYNAPSE | 音乐节奏游戏 - superun AI 模板预览" class="template-image"><h3>NEON SYNAPSE | 音乐节奏游戏</h3>
+        <p>四轨霓虹节奏游戏演示，支持快速/精细制谱与音符精准同步、多首曲库、判定友好与粒子特效</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/tu-pian-ban-quan-he-gui-cha-xun">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260105111331/cfhhl8jh.png" alt="图片版权合规查询 - superun AI 模板预览" class="template-image"><h3>图片版权合规查询</h3>
+        <p>图片版权速查，提供一键上传识别、合规状态与置信度提示，并推荐免费替代图片资源</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/hang-zheng-man-yi-du-bao-gao">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251222171941/sfx3u2f3.png" alt="行政满意度报告 - superun AI 模板预览" class="template-image"><h3>行政满意度报告</h3>
+        <p>行政服务满意度可视化分析平台，提供城市/部门/题目多维洞察与建议跟踪</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/gong-ye-she-ji-zhi-neng-xu-qiu-dui-hua-xi-tong">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260119183300/thumfomb.png" alt="工业设计智能需求对话系统 - superun AI 模板预览" class="template-image"><h3>工业设计智能需求对话系统</h3>
+        <p>为工业设计团队提供从需求采集到成果导出的智能PRD与协作工具</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ai-li-xing-xiao-fei-jue-ce-qi">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251210004530/xp0xowaa.png" alt="AI 理性消费决策器 - superun AI 模板预览" class="template-image"><h3>AI 理性消费决策器</h3>
+        <p>AI理性消费平台：可视化仪表盘评估消费风险与杠杆，提供智能决策与课堂演示模式</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/fu-gu-pai-li-de-xiang-ji">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251126201645/9ebgm1xh.png" alt="复古拍立得相机 - superun AI 模板预览" class="template-image"><h3>复古拍立得相机</h3>
+        <p>复古宝丽来相机主题，呈现沉浸式多层动态相片墙视觉特效与氛围感</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/qi-ye-yi-ti-hua-guan-li-ping-tai">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260309224547/9wajxomt.png" alt="企业一体化管理平台 - superun AI 模板预览" class="template-image"><h3>企业一体化管理平台</h3>
+        <p>CENTRALE：一体化企业管理平台，整合决策支持、六大模块与可预约演示功能</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/zhi-chuang-ta-wei-lai-ai-fu-neng-zeng-chang">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260116203137/ywqn1b6k.png" alt="智创她未来：AI赋能增长 - superun AI 模板预览" class="template-image"><h3>智创她未来：AI赋能增长</h3>
+        <p>面向新时代女性，利用AI技术实现个人与事业的增长。通过智能创新，助力女性把握未来机遇，提升竞争力。</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/mao-sha-zhi-xiao-zhan">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251212060429/xglgoae5.png" alt="猫砂直销站 - superun AI 模板预览" class="template-image"><h3>猫砂直销站</h3>
+        <p>猫砂直销站，直供优质猫砂并提供完整的巴西葡萄牙语本地化购物体验</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ji-xiao-guan-li-xi-tong-1">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260325161126/kmt6awsw.png" alt="绩效管理系统 - superun AI 模板预览" class="template-image"><h3>绩效管理系统</h3>
+        <p>面向销售团队的指标化绩效管理系统，覆盖目标下发、业绩填报、审核定分全流程，管理端与员工端双向联动</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ji-ke">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260321173743/9lvg9lzr.png" alt="绩刻 - superun AI 模板预览" class="template-image"><h3>绩刻</h3>
+        <p>面向互联网/科技公司的全流程绩效管理平台，覆盖目标设定、多维评估、校准分析与结果发布，支持员工/TL/HR多角色协同</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/hong-shi-zi-hui-zhi-yuan-zhe-guan-li-xi-tong">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260129164613/as22ua1f.png" alt="红十字会志愿者管理系统 - superun AI 模板预览" class="template-image"><h3>红十字会志愿者管理系统</h3>
+        <p>红十字会志愿者注册与后台一体化管理平台，含服务队、荣誉统计与数据概览</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/mei-tong-xiang-xun-guan-wang">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260131192114/6xmgh5ss.png" alt="美通香薰官网 - superun AI 模板预览" class="template-image"><h3>美通香薰官网</h3>
+        <p>美通香薰官网：以叙事化视觉呈现香氛产品、ODM/OEM合作与在线询盘平台</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/pdf-zhi-neng-pin-jie-gong-ju">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260121141607/awaae5ag.png" alt="PDF智能拼接工具 - superun AI 模板预览" class="template-image"><h3>PDF智能拼接工具</h3>
+        <p>在本地浏览器可视化智能拼接、复制合并PDF并导出，支持空白检测与中文渲染</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/tao-xiao-kai-ai-ke-fu-yun-ying-zhi-nan">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251222200011/d6ku49wq.png" alt="陶小开AI客服运营指南 - superun AI 模板预览" class="template-image"><h3>陶小开AI客服运营指南</h3>
+        <p>陶小开AI决策局：纸质编辑风与AI工具，帮你高效梳理信息、支持决策</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/xiang-su-feng-fan-qie-zhong">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260117214701/u7vzm5hh.png" alt="像素风番茄钟 - superun AI 模板预览" class="template-image"><h3>像素风番茄钟</h3>
+        <p>可复刻的像素风番茄钟应用，拥有丰富动画、PWA离线安装、目标与成就激励</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/qing-yu-shi-guang-guan-cheng-shi-zhao-ming-gui-hua">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251214163147/slb3nfif.png" alt="清瑜拾光馆 | 城市照明规划 - superun AI 模板预览" class="template-image"><h3>清瑜拾光馆 | 城市照明规划</h3>
+        <p>以诗意光影呈现城市与公共空间的专业照明设计案例与品牌创作服务</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/zhe-jiang-sheng-wei-lai-ke-pu-jiao-yu-yan-jiu-yuan">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251215131800/pvxe7qjm.png" alt="浙江省未来科普教育研究院 - superun AI 模板预览" class="template-image"><h3>浙江省未来科普教育研究院</h3>
+        <p>浙江省未来科普教育研究院官网演示，聚焦沉浸式科普资源与交互体验</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/jian-shen-fang-she-bei-guan-li-ping-tai">
+        <img src="https://b.ux-cdn.com/uxarts/puppeteer/snapshot/1762327594542_mPwiYhIOb3.png" alt="健身房设备管理平台 - superun AI 模板预览" class="template-image"><h3>健身房设备管理平台</h3>
+        <p>统一管理健身器材的状态、维护与预约，实时掌握设备使用与安全情况。支持故障告警、保养排期和数据看板，帮助场馆降低故障率、提升运营效率。</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/shi-shi-di-qiu-guan-ce-di-tu">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251223160907/c0f9z9sw.png" alt="实时地球观测地图 - superun AI 模板预览" class="template-image"><h3>实时地球观测地图</h3>
+        <p>Interactive mobile globe with layered maps, live locations, weather, and customizable themes.</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/zhi-neng-yi-chu-mei-ri-chuan-da-tui-jian">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260114174629/9dpj9jg9.png" alt="智能衣橱：每日穿搭推荐 - superun AI 模板预览" class="template-image"><h3>智能衣橱：每日穿搭推荐</h3>
+        <p>衣橱搭配助手提供结合实时天气与场合的智能穿搭建议，让你轻松挑选每日造型与风格</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/personal-portfolio">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260119013426/sdpgtw6w.png" alt="Personal Portfolio - superun AI 模板预览" class="template-image"><h3>Personal Portfolio</h3>
+        <p>A warm, editorial personal portfolio showcasing skills, projects, and a downloadable resume.</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/han-zi-dong-xiao-ling-gan-ku">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260112192610/r7sqn92b.png" alt="汉字动效灵感库 - superun AI 模板预览" class="template-image"><h3>汉字动效灵感库</h3>
+        <p>沉浸式每日單字展示，結合互動排版與情緒圖像，可收藏、瀏覽檔案抽屜並支援鍵盤導航</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/tao-xiao-kai-ai-jue-ce-ju-ke-fu-zhi-nan-ban-du">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251223155559/q324pkdr.png" alt="陶小开AI决策局：客服指南伴读 - superun AI 模板预览" class="template-image"><h3>陶小开AI决策局：客服指南伴读</h3>
+        <p>陶小开的决策局，书籍化课程与沉浸式阅读，逐章提供实战级观点与洞察</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/dai-zu-wen-yang-wan-hua-tong">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251219235149/dwyzhlls.png" alt="傣族纹样万花筒 - superun AI 模板预览" class="template-image"><h3>傣族纹样万花筒</h3>
+        <p>傣族纹样驱动的交互式万花筒生成与演示平台，支持AI语义配色与实时控制</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/wu-la-gui-guo-ji-hai-bao-shuang-nian-zhan">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251214153314/29arscri.png" alt="乌拉圭国际海报双年展 - superun AI 模板预览" class="template-image"><h3>乌拉圭国际海报双年展</h3>
+        <p>个人设计师作品集，暗色侘寂风格，动感标题、互动预览与时间线履历，支持PWA安装</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ai-fen-xi-zong-jie">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251210021308/fj4gsqxl.png" alt="AI分析总结 - superun AI 模板预览" class="template-image"><h3>AI分析总结</h3>
+        <p>沉浸式可视化人工智能分析报告，呈现使用趋势、成本与模型排行洞察</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/tai-yang-xi-xing-ji-dang-an-guan">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260122220657/p2adcgru.png" alt="太阳系星际档案馆 - superun AI 模板预览" class="template-image"><h3>太阳系星际档案馆</h3>
+        <p>交互式三维太阳系探秘平台，可调节时间与视角，查看高分辨率行星细节与动态</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/di-tie-lu-xian-gui-hua">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251209225059/7pkql6xi.png" alt="地铁路线规划 - superun AI 模板预览" class="template-image"><h3>地铁路线规划</h3>
+        <p>为多站点出行提供可比较的地铁路线规划与优化推荐，含批量导入、路线对比与多策略选择</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ai-zhi-neng-zuo-ye-fu-dao-ping-tai">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251204231403/8fxngcfj.png" alt="AI智能作业辅导平台 - superun AI 模板预览" class="template-image"><h3>AI智能作业辅导平台</h3>
+        <p>面向小学生的作业辅导平台，提供AI步骤解析、拍照上传、错题本与家长学习分析</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/zhong-kao-shu-xue-zhi-shi-tu-pu">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251130220937/mmtoka2j.png" alt="中考数学知识图谱 - superun AI 模板预览" class="template-image"><h3>中考数学知识图谱</h3>
+        <p>中考数学知识图谱可视化平台，整合考点题型与学习资源，卡片式浏览与掌握标记</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/gang-tie-jun-tuan-ce-lve-dui-zhan-you-xi">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260113184000/lr1w2m4k.png" alt="钢铁军团策略对战游戏 - superun AI 模板预览" class="template-image"><h3>钢铁军团策略对战游戏</h3>
+        <p>沉浸式现代军事策略模拟，管理部队与城镇扩张、动态战场与昼夜天气系统，体验无尽战争</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/xian-du-jing-qu-guan-wang">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251127171740/x99blli7.png" alt="仙都景区官网 - superun AI 模板预览" class="template-image"><h3>仙都景区官网</h3>
+        <p>仙都景区官方网站，提供景区介绍、实时看板、在线票务、攻略推荐与活动线路一站式服务</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ukasz-agocki-music">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251127130028/ab6oxlrg.png" alt="Łukasz Łagocki Music - superun AI 模板预览" class="template-image"><h3>Łukasz Łagocki Music</h3>
+        <p>Minimal portfolio site for Łukasz Łagocki — electronic and improvised music.</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/shu-ju-jia-gou-tu">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251123000439/acox9plo.png" alt="数据架构图 - superun AI 模板预览" class="template-image"><h3>数据架构图</h3>
+        <p>可视化智慧商业四层数据架构图，支持交互、导出与技术栈查看，并适配商场场景需求</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/calfuel-zhi-neng-yin-shi-ka-lu-li-fen-xi-qi">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260202191953/x6b06mjx.png" alt="CalFuel｜智能饮食卡路里分析器 - superun AI 模板预览" class="template-image"><h3>CalFuel｜智能饮食卡路里分析器</h3>
+        <p>直观记录与分析日常饮食卡路里及营养，可个性化目标与历史趋势追踪，支持图片识别</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ji-guang-lei-da-yu-chong-dian-zhuang">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251221090059/9l3f5xns.png" alt="激光雷达与充电桩 - superun AI 模板预览" class="template-image"><h3>激光雷达与充电桩</h3>
+        <p>双业务线科技公司官网，展示激光雷达感知与智能充电通信解决方案</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/edgerunners-night-city-2077">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251128141156/uumokyjq.png" alt="EDGERUNNERS | NIGHT CITY 2077 - superun AI 模板预览" class="template-image"><h3>EDGERUNNERS | NIGHT CITY 2077</h3>
+        <p>以赛博朋克《边缘行者》为主题的沉浸式作品与角色展示官网，并集成配乐、画廊与故事时间线</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/qing-liang-chuang-ye-gong-ju-ji">
+        <img src="https://b.ux-cdn.com/uxarts/puppeteer/snapshot/1763719177360_02mgxsWl1Q.png" alt="轻量创业工具集 - superun AI 模板预览" class="template-image"><h3>轻量创业工具集</h3>
+        <p>精选创业工具集中展示，支持搜索、筛选与并排对比，快速找到适合的办公与增长方案。</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/loopy-sui-ji-xun-huan-dong-hua-sheng-cheng-qi">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260120180041/23txprin.png" alt="Loopy - 随机循环动画生成器 - superun AI 模板预览" class="template-image"><h3>Loopy - 随机循环动画生成器</h3>
+        <p>互动绘图与动画创作工具，添加多种循环效果并可调节速度与强度</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/gu-piao-zi-zheng-yi-biao-pan">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260225161729/bior4n4o.png" alt="股票自证仪表盘 - superun AI 模板预览" class="template-image"><h3>股票自证仪表盘</h3>
+        <p>深色终端风格的股票持仓自证仪表盘，含持仓管理与指标可视化、导入导出与风险摘要</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/he-lie-bian-da-zhuan">
+        
+        <h3>核裂变打砖</h3>
+        <p>极简黑白像素风核裂变弹球打砖，手机与电脑双控，突破钢板围城触发分裂连锁爽感</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/jian-kang-guan-jia">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260127170450/0vzfj1g7.png" alt="健康管家 - superun AI 模板预览" class="template-image"><h3>健康管家</h3>
+        <p>健康助手：为个人与机构提供数据记录、饮食计划、专家预约与健康教育的平台</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/zhong-guo-li-shi-jiang-yu-di-tu">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260124164619/i17yfbqr.png" alt="中国历史疆域地图 - superun AI 模板预览" class="template-image"><h3>中国历史疆域地图</h3>
+        <p>交互式中国历朝疆域变迁、都城位置与帝王信息可视化地图，深墨羊皮纸风格</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/alex-chen-portfolio">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260120153034/huzvunss.png" alt="Alex Chen Portfolio - superun AI 模板预览" class="template-image"><h3>Alex Chen Portfolio</h3>
+        <p>个人创意开发者的实景三维MR设计作品集，暗色学术极简风展示项目、技能与联系方式</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/pomo-chan-fan-qie-zhong">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260118112622/fevjdcdg.png" alt="Pomo-chan 番茄钟 - superun AI 模板预览" class="template-image"><h3>Pomo-chan 番茄钟</h3>
+        <p>可爱番茄钟，带弹性弹跳与旋转动效，支持交互按键与模式平滑过渡</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/zhe-jiang-sheng-wei-lai-ke-pu-jiao-yu-yan-jiu-yuan-1">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260115152427/w8q7cysl.png" alt="浙江省未来科普教育研究院 - superun AI 模板预览" class="template-image"><h3>浙江省未来科普教育研究院</h3>
+        <p>专注科普内容与研究展示，提供知识传播与学习交流平台，兼具互动资源与可视化成果展示</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ai-zhi-neng-ke-yan-zhi-tu-ping-tai">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260111155426/ligfk9xh.png" alt="AI智能科研制图平台 - superun AI 模板预览" class="template-image"><h3>AI智能科研制图平台</h3>
+        <p>科研制图：一站式AI辅助图表、流程图与示意图生成编辑平台，支持模板与项目管理</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/wu-liao-si-le-sha-si-ni-de-suan-fa">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260119113913/tc28cu5r.png" alt="无聊死了 - 杀死你的算法 - superun AI 模板预览" class="template-image"><h3>无聊死了 - 杀死你的算法</h3>
+        <p>沉浸式大图卡片浏览，发现并收藏五十个冷门奇趣主题与深度引言，并支持保存评论与分享</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/chou-le-mo-jie-yan-fu-zhu">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260114175413/oc1du3r6.png" alt="抽了么 - 戒烟辅助 - superun AI 模板预览" class="template-image"><h3>抽了么 - 戒烟辅助</h3>
+        <p>用拟物化香烟动画与烟雾交互，记录吸烟并以成就与恢复时线激励戒烟</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/shu-zi-shi-ku-shi-jing-san-wei-ti-yan">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260108142641/wjuiu985.png" alt="数字石窟：实景三维体验 - superun AI 模板预览" class="template-image"><h3>数字石窟：实景三维体验</h3>
+        <p>面向企业的实景三维与MR展示设计，提供探索交互、案例展示与离线安装支持</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/you-xi-hua-pwa-fan-qie-zhong">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260108222558/ga6wdhuc.png" alt="游戏化PWA番茄钟 - superun AI 模板预览" class="template-image"><h3>游戏化PWA番茄钟</h3>
+        <p>赛博风格的游戏化PWA番茄钟，支持自定义时长、成就与沉浸专注体验</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/fan-qie-gong-zuo-fa-zhuan-zhu-ren-wu-gong-ju">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260108182826/d3duoual.png" alt="番茄工作法专注任务工具 - superun AI 模板预览" class="template-image"><h3>番茄工作法专注任务工具</h3>
+        <p>可爱治愈风番茄钟，集专注计时、任务管理、统计分析与休息成长于一体</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/yi-sun-amazingsu-di-yu-wen-hua-ip-shi-shang-she-ji">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260107115537/vctsoa4f.png" alt="一笋 AmazingSu | 地域文化IP时尚设计 - superun AI 模板预览" class="template-image"><h3>一笋 AmazingSu | 地域文化IP时尚设计</h3>
+        <p>一笋演示站点提供桌面组件、管理员功能与后端集成，便于快速试用与定制</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/shortv-duan-ju-guan-kan-ping-tai">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260108003631/pj6ac97r.png" alt="ShortV - 短剧观看平台 - superun AI 模板预览" class="template-image"><h3>ShortV - 短剧观看平台</h3>
+        <p>短剧平台：竖屏沉浸观影，杂志式发现、智能搜索、评论互动与会员特权</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/yi-mei-xiao-cheng-xu">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251224183400/8szenmp2.png" alt="医美小程序 - superun AI 模板预览" class="template-image"><h3>医美小程序</h3>
+        <p>专为医美机构与用户打造的预约咨询、项目展示、专家管理与优惠活动一体化小程序</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/chuang-xin-fan-qie-zhong">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260108190612/duwhnlnn.png" alt="创新番茄钟 - superun AI 模板预览" class="template-image"><h3>创新番茄钟</h3>
+        <p>专注花园：以治愈花园与小花成长可视化，帮助你高效管理任务并记录专注进度。</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/qing-zhu-xie-tong-ai-sheng-chan-yin-qing">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260206185028/l1qsvyt4.png" alt="氢竹协同：AI生产引擎 - superun AI 模板预览" class="template-image"><h3>氢竹协同：AI生产引擎</h3>
+        <p>为非标制造企业提供订单到任务的协同执行与可视化管理，提高交付与协作效率</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/yun-qi-bao-tai-dong-gong-suo-yu-yin-shi">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251224170352/5kkvkgxe.png" alt="孕期宝：胎动宫缩与饮食 - superun AI 模板预览" class="template-image"><h3>孕期宝：胎动宫缩与饮食</h3>
+        <p>一款为准妈妈提供胎动记录、宫缩监测、饮食与知识提醒的全能孕期助手</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/sheng-yu-li-ping-gu">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251222165707/jy3936av.png" alt="生育力评估 - superun AI 模板预览" class="template-image"><h3>生育力评估</h3>
+        <p>基于权威指南的男女通用生育力在线评估，提供个性化改善建议与专家预约服务</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ao-tai-xian-qin-ling-jin-qu-dang-an">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251219160350/i9pfe5lc.png" alt="鳌太线：秦岭禁区档案 - superun AI 模板预览" class="template-image"><h3>鳌太线：秦岭禁区档案</h3>
+        <p>鳌太线徒步全方位攻略：路线与海拔、装备清单、营地与风险提示，行程参考及替代合法线路</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/zhejiang-local-guide">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260114170051/5gq36jfr.png" alt="Zhejiang Local Guide - superun AI 模板预览" class="template-image"><h3>Zhejiang Local Guide</h3>
+        <p>深浙体验：集合歌劇、科技、城鎮與美食的浙江深度導覽與互動內容平台</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/yong-hu-xin-xi-biao-dan">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260109115331/bm63rnqy.png" alt="用户信息表单 - superun AI 模板预览" class="template-image"><h3>用户信息表单</h3>
+        <p>AI时代服装行业邀请注册表单与管理后台，含组织选择、CSV导出与统计面板</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/jian-jie-da-qi-que-sheng-tu">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251227223334/4unaam5e.png" alt="简洁大气缺省图 - superun AI 模板预览" class="template-image"><h3>简洁大气缺省图</h3>
+        <p>以极简欧式美学呈现的课程等待页模板与精致占位图，含沉浸沙漏动效与可定制按钮</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/zhao-biao-an-pai">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251223011114/y1r2q1ad.png" alt="招标安排 - superun AI 模板预览" class="template-image"><h3>招标安排</h3>
+        <p>智能生成并管理招标日程，支持法规节点合规校验、时间轴展示与导入导出</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/liu-guang-he-xin-yuan-xing-kong">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251215155737/n0ljziuj.png" alt="流光盒 - 心愿星空 - superun AI 模板预览" class="template-image"><h3>流光盒 - 心愿星空</h3>
+        <p>在梦幻星空中储存愿望，定时提醒并分享你的时间盒子，记录成长与回忆</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/pokerverse-de-zhou-pu-ke-xue-xi-app">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20251201211744/csfyjfoj.png" alt="Pokerverse - 德州扑克学习APP - superun AI 模板预览" class="template-image"><h3>Pokerverse - 德州扑克学习APP</h3>
+        <p>游戏化德州扑克教学平台实时胜率选牌矩阵智能教练与离线安装体验</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/you-zan-xiao-shou-demo">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260212185608/8xitzu8s.png" alt="有赞销售Demo - superun AI 模板预览" class="template-image"><h3>有赞销售Demo</h3>
+        <p>有赞销售助手完整复刻演示，支持AI交互、素材管理与PPT方案预览</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/han-yuan-bi-ji-zhi-neng-fu-xi-gong-ju">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260127210010/3p44y8wt.png" alt="寒园笔记：智能复习工具 - superun AI 模板预览" class="template-image"><h3>寒园笔记：智能复习工具</h3>
+        <p>学生复习助手：岁寒三友主题，试卷拍照上传、AI错题分析与学习进度追踪</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/fang-kuai-chuang-shi-shen">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260127112554/xoy4rpld.png" alt="方块创世神 - superun AI 模板预览" class="template-image"><h3>方块创世神</h3>
+        <p>在低多边形风格的可交互世界中创造并观察可爱动物的随机漫步与互动</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ling-gan-meng-jing">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260125164802/7ago88k7.png" alt="灵感梦境 - superun AI 模板预览" class="template-image"><h3>灵感梦境</h3>
+        <p>将灵感以梦幻童话、神秘魔法或奇幻森林风格收集、浏览、整理与分享的可视化灵感库</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/za-pai-ne-ai-she-ying-ban-lv">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260124171354/cij0ghgf.png" alt="咋拍呢 - AI摄影伴侣 - superun AI 模板预览" class="template-image"><h3>咋拍呢 - AI摄影伴侣</h3>
+        <p>面向用户的产品演示与体验页，展示视觉风格、交互动效与图标细节</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/j-ren-shen-qi-ai-sheng-huo-zhu-li">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260124201208/033gjbmg.png" alt="J人神器 - AI生活助理 - superun AI 模板预览" class="template-image"><h3>J人神器 - AI生活助理</h3>
+        <p>为J人量身打造的温暖智能生活助理，整合日程、健康与生活服务，提供贴心提醒</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/zai-wo-si-qian">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260123204906/eq1ibeu9.png" alt="在我死前 - superun AI 模板预览" class="template-image"><h3>在我死前</h3>
+        <p>以温暖纸感与情感化交互，将生命愿望写入并打印成带编号的纪念卡片</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/mei-ri-yi-qian">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260122170430/xqwgguek.png" alt="每日一签 - superun AI 模板预览" class="template-image"><h3>每日一签</h3>
+        <p>每日抽签，揭示能量指数、运势启示与正能量金句，配优雅米纸质感界面</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/zhuan-zhu-kong-jian-fan-qie-zhong-guan-li">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260127171352/r4eip7i7.png" alt="专注空间：番茄钟管理 - superun AI 模板预览" class="template-image"><h3>专注空间：番茄钟管理</h3>
+        <p>为备考学生提供番茄钟计时、任务管理、每日统计与主题自定义的网站</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ye-deng-xia-de-pei-ban-fan-qie-zhong">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260119165008/08ikcfnd.png" alt="夜灯下的陪伴 - 番茄钟 - superun AI 模板预览" class="template-image"><h3>夜灯下的陪伴 - 番茄钟</h3>
+        <p>陪伴番茄钟，专注计时与任务管理，记录学习统计并支持个性化设置，适合日常专注与效率提升</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/jia-chang-cai-pu">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260118185625/6ej64wks.png" alt="家常菜谱 - superun AI 模板预览" class="template-image"><h3>家常菜谱</h3>
+        <p>行动优先烹饪食谱应用，提供互动食材清单、逐步教学与收藏整理，让你随时轻松做菜。</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/zhuan-zhu-ji-shi-qi">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260118174328/ukhogb8h.png" alt="专注计时器 - superun AI 模板预览" class="template-image"><h3>专注计时器</h3>
+        <p>极简移动番茄钟计时器，支持调时、开始/暂停/重置、会话计数并可安装PWA</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ri-chang-ji-shu-qi">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260118174014/uqbsywom.png" alt="日常计数器 - superun AI 模板预览" class="template-image"><h3>日常计数器</h3>
+        <p>极简移动计数器，杂志式排版与温暖纸色，呈现大号衬线数字、网格化控件与优雅动画</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/mei-wei-cai-dan">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260118163559/niib5zyi.png" alt="美味菜单 - superun AI 模板预览" class="template-image"><h3>美味菜单</h3>
+        <p>一个轻量级的可离线、可安装的简单菜单演示，优化图片与字体缓存加速加载体验</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/wei-dao-xiao-guan-zi-zhu-dian-can">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260118155108/jxlichyf.png" alt="味道小馆 - 自助点餐 - superun AI 模板预览" class="template-image"><h3>味道小馆 - 自助点餐</h3>
+        <p>一款面向餐饮场景的点菜与订单管理演示平台，简洁直观，便于展示与测试</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/jing-zhi-cai-dan">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260118164213/e67xi997.png" alt="精致菜单 - superun AI 模板预览" class="template-image"><h3>精致菜单</h3>
+        <p>为用户提供精美的菜单展示。它能展示菜品名称和相关信息。</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/ya-she-cai-dan">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260118152630/xo5undxu.png" alt="雅舍菜单 - superun AI 模板预览" class="template-image"><h3>雅舍菜单</h3>
+        <p>为餐饮商家提供简洁直观的菜单管理与展示工具，便于编辑、发布与客户互动</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/wei-jue-shi-tang-dian-zi-cai-dan">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260118152832/vhkoaogf.png" alt="味觉食堂电子菜单 - superun AI 模板预览" class="template-image"><h3>味觉食堂电子菜单</h3>
+        <p>轻量可定制的网页简单菜单，清晰易用，去除占位项并支持内联 PWA 添加到主屏幕</p>
+      </a>
+    </div>
+  
+    <div class="template-card">
+      <a href="https://www.superun.com/templates/lao-jia-wei-dao-shu-zi-cai-dan">
+        <img src="https://b.ux-cdn.com/uxarts/files/t20260118152213/e00zeo4a.png" alt="老家味道 - 数字菜单 - superun AI 模板预览" class="template-image"><h3>老家味道 - 数字菜单</h3>
+        <p>为餐饮行业提供在线菜单管理、发布与版本控制，简化菜单编辑与更新流程</p>
+      </a>
+    </div>
+  
+    </div>
+  
+      </div>
+    </main><footer><div class="container">
+        <p>© 2026 superun Inc. All rights reserved.</p>
+      </div>
+    </footer></body></html>

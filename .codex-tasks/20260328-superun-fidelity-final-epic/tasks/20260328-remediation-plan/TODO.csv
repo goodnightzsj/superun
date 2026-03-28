@@ -1,0 +1,5 @@
+id,task,status,acceptance_criteria,validation_command,completed_at,retry_count,notes
+1,Summarize shared-system fidelity gaps,DONE,A shared-system gap list exists,echo SKIP,2026-03-28,0,Typography, chrome, control semantics, and SEO/footer modules are grouped together.
+2,Separate home and login page-local work,DONE,Home and login have page-local implementation tracks,echo SKIP,2026-03-28,0,Page-local work is scoped so it does not hide shared drift.
+3,Define community-shell rebaseline plan,DONE,A concrete architecture direction exists for community routes,echo SKIP,2026-03-28,0,Plan assumes upstream shared iframe shell is the new target.
+4,Write execution order and verification plan,DONE,A future implementation wave has ordered execution and verification steps,echo SKIP,2026-03-28,0,Verification includes desktop and mobile checks against the original site.

@@ -1,0 +1,4 @@
+id,task,status,acceptance_criteria,validation_command,completed_at,retry_count,notes
+1,提取 upstream home shell 剩余差异,DONE,确认 header hero gallery footer 的真实结构与尺寸,python3 - <<'PY'\nfrom pathlib import Path\nhtml=Path('.codex-tasks/20260328-superun-dom-css-fidelity/raw/upstream/pages/home/page.html').read_text(); print('home-community-projects' in html and '<footer' in html)\nPY,2026-03-28 22:32,0,结合归档 DOM 和截图复盘
+2,调整 home shell hero footer 与 header 结构,DONE,本地 `/home` 去掉 docs link 区并对齐 hero/footer 布局,test -f src/pages/home.astro,2026-03-28 22:35,0,涉及 Header Footer Home 和 global.css
+3,构建与截图验证,DONE,构建通过且新截图已生成,test -f .codex-tasks/20260328-home-shell-fidelity/raw/screenshots/home_local_after.png,2026-03-28 22:37,0,full diff 已显著下降

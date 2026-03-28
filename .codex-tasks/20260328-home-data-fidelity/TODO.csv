@@ -1,0 +1,5 @@
+id,content,status
+1,读取 live desktop DOM 和既有 fidelity 任务上下文,completed
+2,修正 home template directory 的 deviceType 与 previewImage 差异,completed
+3,恢复 home 底部 docs 导流区并对齐原站排序,completed
+4,运行 check build 与 Playwright 对比验证,completed

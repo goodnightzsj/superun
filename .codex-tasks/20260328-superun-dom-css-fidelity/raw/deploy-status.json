@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-03-28T20:02:53+0800",
+  "workerUrl": "https://superun-public-site.sub-store.workers.dev",
+  "deployment": {
+    "id": "39e61e9a-ac43-43b6-971a-a6faa51edd74",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "authorEmail": "zhaishujie666@gmail.com",
+    "createdOn": "2026-03-28T12:01:35.67384Z",
+    "versionId": "0f0c9d74-b11f-4d1f-b98f-6bd589bf2884",
+    "percentage": 100
+  },
+  "verification": {
+    "rootRedirectsToHome": true,
+    "homeHasCreatedAtSort": true,
+    "homeUsesTemplatesRoute": true,
+    "communityShowsMissingSessionShell": true,
+    "communityUsesSlugHostIframe": true
+  }
+}

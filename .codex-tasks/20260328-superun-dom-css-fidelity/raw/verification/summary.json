@@ -1,0 +1,405 @@
+{
+  "home_original": {
+    "title": "superun - 聊出你的产品 - 优势智设",
+    "h1": [],
+    "headings": [
+      "看看其他人的创作",
+      "法律",
+      "社区"
+    ],
+    "buttons": [
+      "简中",
+      "登录",
+      "全部",
+      "有趣的应用",
+      "管理类应用",
+      "一些网站",
+      "全部",
+      "有趣的应用",
+      "管理类应用",
+      "一些网站",
+      "创建时间",
+      "复刻",
+      "复刻",
+      "复刻",
+      "复刻",
+      "复刻",
+      "复刻"
+    ],
+    "templateLinks": [
+      {
+        "text": "superun — AI 产品设计平台，从灵感到现实",
+        "href": "https://www.superun.com/templates/superun-ai-chan-pin-she-ji-ping-tai-cong-ling-gan"
+      },
+      {
+        "text": "薪擎 - 业绩提成绩效管理平台",
+        "href": "https://www.superun.com/templates/xin-qing-ye-ji-ti-cheng-ji-xiao-guan-li-ping-tai"
+      },
+      {
+        "text": "绩效星",
+        "href": "https://www.superun.com/templates/ji-xiao-xing"
+      },
+      {
+        "text": "招聘流程管理",
+        "href": "https://www.superun.com/templates/zhao-pin-liu-cheng-guan-li"
+      },
+      {
+        "text": "养生之道：每日健康手册",
+        "href": "https://www.superun.com/templates/yang-sheng-zhi-dao-mei-ri-jian-kang-shou-ce"
+      },
+      {
+        "text": "AI 私域增长工作台",
+        "href": "https://www.superun.com/templates/ai-si-yu-zeng-chang-gong-zuo-tai"
+      },
+      {
+        "text": "GlowMind: 面向美妆电商的 AI 客服与客户分层运营平台。",
+        "href": "https://www.superun.com/templates/glowmind-mian-xiang-mei-zhuang-dian-shang-de-ai-ke"
+      },
+      {
+        "text": "AI 薪酬管理、人力资源与合规系统",
+        "href": "https://www.superun.com/templates/ai-xin-chou-guan-li-ren-li-zi-yuan-yu-he-gui-xi-to"
+      },
+      {
+        "text": "销售拜访助手",
+        "href": "https://www.superun.com/templates/xiao-shou-bai-fang-zhu-shou"
+      },
+      {
+        "text": "AI虚拟同事平台",
+        "href": "https://www.superun.com/templates/ai-xu-ni-tong-shi-ping-tai"
+      },
+      {
+        "text": "人效决策引擎",
+        "href": "https://www.superun.com/templates/ren-xiao-jue-ce-yin-qing"
+      },
+      {
+        "text": "绩效校准中心（企业绩效评分分析与薪酬决策系统）",
+        "href": "https://www.superun.com/templates/ji-xiao-xiao-zhun-zhong-xin-qi-ye-ji-xiao-ping-fen"
+      }
+    ],
+    "communityLinks": [],
+    "iframeSrc": "",
+    "missingSession": false,
+    "remixText": false,
+    "localeButton": "简中",
+    "url": "https://www.superun.com/home"
+  },
+  "home_local": {
+    "title": "superun - 聊出你的产品 - 优势智设",
+    "h1": [],
+    "headings": [
+      "看看其他人的创作",
+      "薪擎 - 业绩提成绩效管理平台",
+      "绩效星",
+      "招聘流程管理",
+      "养生之道：每日健康手册",
+      "AI 私域增长工作台",
+      "GlowMind: 面向美妆电商的 AI 客服与客户分层运营平台。",
+      "AI 薪酬管理、人力资源与合规系统",
+      "销售拜访助手",
+      "AI虚拟同事平台"
+    ],
+    "buttons": [
+      "简中",
+      "简体中文",
+      "繁體中文",
+      "廣東話",
+      "日本語",
+      "한국어",
+      "English",
+      "Global",
+      "登录",
+      "全部",
+      "有趣的应用",
+      "管理类应用",
+      "一些网站",
+      "显示更多"
+    ],
+    "templateLinks": [
+      {
+        "text": "复刻 薪擎 - 业绩提成绩效管理平台 面向中型企业的销售绩效管理平台，三端联动管理提成规则、核算审批与团队人效",
+        "href": "http://127.0.0.1:4332/templates/xin-qing-ye-ji-ti-cheng-ji-xiao-guan-li-ping-tai"
+      },
+      {
+        "text": "复刻 绩效星 面向中大型企业的一站式绩效管理平台，覆盖目标制定、过程跟踪到绩效评估的完整闭环并支持三端协同与移动适配",
+        "href": "http://127.0.0.1:4332/templates/ji-xiao-xing"
+      },
+      {
+        "text": "复刻 招聘流程管理 招聘流程管理：HR面试、人才评估与入职流程工作台",
+        "href": "http://127.0.0.1:4332/templates/zhao-pin-liu-cheng-guan-li"
+      },
+      {
+        "text": "复刻 养生之道：每日健康手册 为追求健康生活的人士提供日常养生指导和实践方法。它能帮助用户轻松执行健康计划，提升生活品质。",
+        "href": "http://127.0.0.1:4332/templates/yang-sheng-zhi-dao-mei-ri-jian-kang-shou-ce"
+      },
+      {
+        "text": "复刻 AI 私域增长工作台 为企业提供AI驱动的私域增长解决方案，助力客户管理和营销自动化。通过智能工具提升用户互动和转化效率。",
+        "href": "http://127.0.0.1:4332/templates/ai-si-yu-zeng-chang-gong-zuo-tai"
+      },
+      {
+        "text": "复刻 GlowMind: 面向美妆电商的 AI 客服与客户分层运营平台。 一站式美妆智能客服与客户运营平台：知识库、客户分层、自动化规则与数据看板",
+        "href": "http://127.0.0.1:4332/templates/glowmind-mian-xiang-mei-zhuang-dian-shang-de-ai-ke"
+      },
+      {
+        "text": "复刻 AI 薪酬管理、人力资源与合规系统 复刻单页落地页模板，支持中英双语、暗亮切换、粘性导航与演示组件",
+        "href": "http://127.0.0.1:4332/templates/ai-xin-chou-guan-li-ren-li-zi-yuan-yu-he-gui-xi-to"
+      },
+      {
+        "text": "复刻 销售拜访助手 面向外勤销售的拜访与客户管理助手，支持本地运行与智能日报，含消息通知与主题定制",
+        "href": "http://127.0.0.1:4332/templates/xiao-shou-bai-fang-zhu-shou"
+      },
+      {
+        "text": "复刻 AI虚拟同事平台 面向企业的AI同事管理平台，集中管理AI角色、流程与运营数据并支持可视化与移动适配",
+        "href": "http://127.0.0.1:4332/templates/ai-xu-ni-tong-shi-ping-tai"
+      },
+      {
+        "text": "复刻 人效决策引擎 人效预测与招聘成本分析平台，涵盖离职风险、智能洞察及移动视图",
+        "href": "http://127.0.0.1:4332/templates/ren-xiao-jue-ce-yin-qing"
+      },
+      {
+        "text": "复刻 绩效校准中心（企业绩效评分分析与薪酬决策系统） 一站式绩效薪酬管理平台，流程可视、任务优先、移动即办并支持校准与审批归档",
+        "href": "http://127.0.0.1:4332/templates/ji-xiao-xiao-zhun-zhong-xin-qi-ye-ji-xiao-ping-fen"
+      },
+      {
+        "text": "复刻 智能招聘管理平台 智聘——智能招聘管理平台，简化流程并支持AI岗位描述生成",
+        "href": "http://127.0.0.1:4332/templates/zhi-neng-zhao-pin-guan-li-ping-tai"
+      }
+    ],
+    "communityLinks": [],
+    "iframeSrc": "",
+    "missingSession": false,
+    "remixText": false,
+    "localeButton": "简中",
+    "url": "http://127.0.0.1:4332/home"
+  },
+  "login_original": {
+    "title": "superun - 聊出你的产品 - 优势智设",
+    "h1": [
+      "欢迎使用 superun"
+    ],
+    "headings": [],
+    "buttons": [
+      "简中",
+      "使用 微信 继续",
+      "更多",
+      "手机号",
+      "邮箱",
+      "发送验证码",
+      "登录 / 注册",
+      "创建团队"
+    ],
+    "templateLinks": [
+      {
+        "text": "superun — AI 产品设计平台，从灵感到现实",
+        "href": "https://www.superun.com/templates/superun-ai-chan-pin-she-ji-ping-tai-cong-ling-gan"
+      },
+      {
+        "text": "薪擎 - 业绩提成绩效管理平台",
+        "href": "https://www.superun.com/templates/xin-qing-ye-ji-ti-cheng-ji-xiao-guan-li-ping-tai"
+      },
+      {
+        "text": "绩效星",
+        "href": "https://www.superun.com/templates/ji-xiao-xing"
+      },
+      {
+        "text": "招聘流程管理",
+        "href": "https://www.superun.com/templates/zhao-pin-liu-cheng-guan-li"
+      },
+      {
+        "text": "养生之道：每日健康手册",
+        "href": "https://www.superun.com/templates/yang-sheng-zhi-dao-mei-ri-jian-kang-shou-ce"
+      },
+      {
+        "text": "AI 私域增长工作台",
+        "href": "https://www.superun.com/templates/ai-si-yu-zeng-chang-gong-zuo-tai"
+      },
+      {
+        "text": "GlowMind: 面向美妆电商的 AI 客服与客户分层运营平台。",
+        "href": "https://www.superun.com/templates/glowmind-mian-xiang-mei-zhuang-dian-shang-de-ai-ke"
+      },
+      {
+        "text": "AI 薪酬管理、人力资源与合规系统",
+        "href": "https://www.superun.com/templates/ai-xin-chou-guan-li-ren-li-zi-yuan-yu-he-gui-xi-to"
+      },
+      {
+        "text": "销售拜访助手",
+        "href": "https://www.superun.com/templates/xiao-shou-bai-fang-zhu-shou"
+      },
+      {
+        "text": "AI虚拟同事平台",
+        "href": "https://www.superun.com/templates/ai-xu-ni-tong-shi-ping-tai"
+      },
+      {
+        "text": "人效决策引擎",
+        "href": "https://www.superun.com/templates/ren-xiao-jue-ce-yin-qing"
+      },
+      {
+        "text": "绩效校准中心（企业绩效评分分析与薪酬决策系统）",
+        "href": "https://www.superun.com/templates/ji-xiao-xiao-zhun-zhong-xin-qi-ye-ji-xiao-ping-fen"
+      }
+    ],
+    "communityLinks": [],
+    "iframeSrc": "",
+    "missingSession": false,
+    "remixText": false,
+    "localeButton": "简中",
+    "url": "https://www.superun.com/web/login?redirectUrl=%2Fhome&prompt=%E5%A4%8D%E5%88%BB%20%E8%96%AA%E6%93%8E"
+  },
+  "login_local": {
+    "title": "superun - 聊出你的产品 - 优势智设",
+    "h1": [
+      "欢迎使用 superun"
+    ],
+    "headings": [],
+    "buttons": [
+      "简中",
+      "简体中文",
+      "繁體中文",
+      "廣東話",
+      "日本語",
+      "한국어",
+      "English",
+      "Global",
+      "使用 微信 继续",
+      "更多",
+      "使用 Google 继续",
+      "手机号",
+      "邮箱",
+      "发送验证码",
+      "忘记密码？",
+      "登录 / 注册",
+      "创建团队"
+    ],
+    "templateLinks": [],
+    "communityLinks": [],
+    "iframeSrc": "",
+    "missingSession": false,
+    "remixText": false,
+    "localeButton": "简中",
+    "url": "http://127.0.0.1:4332/web/login?redirectUrl=%2Fhome&prompt=%E5%A4%8D%E5%88%BB%20%E8%96%AA%E6%93%8E"
+  },
+  "template_original": {
+    "title": "薪擎 - 业绩提成绩效管理平台模板 - 快速生成 - superun AI制作 - 优势智设",
+    "h1": [
+      "薪擎 - 业绩提成绩效管理平台"
+    ],
+    "headings": [
+      "介绍",
+      "模板详情"
+    ],
+    "buttons": [],
+    "templateLinks": [],
+    "communityLinks": [],
+    "iframeSrc": "",
+    "missingSession": false,
+    "remixText": false,
+    "localeButton": "",
+    "url": "https://www.superun.com/templates/xin-qing-ye-ji-ti-cheng-ji-xiao-guan-li-ping-tai"
+  },
+  "template_local": {
+    "title": "薪擎 - 业绩提成绩效管理平台模板 - 快速生成 - superun AI制作 - 优势智设",
+    "h1": [
+      "薪擎 - 业绩提成绩效管理平台"
+    ],
+    "headings": [
+      "介绍",
+      "模板详情"
+    ],
+    "buttons": [],
+    "templateLinks": [],
+    "communityLinks": [],
+    "iframeSrc": "",
+    "missingSession": false,
+    "remixText": false,
+    "localeButton": "",
+    "url": "http://127.0.0.1:4332/templates/xin-qing-ye-ji-ti-cheng-ji-xiao-guan-li-ping-tai"
+  },
+  "community_original": {
+    "title": "superun - 优势智设",
+    "h1": [],
+    "headings": [],
+    "buttons": [
+      "新对话",
+      "复刻创作",
+      "手机",
+      "电脑"
+    ],
+    "templateLinks": [
+      {
+        "text": "superun — AI 产品设计平台，从灵感到现实",
+        "href": "https://www.superun.com/templates/superun-ai-chan-pin-she-ji-ping-tai-cong-ling-gan"
+      },
+      {
+        "text": "薪擎 - 业绩提成绩效管理平台",
+        "href": "https://www.superun.com/templates/xin-qing-ye-ji-ti-cheng-ji-xiao-guan-li-ping-tai"
+      },
+      {
+        "text": "绩效星",
+        "href": "https://www.superun.com/templates/ji-xiao-xing"
+      },
+      {
+        "text": "招聘流程管理",
+        "href": "https://www.superun.com/templates/zhao-pin-liu-cheng-guan-li"
+      },
+      {
+        "text": "养生之道：每日健康手册",
+        "href": "https://www.superun.com/templates/yang-sheng-zhi-dao-mei-ri-jian-kang-shou-ce"
+      },
+      {
+        "text": "AI 私域增长工作台",
+        "href": "https://www.superun.com/templates/ai-si-yu-zeng-chang-gong-zuo-tai"
+      },
+      {
+        "text": "GlowMind: 面向美妆电商的 AI 客服与客户分层运营平台。",
+        "href": "https://www.superun.com/templates/glowmind-mian-xiang-mei-zhuang-dian-shang-de-ai-ke"
+      },
+      {
+        "text": "AI 薪酬管理、人力资源与合规系统",
+        "href": "https://www.superun.com/templates/ai-xin-chou-guan-li-ren-li-zi-yuan-yu-he-gui-xi-to"
+      },
+      {
+        "text": "销售拜访助手",
+        "href": "https://www.superun.com/templates/xiao-shou-bai-fang-zhu-shou"
+      },
+      {
+        "text": "AI虚拟同事平台",
+        "href": "https://www.superun.com/templates/ai-xu-ni-tong-shi-ping-tai"
+      },
+      {
+        "text": "人效决策引擎",
+        "href": "https://www.superun.com/templates/ren-xiao-jue-ce-yin-qing"
+      },
+      {
+        "text": "绩效校准中心（企业绩效评分分析与薪酬决策系统）",
+        "href": "https://www.superun.com/templates/ji-xiao-xiao-zhun-zhong-xin-qi-ye-ji-xiao-ping-fen"
+      }
+    ],
+    "communityLinks": [],
+    "iframeSrc": "https://snapshot-health-guide.superun.yun/",
+    "missingSession": true,
+    "remixText": true,
+    "localeButton": "",
+    "url": "https://www.superun.com/web/community-view/snapshot-health-guide"
+  },
+  "community_local": {
+    "title": "superun - 优势智设",
+    "h1": [],
+    "headings": [],
+    "buttons": [
+      "新对话",
+      "复刻创作",
+      "手机",
+      "电脑"
+    ],
+    "templateLinks": [],
+    "communityLinks": [],
+    "iframeSrc": "https://snapshot-health-guide.superun.yun/",
+    "missingSession": true,
+    "remixText": true,
+    "localeButton": "",
+    "url": "http://127.0.0.1:4332/web/community-view/snapshot-health-guide"
+  },
+  "community_local_remix_flow": {
+    "after_remix_click": "http://127.0.0.1:4332/web/login?redirectUrl=%2Fhome&prompt=%E5%A4%8D%E5%88%BB%20%E5%85%BB%E7%94%9F%E4%B9%8B%E9%81%93%EF%BC%9A%E6%AF%8F%E6%97%A5%E5%81%A5%E5%BA%B7%E6%89%8B%E5%86%8C",
+    "after_login_submit": "http://127.0.0.1:4332/home?prompt=%E5%A4%8D%E5%88%BB+%E5%85%BB%E7%94%9F%E4%B9%8B%E9%81%93%EF%BC%9A%E6%AF%8F%E6%97%A5%E5%81%A5%E5%BA%B7%E6%89%8B%E5%86%8C"
+  }
+}

@@ -8,6 +8,8 @@ interface Props {
 const { template } = Astro.props;
 const href = getTemplateCommunityPath(template);
 const previewTheme = template.deviceType === 'mobile' ? 'mobile' : 'light';
+const isMobilePreview = template.deviceType === 'mobile';
+const hasPreviewImage = template.previewImage.length > 0;
 const chevronIcon = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5.25 2.75L9.25 7L5.25 11.25" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>`;
 ---
 
@@ -21,7 +23,29 @@ const chevronIcon = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none"
   aria-label={`${template.title} ${template.description}`}
 >
   <div class="template-card__media">
-    <img class="template-card__image" src={template.previewImage} alt={`${template.title} - superun AI 创建的项目预览`} loading="lazy" decoding="async" />
+    {isMobilePreview ? (
+      <div class="template-card__device-preview">
+        <div class="template-card__device-frame">
+          <div class="template-card__device-screen">
+            {hasPreviewImage ? (
+              <img class="template-card__image template-card__image--device" src={template.previewImage} alt={`${template.title} - superun AI 创建的项目预览`} loading="lazy" decoding="async" />
+            ) : (
+              <div class="template-card__placeholder template-card__placeholder--device" aria-hidden="true">
+                <div class="template-card__placeholder-glow"></div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    ) : (
+      hasPreviewImage ? (
+        <img class="template-card__image template-card__image--desktop" src={template.previewImage} alt={`${template.title} - superun AI 创建的项目预览`} loading="lazy" decoding="async" />
+      ) : (
+        <div class="template-card__placeholder template-card__placeholder--desktop" aria-hidden="true">
+          <div class="template-card__placeholder-glow"></div>
+        </div>
+      )
+    )}
     <div class="template-card__hover-cta-wrap" aria-hidden="true">
       <span class="template-card__hover-cta" data-copy-key="home.cardRecreate">复刻</span>
     </div>

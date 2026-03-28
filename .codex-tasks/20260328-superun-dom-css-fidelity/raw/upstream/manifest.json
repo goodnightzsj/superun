@@ -1,0 +1,42 @@
+{
+  "captured_at": "2026-03-28",
+  "pages": [
+    {
+      "name": "home",
+      "url": "https://www.superun.com/home",
+      "dir": "pages/home"
+    },
+    {
+      "name": "login",
+      "url": "https://www.superun.com/web/login?redirectUrl=%2Fhome&prompt=%E5%A4%8D%E5%88%BB%20%E8%96%AA%E6%93%8E",
+      "dir": "pages/login"
+    },
+    {
+      "name": "templates-index",
+      "url": "https://www.superun.com/templates",
+      "dir": "pages/templates-index"
+    },
+    {
+      "name": "template-sales-incentive",
+      "url": "https://www.superun.com/templates/xin-qing-ye-ji-ti-cheng-ji-xiao-guan-li-ping-tai",
+      "dir": "pages/template-sales-incentive"
+    },
+    {
+      "name": "community-sales-incentive",
+      "url": "https://www.superun.com/web/community-view/snapshot-sales-incentive-platform",
+      "dir": "pages/community-sales-incentive"
+    },
+    {
+      "name": "community-health-guide",
+      "url": "https://www.superun.com/web/community-view/snapshot-health-guide",
+      "dir": "pages/community-health-guide"
+    }
+  ],
+  "apis": [
+    {
+      "name": "home-feed",
+      "url": "https://www.superun.com/api/uxa-center/agent/AgentCommunity/queryByCategory?_t=1",
+      "file": "apis/home-feed.json"
+    }
+  ]
+}

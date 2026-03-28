@@ -1,0 +1,4 @@
+id,task,status,acceptance_criteria,validation_command,completed_at,retry_count,notes
+1,Capture local and upstream login evidence,DONE,Desktop and mobile metric plus interaction evidence are saved,echo SKIP,2026-03-28,0,Raw metrics are saved in raw/metrics.md.
+2,Extract concrete fidelity gaps,DONE,A page-level gap list exists,echo SKIP,2026-03-28,0,Gap list is summarized in PROGRESS.md.
+3,Write implementation-facing audit summary,DONE,A concise audit summary exists in PROGRESS.md,echo SKIP,2026-03-28,0,Summary distinguishes behavior parity from visual drift.
