@@ -12,14 +12,14 @@
 - `src/worker.ts:8` forwards public requests to `env.ASSETS.fetch(...)` and `src/worker.ts:10` immediately redirects `/` to `/home` on Workers
 - Command: `npm run deploy`
 - Current live workers.dev URL: `https://superun-public-site.sub-store.workers.dev`
-- Latest verified deploy: deployment `bf973d81-9fc3-4e5c-a3d0-c8cb90f44e7f`, version `1c52d8fa-9322-4a42-ad6a-e9841304326d`, created on `2026-03-28T13:02:48.970368Z`; this rollout serves the corrected `/home -> /web/community-view/<preview-slug>` chain, the hidden runtime-only sort control state, and the detailed community intro shell on Workers
+- Latest verified deploy: deployment `66a2fe46-444d-46b3-bbd3-51d33ebb1868`, version `1f6ce209-6bd2-498a-978d-e58b3c61aee0`, created on `2026-03-28T16:03:39.767998Z`; this rollout keeps the corrected `/home -> /web/community-view/<preview-slug>` chain, preserves the upstream bottom-rail refresh behavior that defaults back to `最新内容`, and re-syncs the first 40 home-card display fields to the live community feed so later cover images render again on Workers
 
 ## Validation
 - `npm run check`
 - `npm run build`
 - `npx wrangler deployments status --json --name superun-public-site --cwd "/Users/zsj/code/program/superun" -c "/Users/zsj/code/program/superun/wrangler.jsonc"`
 - Local DOM/CSS fidelity evidence: `.codex-tasks/20260328-home-community-route-recovery/raw/verification-summary.json`
-- Latest live acceptance evidence: `.codex-tasks/20260328-home-community-route-recovery/raw/deploy-status.json`
+- Latest live acceptance evidence: `.codex-tasks/20260328-superun-state-unify/raw/live-state.json`
 - Current live-state mirror: `.codex-tasks/20260328-superun-state-unify/raw/live-state.json`
 - Historical pass-9 deploy evidence remains in `.codex-tasks/20260327-superun-ui-fidelity-pass-9-epic/tasks/20260327-deploy-docs/raw/pass9-deploy-status.json` for the earlier `cbfb4aff-ab40-4390-a7a5-dc90855f5ad1` rollout
 - For local fidelity checks, rebuild with `npm run build`, then validate `/home`, `/web/login`, `/web/community-view/snapshot--d84ad43ac3ca73a429f26cece4a3d557`, and `/web/community-view/snapshot-health-guide` against the upstream scrape pack under `.codex-tasks/20260328-superun-dom-css-fidelity/raw/upstream/`
