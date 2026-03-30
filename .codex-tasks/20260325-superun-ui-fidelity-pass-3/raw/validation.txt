@@ -1,0 +1,28 @@
+Third-pass local validation
+
+Commands
+- npm --prefix /Users/zsj/code/program/superun run check -> PASS
+- npm --prefix /Users/zsj/code/program/superun run build -> PASS
+
+Browser checks
+- /home -> PASS
+  - Computed body font stack: "Camera Plain Variable", Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif
+  - Computed body size: 16px
+  - Header login control: 14px
+  - Hero eyebrow: 16px
+  - Section title: 20px
+  - Prompt input: 14px
+- /web/login?redirectUrl=%2Fhome -> PASS
+  - Bare auth shell renders without the global site header
+  - Heading: 20px
+  - Tabs, inputs, and submit button: 14px
+  - Login/register CTA preserves redirect and prompt chaining
+- /web/community-view/snapshot-ai-growth-workbench -> PASS
+  - Compact top bar, left rail, recreate CTA, and dense preview shell render correctly
+- /web/community-view/snapshot-ai-growth-workbench?device=mobile -> PASS
+  - preview-frame receives is-mobile
+  - mobile toggle is active and desktop toggle is inactive
+
+Notes
+- The target site advertises Camera Plain Variable first; the local clone now keeps that stack and imports Inter fallback to reduce font drift where Camera Plain is unavailable.
+- community-view remains a static approximation of the live iframe-backed detail page, but the layout, density, and typography are materially closer to the target for the third fidelity pass.

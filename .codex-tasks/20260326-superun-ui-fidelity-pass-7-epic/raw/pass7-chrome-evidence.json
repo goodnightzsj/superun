@@ -1,0 +1,678 @@
+[
+  {
+    "name": "target-home-desktop",
+    "kind": "home",
+    "url": "https://www.superun.com/home",
+    "metrics": {
+      "title": "superun - 聊出你的产品 - 优势智设",
+      "href": "https://www.superun.com/home",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "slogan": null,
+      "composer": null,
+      "textarea": {
+        "x": 437,
+        "y": 288,
+        "width": 566,
+        "height": 86,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "borderRadius": "6px",
+        "paddingTop": "2px",
+        "paddingBottom": "4px",
+        "paddingLeft": "4px",
+        "paddingRight": "4px"
+      },
+      "galleryTitle": {
+        "x": 52,
+        "y": 572,
+        "width": 160,
+        "height": 30,
+        "fontSize": "20px",
+        "lineHeight": "30px",
+        "borderRadius": "0px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "firstCard": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-target-home-desktop.png"
+    }
+  },
+  {
+    "name": "live-home-desktop",
+    "kind": "home",
+    "url": "https://superun-public-site.sub-store.workers.dev/home",
+    "metrics": {
+      "title": "superun - 聊出你的产品 - 优势智设",
+      "href": "https://superun-public-site.sub-store.workers.dev/home",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "slogan": {
+        "x": 648,
+        "y": 218,
+        "width": 144,
+        "height": 28.8,
+        "fontSize": "24px",
+        "lineHeight": "28.8px",
+        "borderRadius": "0px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "composer": {
+        "x": 437,
+        "y": 290.8,
+        "width": 566,
+        "height": 122,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "borderRadius": "6px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "textarea": {
+        "x": 438,
+        "y": 291.8,
+        "width": 564,
+        "height": 86,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "borderRadius": "0px",
+        "paddingTop": "13px",
+        "paddingBottom": "0px",
+        "paddingLeft": "16px",
+        "paddingRight": "16px"
+      },
+      "galleryTitle": {
+        "x": 52,
+        "y": 562.8,
+        "width": 160,
+        "height": 30,
+        "fontSize": "20px",
+        "lineHeight": "30px",
+        "borderRadius": "0px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "firstCard": {
+        "x": 52,
+        "y": 613.8,
+        "width": 317.5,
+        "height": 269.8
+      },
+      "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-live-home-desktop.png"
+    }
+  },
+  {
+    "name": "target-home-mobile",
+    "kind": "home",
+    "url": "https://www.superun.com/home",
+    "metrics": {
+      "title": "superun - 聊出你的产品 - 优势智设",
+      "href": "https://www.superun.com/home",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "slogan": null,
+      "composer": null,
+      "textarea": {
+        "x": 31,
+        "y": 246,
+        "width": 328,
+        "height": 102,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "borderRadius": "6px",
+        "paddingTop": "2px",
+        "paddingBottom": "4px",
+        "paddingLeft": "4px",
+        "paddingRight": "4px"
+      },
+      "galleryTitle": {
+        "x": 16,
+        "y": 549,
+        "width": 358,
+        "height": 56,
+        "fontSize": "18px",
+        "lineHeight": "28px",
+        "borderRadius": "0px",
+        "paddingTop": "16px",
+        "paddingBottom": "12px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "firstCard": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-target-home-mobile.png"
+    }
+  },
+  {
+    "name": "live-home-mobile",
+    "kind": "home",
+    "url": "https://superun-public-site.sub-store.workers.dev/home",
+    "metrics": {
+      "title": "superun - 聊出你的产品 - 优势智设",
+      "href": "https://superun-public-site.sub-store.workers.dev/home",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "slogan": {
+        "x": 123,
+        "y": 184,
+        "width": 144,
+        "height": 28.8,
+        "fontSize": "24px",
+        "lineHeight": "28.8px",
+        "borderRadius": "0px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "composer": {
+        "x": 31,
+        "y": 248.8,
+        "width": 328,
+        "height": 122,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "borderRadius": "6px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "textarea": {
+        "x": 32,
+        "y": 249.8,
+        "width": 326,
+        "height": 86,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "borderRadius": "0px",
+        "paddingTop": "13px",
+        "paddingBottom": "0px",
+        "paddingLeft": "16px",
+        "paddingRight": "16px"
+      },
+      "galleryTitle": {
+        "x": 16,
+        "y": 454.8,
+        "width": 352,
+        "height": 27,
+        "fontSize": "18px",
+        "lineHeight": "27px",
+        "borderRadius": "0px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "firstCard": {
+        "x": 16,
+        "y": 549.8,
+        "width": 174,
+        "height": 212.7
+      },
+      "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-live-home-mobile.png"
+    }
+  },
+  {
+    "name": "target-login-desktop",
+    "kind": "login",
+    "url": "https://www.superun.com/web/login?redirectUrl=%2Fhome",
+    "metrics": {
+      "title": "superun - 聊出你的产品 - 优势智设",
+      "href": "https://www.superun.com/web/login?redirectUrl=%2Fhome",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "heading": {
+        "x": 576,
+        "y": 92,
+        "width": 160.2,
+        "height": 28,
+        "fontSize": "20px",
+        "lineHeight": "28px",
+        "borderRadius": "0px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "formCard": {
+        "x": 576,
+        "y": 331,
+        "width": 288,
+        "height": 188,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "borderRadius": "0px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "firstInput": {
+        "x": 615.2,
+        "y": 332,
+        "width": 247.8,
+        "height": 42,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "borderRadius": "6px",
+        "paddingTop": "8px",
+        "paddingBottom": "8px",
+        "paddingLeft": "12px",
+        "paddingRight": "12px"
+      },
+      "primaryButton": {
+        "x": 576,
+        "y": 152,
+        "width": 288,
+        "height": 44,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "borderRadius": "6px"
+      },
+      "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-target-login-desktop.png"
+    }
+  },
+  {
+    "name": "live-login-desktop",
+    "kind": "login",
+    "url": "https://superun-public-site.sub-store.workers.dev/web/login?redirectUrl=%2Fhome",
+    "metrics": {
+      "title": "superun - 登录",
+      "href": "https://superun-public-site.sub-store.workers.dev/web/login?redirectUrl=%2Fhome",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "heading": {
+        "x": 576,
+        "y": 104,
+        "width": 288,
+        "height": 28,
+        "fontSize": "20px",
+        "lineHeight": "28px",
+        "borderRadius": "0px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "formCard": {
+        "x": 576,
+        "y": 104,
+        "width": 288,
+        "height": 437,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "borderRadius": "0px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "firstInput": {
+        "x": 615.6,
+        "y": 332,
+        "width": 247.4,
+        "height": 44,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "borderRadius": "0px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "12px",
+        "paddingRight": "12px"
+      },
+      "primaryButton": {
+        "x": 576,
+        "y": 152,
+        "width": 288,
+        "height": 44,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "borderRadius": "6px"
+      },
+      "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-live-login-desktop.png"
+    }
+  },
+  {
+    "name": "target-login-mobile",
+    "kind": "login",
+    "url": "https://www.superun.com/web/login?redirectUrl=%2Fhome",
+    "metrics": {
+      "title": "superun - 聊出你的产品 - 优势智设",
+      "href": "https://www.superun.com/web/login?redirectUrl=%2Fhome",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "heading": {
+        "x": 35,
+        "y": 132,
+        "width": 160.2,
+        "height": 28,
+        "fontSize": "20px",
+        "lineHeight": "28px",
+        "borderRadius": "0px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "formCard": {
+        "x": 35,
+        "y": 371,
+        "width": 320,
+        "height": 188,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "borderRadius": "0px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "firstInput": {
+        "x": 74.2,
+        "y": 372,
+        "width": 279.8,
+        "height": 42,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "borderRadius": "6px",
+        "paddingTop": "8px",
+        "paddingBottom": "8px",
+        "paddingLeft": "12px",
+        "paddingRight": "12px"
+      },
+      "primaryButton": {
+        "x": 35,
+        "y": 192,
+        "width": 320,
+        "height": 44,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "borderRadius": "6px"
+      },
+      "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-target-login-mobile.png"
+    }
+  },
+  {
+    "name": "live-login-mobile",
+    "kind": "login",
+    "url": "https://superun-public-site.sub-store.workers.dev/web/login?redirectUrl=%2Fhome",
+    "metrics": {
+      "title": "superun - 登录",
+      "href": "https://superun-public-site.sub-store.workers.dev/web/login?redirectUrl=%2Fhome",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "heading": {
+        "x": 35,
+        "y": 100,
+        "width": 320,
+        "height": 28,
+        "fontSize": "20px",
+        "lineHeight": "28px",
+        "borderRadius": "0px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "formCard": {
+        "x": 35,
+        "y": 100,
+        "width": 320,
+        "height": 433,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "borderRadius": "0px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "firstInput": {
+        "x": 74.6,
+        "y": 324,
+        "width": 279.4,
+        "height": 44,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "borderRadius": "0px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "12px",
+        "paddingRight": "12px"
+      },
+      "primaryButton": {
+        "x": 35,
+        "y": 144,
+        "width": 320,
+        "height": 44,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "borderRadius": "6px"
+      },
+      "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-live-login-mobile.png"
+    }
+  },
+  {
+    "name": "target-community-desktop",
+    "kind": "community",
+    "url": "https://www.superun.com/templates/ai-xin-chou-guan-li-ren-li-zi-yuan-yu-he-gui-xi-to",
+    "metrics": {
+      "title": "AI 薪酬管理、人力资源与合规系统模板 - 快速生成 - superun AI制作 - 优势智设",
+      "href": "https://www.superun.com/templates/ai-xin-chou-guan-li-ren-li-zi-yuan-yu-he-gui-xi-to",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "topbar": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 71.4,
+        "fontSize": "16px",
+        "lineHeight": "25.6px",
+        "borderRadius": "0px",
+        "paddingTop": "16px",
+        "paddingBottom": "16px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "frame": {
+        "x": 0,
+        "y": 71.4,
+        "width": 1440,
+        "height": 1445.7,
+        "fontSize": "16px",
+        "lineHeight": "25.6px",
+        "borderRadius": "0px",
+        "paddingTop": "32px",
+        "paddingBottom": "32px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "primaryButton": null,
+      "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-target-community-desktop.png"
+    }
+  },
+  {
+    "name": "live-community-desktop",
+    "kind": "community",
+    "url": "https://superun-public-site.sub-store.workers.dev/web/community-view/snapshot-hr-payroll-suite",
+    "metrics": {
+      "title": "AI 薪酬管理、人力资源与合规系统 - superun 模板预览",
+      "href": "https://superun-public-site.sub-store.workers.dev/web/community-view/snapshot-hr-payroll-suite",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "topbar": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 48,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "borderRadius": "0px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "12px",
+        "paddingRight": "12px"
+      },
+      "frame": {
+        "x": 0,
+        "y": 48,
+        "width": 1440,
+        "height": 888,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "borderRadius": "0px",
+        "paddingTop": "18px",
+        "paddingBottom": "18px",
+        "paddingLeft": "18px",
+        "paddingRight": "18px"
+      },
+      "primaryButton": {
+        "x": 1344,
+        "y": 7.5,
+        "width": 84,
+        "height": 32,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "borderRadius": "999px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "14px",
+        "paddingRight": "14px"
+      },
+      "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-live-community-desktop.png"
+    }
+  },
+  {
+    "name": "target-community-mobile",
+    "kind": "community",
+    "url": "https://www.superun.com/templates/ai-xin-chou-guan-li-ren-li-zi-yuan-yu-he-gui-xi-to",
+    "metrics": {
+      "title": "AI 薪酬管理、人力资源与合规系统模板 - 快速生成 - superun AI制作 - 优势智设",
+      "href": "https://www.superun.com/templates/ai-xin-chou-guan-li-ren-li-zi-yuan-yu-he-gui-xi-to",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "topbar": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 71.4,
+        "fontSize": "16px",
+        "lineHeight": "25.6px",
+        "borderRadius": "0px",
+        "paddingTop": "16px",
+        "paddingBottom": "16px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "frame": {
+        "x": 0,
+        "y": 71.4,
+        "width": 390,
+        "height": 1666,
+        "fontSize": "16px",
+        "lineHeight": "25.6px",
+        "borderRadius": "0px",
+        "paddingTop": "32px",
+        "paddingBottom": "32px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "primaryButton": null,
+      "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-target-community-mobile.png"
+    }
+  },
+  {
+    "name": "live-community-mobile",
+    "kind": "community",
+    "url": "https://superun-public-site.sub-store.workers.dev/web/community-view/snapshot-hr-payroll-suite",
+    "metrics": {
+      "title": "AI 薪酬管理、人力资源与合规系统 - superun 模板预览",
+      "href": "https://superun-public-site.sub-store.workers.dev/web/community-view/snapshot-hr-payroll-suite",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "topbar": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 56,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "borderRadius": "0px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "16px",
+        "paddingRight": "16px"
+      },
+      "frame": {
+        "x": 0,
+        "y": 56,
+        "width": 390,
+        "height": 788,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "borderRadius": "0px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "primaryButton": {
+        "x": 290,
+        "y": 11.5,
+        "width": 84,
+        "height": 32,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "borderRadius": "999px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "14px",
+        "paddingRight": "14px"
+      },
+      "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-live-community-mobile.png"
+    }
+  }
+]

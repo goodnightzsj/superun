@@ -1,0 +1,4 @@
+id,task,status,acceptance_criteria,validation_command,completed_at,retry_count,notes
+1,Add Google icon to expanded login action,DONE,Expanded Google continue action shows visible Google icon chrome,npm --prefix /Users/zsj/code/program/superun run check && npm --prefix /Users/zsj/code/program/superun run build,,,0,Validated with raw/pass9-login-fix-verify.json.
+2,Make more-button disappear after expansion,DONE,Clicking 更多 reveals Google action and removes the more trigger like the target site,npm --prefix /Users/zsj/code/program/superun run check && npm --prefix /Users/zsj/code/program/superun run build,,,0,Validated with raw/pass9-login-fix-verify.json.
+3,Finalize login-fix child artifacts,DONE,Child truth files reflect validated login interaction parity,echo SKIP,,,0,Validation evidence saved to raw/pass9-login-fix-verify.json.

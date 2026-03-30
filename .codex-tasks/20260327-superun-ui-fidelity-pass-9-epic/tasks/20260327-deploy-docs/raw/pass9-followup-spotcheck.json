@@ -1,0 +1,93 @@
+{
+  "checkedAt": "2026-03-27T05:36:51Z",
+  "workerUrl": "https://superun-public-site.sub-store.workers.dev",
+  "versionId": "cbfb4aff-ab40-4390-a7a5-dc90855f5ad1",
+  "summary": {
+    "rootRedirectOk": true,
+    "homeHoverCtaPresent": true,
+    "homeMobileOnlyZoomRulePresent": true,
+    "loginGoogleActionPresent": true,
+    "loginMoreTriggerPresent": true,
+    "localCommunityRoutesStayLocal": true,
+    "iframeCommunityRoutesStayIframe": true,
+    "iframeLoaderCopyRemoved": true,
+    "iframePseudoChromeRemoved": true,
+    "iframeOpacityGatePresent": true
+  },
+  "checks": {
+    "root": {
+      "url": "https://superun-public-site.sub-store.workers.dev/",
+      "redirectTarget": "https://superun-public-site.sub-store.workers.dev/home",
+      "statusObservedEarlier": 302
+    },
+    "home": {
+      "url": "https://superun-public-site.sub-store.workers.dev/home",
+      "title": "superun - 聊出你的产品 - 优势智设",
+      "hoverCtaMarker": "src/components/TemplateCard.astro:19",
+      "mobileOnlyZoomRule": "src/styles/global.css:446",
+      "activeMobileZoomRule": "src/styles/global.css:463"
+    },
+    "login": {
+      "url": "https://superun-public-site.sub-store.workers.dev/web/login",
+      "title": "superun - 聊出你的产品 - 优势智设",
+      "googleActionPresent": true,
+      "moreTriggerPresent": true,
+      "hideMoreLogicMarker": "src/pages/web/login.astro:135"
+    },
+    "communitySplit": {
+      "local": {
+        "snapshot-glowmind": {
+          "hasIframe": false,
+          "hasLocalMarker": true
+        },
+        "snapshot-ai-growth-workbench": {
+          "hasIframe": false,
+          "hasLocalMarker": true
+        },
+        "snapshot-hr-payroll-suite": {
+          "hasIframe": false,
+          "hasLocalMarker": true
+        }
+      },
+      "iframe": {
+        "snapshot-health-guide": {
+          "hasIframe": true,
+          "hasLoaderPulse": true,
+          "hasLoaderCopy": false
+        },
+        "snapshot-ai-coworker-platform": {
+          "hasIframe": true,
+          "hasLoaderPulse": true,
+          "hasLoaderCopy": false
+        },
+        "snapshot-workforce-engine": {
+          "hasIframe": true,
+          "hasLoaderPulse": true,
+          "hasLoaderCopy": false
+        }
+      }
+    },
+    "communityCss": {
+      "pseudoChromeBefore": false,
+      "pseudoChromeAfter": false,
+      "framePaddingZero": true,
+      "hostWidthFull": true,
+      "iframeOpacityZero": true
+    },
+    "targetComparisons": {
+      "targetRootTitle": "superun - 聊出你的产品 - 优势智设",
+      "targetLoginTitle": "superun - 聊出你的产品 - 优势智设",
+      "targetGlowmindTitle": "GlowMind: 面向美妆电商的 AI 客服与客户分层运营模板 - 快速生成 - superun AI制作 - 优势智设",
+      "targetHealthTitle": "养生之道：每日健康手册模板 - 快速生成 - superun AI制作 - 优势智设"
+    }
+  },
+  "limitations": [
+    "This environment could not establish Playwright or pinchtab browser sessions during the spot check.",
+    "The spot check therefore used live HTTP, HTML, and CSS marker inspection rather than visual screenshot diffing.",
+    "Some structure markers such as runtime-inserted controls may not be trivially detectable with raw HTML alone."
+  ],
+  "remainingRisk": [
+    "Visual pixel parity against the target site is not fully proven without a working browser session or screenshots.",
+    "Community full-screen feel and loading smoothness are validated through deployed structure/CSS markers, not recorded runtime video."
+  ]
+}

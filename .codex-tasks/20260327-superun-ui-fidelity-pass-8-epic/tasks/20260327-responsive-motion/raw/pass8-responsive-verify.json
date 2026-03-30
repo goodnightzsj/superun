@@ -1,0 +1,39 @@
+{
+  "validatedAt": "2026-03-26T19:07:41Z",
+  "localDistBase": "http://127.0.0.1:4321",
+  "buildValidation": {
+    "command": "npm --prefix /Users/zsj/code/program/superun run check && npm --prefix /Users/zsj/code/program/superun run build",
+    "result": "passed"
+  },
+  "homeHoverMotion": {
+    "lightCardTransform": "matrix(1, 0, 0, 1, 0, 0)",
+    "lightCardCtaOpacity": "0.681401",
+    "mobileCardTransform": "matrix(1.01025, 0, 0, 1.01025, 0, 0)",
+    "mobileCardCtaOpacity": "0.393448",
+    "observations": [
+      "desktop/light card image remains at scale(1) on hover",
+      "mobile-themed card image scales above 1 on hover",
+      "hover CTA is visible on both sampled cards during interaction"
+    ]
+  },
+  "communityDeviceToggle": {
+    "initialActive": ["  电脑 "],
+    "afterMobile": ["  手机 "],
+    "urlAfterMobile": "http://127.0.0.1:4321/web/community-view/snapshot-ai-coworker-platform?device=mobile",
+    "isMobileClass": true,
+    "afterDesktop": ["  电脑 "],
+    "urlAfterDesktop": "http://127.0.0.1:4321/web/community-view/snapshot-ai-coworker-platform",
+    "isDesktopClass": false
+  },
+  "iframeRenderSearch": {
+    "pattern": "<iframe|community-preview-embed|previewSrc",
+    "path": "/Users/zsj/code/program/superun/src",
+    "result": "no matches"
+  },
+  "loginPresence": {
+    "title": "superun - 聊出你的产品 - 优势智设",
+    "heading": "欢迎使用 superun",
+    "tabs": ["手机号", "邮箱"],
+    "createTeamVisible": true
+  }
+}

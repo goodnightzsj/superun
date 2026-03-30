@@ -1,0 +1,62 @@
+{
+  "home": {
+    "url": "https://www.superun.com/home",
+    "status": 200,
+    "title": "superun - 聊出你的产品 - 优势智设",
+    "h1": null,
+    "body_font": "Camera Plain Variable,\n          ui-sans-serif,\n          system-ui,\n          sans-serif",
+    "css_links": [
+      "https://b.ux-cdn.com/superun/20250912/favicon.svg",
+      "https://b.ux-cdn.com/superun/2025915/favicon.png",
+      "https://b.ux-cdn.com/uxarts/static/superun/20260325205344/assets/vendor-DnDMtSW_.js",
+      "https://b.ux-cdn.com/uxarts/static/superun/20260325205344/assets/ui-BaCWLLE5.js",
+      "https://b.ux-cdn.com/uxarts/static/superun/20260325205344/assets/index-BottBQch.css",
+      "https://www.superun.com/"
+    ],
+    "js_links": [
+      "https://r.wdfl.co/rw.js",
+      "https://b.ux-cdn.com/uxarts/static/superun/20260325205344/assets/index-Bbo130cM.js"
+    ],
+    "style_block_count": 2
+  },
+  "login": {
+    "url": "https://www.superun.com/web/login?redirectUrl=%2Fhome",
+    "status": 200,
+    "title": "superun - 聊出你的产品 - 优势智设",
+    "h1": null,
+    "body_font": "Camera Plain Variable,\n          ui-sans-serif,\n          system-ui,\n          sans-serif",
+    "css_links": [
+      "https://b.ux-cdn.com/superun/20250912/favicon.svg",
+      "https://b.ux-cdn.com/superun/2025915/favicon.png",
+      "https://b.ux-cdn.com/uxarts/static/superun/20260325205344/assets/vendor-DnDMtSW_.js",
+      "https://b.ux-cdn.com/uxarts/static/superun/20260325205344/assets/ui-BaCWLLE5.js",
+      "https://b.ux-cdn.com/uxarts/static/superun/20260325205344/assets/index-BottBQch.css",
+      "https://www.superun.com/login"
+    ],
+    "js_links": [
+      "https://r.wdfl.co/rw.js",
+      "https://b.ux-cdn.com/uxarts/static/superun/20260325205344/assets/index-Bbo130cM.js"
+    ],
+    "style_block_count": 2
+  },
+  "community": {
+    "url": "https://www.superun.com/web/community-view/snapshot--5970b4812267a8197073cf6ea8474a34",
+    "status": 200,
+    "title": "superun - 聊出你的产品 - 优势智设",
+    "h1": null,
+    "body_font": "Camera Plain Variable,\n          ui-sans-serif,\n          system-ui,\n          sans-serif",
+    "css_links": [
+      "https://b.ux-cdn.com/superun/20250912/favicon.svg",
+      "https://b.ux-cdn.com/superun/2025915/favicon.png",
+      "https://b.ux-cdn.com/uxarts/static/superun/20260325205344/assets/vendor-DnDMtSW_.js",
+      "https://b.ux-cdn.com/uxarts/static/superun/20260325205344/assets/ui-BaCWLLE5.js",
+      "https://b.ux-cdn.com/uxarts/static/superun/20260325205344/assets/index-BottBQch.css",
+      "https://www.superun.com/community-view/snapshot--5970b4812267a8197073cf6ea8474a34"
+    ],
+    "js_links": [
+      "https://r.wdfl.co/rw.js",
+      "https://b.ux-cdn.com/uxarts/static/superun/20260325205344/assets/index-Bbo130cM.js"
+    ],
+    "style_block_count": 2
+  }
+}

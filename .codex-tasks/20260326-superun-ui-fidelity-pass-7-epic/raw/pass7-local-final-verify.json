@@ -1,0 +1,44 @@
+{
+  "home-mobile": {
+    "url": "http://127.0.0.1:4873/home.html",
+    "metrics": {
+      "badgeCount": 0,
+      "arrowCount": 0,
+      "codeBorder": null,
+      "hasBreadcrumb": false,
+      "hasHeader": true,
+      "topbar": false,
+      "previewHeight": null,
+      "previewWidth": null
+    },
+    "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-local-home-mobile-final.png"
+  },
+  "login-mobile": {
+    "url": "http://127.0.0.1:4873/web/login.html",
+    "metrics": {
+      "badgeCount": 0,
+      "arrowCount": 0,
+      "codeBorder": "1px",
+      "hasBreadcrumb": false,
+      "hasHeader": false,
+      "topbar": false,
+      "previewHeight": null,
+      "previewWidth": null
+    },
+    "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-local-login-mobile-final.png"
+  },
+  "community-mobile": {
+    "url": "http://127.0.0.1:4873/web/community-view/snapshot-hr-payroll-suite.html?device=mobile",
+    "metrics": {
+      "badgeCount": 0,
+      "arrowCount": 0,
+      "codeBorder": null,
+      "hasBreadcrumb": true,
+      "hasHeader": true,
+      "topbar": false,
+      "previewHeight": 236,
+      "previewWidth": 295
+    },
+    "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-local-community-mobile-final.png"
+  }
+}

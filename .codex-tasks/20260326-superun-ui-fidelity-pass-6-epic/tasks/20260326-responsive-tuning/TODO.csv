@@ -1,0 +1,3 @@
+id,task,status,acceptance_criteria,validation_command,completed_at,retry_count,notes
+1,Tighten 390px mobile sizing and stacking,DONE,390px home login and community layouts match target behavior more closely,npm --prefix /Users/zsj/code/program/superun run check && npm --prefix /Users/zsj/code/program/superun run build,2026-03-26 21:27,0,Home composer now measures 328px, login auth card now starts at y=100, and local community previews now stay inside a 373x788 internal-scroll frame.
+2,Finalize responsive-tuning child task artifacts,DONE,Child progress reflects validated completion,echo SKIP,2026-03-26 21:27,0,Responsive tuning truth files synchronized after validation.

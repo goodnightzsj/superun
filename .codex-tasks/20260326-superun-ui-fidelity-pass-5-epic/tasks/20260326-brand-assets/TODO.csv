@@ -1,0 +1,4 @@
+id,task,status,acceptance_criteria,validation_command,completed_at,retry_count,notes
+1,Integrate real public brand SVG into shared brand surfaces,DONE,Header login footer and community chrome use the target-like real brand image,test -f /Users/zsj/code/program/superun/public/brand.svg,2026-03-26 03:16,0,Brand.astro now renders the downloaded public SVG and shared brand surfaces use it.
+2,Tighten shared visual tokens around brand treatment,DONE,Shared brand-adjacent sizing spacing and icon rhythm align closer to target,npm --prefix /Users/zsj/code/program/superun run check && npm --prefix /Users/zsj/code/program/superun run build,2026-03-26 03:16,0,Global CSS now uses target-like brand image sizing across header footer login and community chrome.
+3,Finalize brand-assets child task artifacts,DONE,Child progress and truth files reflect completion,echo SKIP,2026-03-26 03:16,0,Brand-assets task files synchronized after validation.

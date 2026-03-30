@@ -1,0 +1,20 @@
+{
+  "validatedAt": "2026-03-27T03:46:39+08:00",
+  "path": "/web/login.html",
+  "checkBuild": "passed",
+  "beforeExpansion": {
+    "wechatVisible": true,
+    "moreVisible": true,
+    "googleVisible": false
+  },
+  "afterExpansion": {
+    "wechatVisible": true,
+    "moreVisible": false,
+    "googleVisible": true,
+    "googleHasIcon": true
+  },
+  "notes": [
+    "Clicking 更多 hides the trigger and reveals the Google continue action.",
+    "Google continue action now renders the SVG icon inside the button."
+  ]
+}

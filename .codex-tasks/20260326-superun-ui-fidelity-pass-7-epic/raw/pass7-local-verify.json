@@ -1,0 +1,109 @@
+{
+  "home-desktop": {
+    "kind": "home",
+    "url": "http://127.0.0.1:4873/home.html",
+    "viewport": {
+      "width": 1440,
+      "height": 1280,
+      "mobile": false
+    },
+    "metrics": {
+      "badgeCount": 0,
+      "arrowCount": 0,
+      "cardCount": 40,
+      "firstCardTitle": "AI 私域增长工作台",
+      "firstCardDescription": "为企业提供 AI 驱动的私域增长解决方案，助力客户管理和营销自动化。",
+      "galleryTop": 561.796875
+    },
+    "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-local-home-desktop.png"
+  },
+  "home-mobile": {
+    "kind": "home",
+    "url": "http://127.0.0.1:4873/home.html",
+    "viewport": {
+      "width": 390,
+      "height": 1180,
+      "mobile": true
+    },
+    "metrics": {
+      "badgeCount": 0,
+      "arrowCount": 0,
+      "tabCount": 4,
+      "firstCardWidth": 174
+    },
+    "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-local-home-mobile.png"
+  },
+  "login-desktop": {
+    "kind": "login",
+    "url": "http://127.0.0.1:4873/web/login.html",
+    "viewport": {
+      "width": 1440,
+      "height": 960,
+      "mobile": false
+    },
+    "metrics": {
+      "borderTopWidth": "1px",
+      "borderTopColor": "rgb(235, 235, 235)",
+      "backgroundColor": "rgb(255, 255, 255)",
+      "borderRadius": "6px",
+      "width": 192,
+      "height": 44
+    },
+    "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-local-login-desktop.png"
+  },
+  "login-mobile": {
+    "kind": "login",
+    "url": "http://127.0.0.1:4873/web/login.html",
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "mobile": true
+    },
+    "metrics": {
+      "borderTopWidth": "1px",
+      "borderTopColor": "rgb(235, 235, 235)",
+      "backgroundColor": "rgb(255, 255, 255)",
+      "rowColumns": "224px 88px"
+    },
+    "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-local-login-mobile.png"
+  },
+  "community-desktop": {
+    "kind": "community",
+    "url": "http://127.0.0.1:4873/web/community-view/snapshot-hr-payroll-suite.html",
+    "viewport": {
+      "width": 1440,
+      "height": 1680,
+      "mobile": false
+    },
+    "metrics": {
+      "hasHeader": true,
+      "hasBreadcrumb": true,
+      "hasPublishDate": true,
+      "hasCommunityTopbar": false,
+      "hasSideControls": true,
+      "usesFullMain": false,
+      "previewPadding": "0px",
+      "previewClasses": "community-preview-frame community-preview-frame--local"
+    },
+    "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-local-community-desktop.png"
+  },
+  "community-mobile": {
+    "kind": "community",
+    "url": "http://127.0.0.1:4873/web/community-view/snapshot-hr-payroll-suite.html?device=mobile",
+    "viewport": {
+      "width": 390,
+      "height": 1600,
+      "mobile": true
+    },
+    "metrics": {
+      "hasHeader": true,
+      "hasBreadcrumb": true,
+      "hasPublishDate": true,
+      "hasCommunityTopbar": false,
+      "isMobileClass": true,
+      "previewPadding": "0px",
+      "localWidth": 54
+    },
+    "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-local-community-mobile.png"
+  }
+}

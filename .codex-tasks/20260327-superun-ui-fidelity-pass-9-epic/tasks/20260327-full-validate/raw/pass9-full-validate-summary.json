@@ -1,0 +1,47 @@
+{
+  "validatedAt": "2026-03-27T03:49:00+08:00",
+  "buildValidation": {
+    "command": "npm --prefix /Users/zsj/code/program/superun run check && npm --prefix /Users/zsj/code/program/superun run build",
+    "result": "passed"
+  },
+  "home": {
+    "status": "reused-pass8-evidence",
+    "source": ".codex-tasks/20260327-superun-ui-fidelity-pass-8-epic/tasks/20260327-responsive-motion/raw/pass8-responsive-verify.json",
+    "observations": [
+      "desktop/light card image remains at scale(1) on hover",
+      "mobile-themed card image scales above 1 on hover",
+      "hover CTA is visible on both sampled cards during interaction",
+      "home implementation was unchanged during pass-9, so pass-8 browser evidence remains valid"
+    ]
+  },
+  "login": {
+    "status": "passed",
+    "source": ".codex-tasks/20260327-superun-ui-fidelity-pass-9-epic/tasks/20260327-login-fix/raw/pass9-login-fix-verify.json",
+    "observations": [
+      "Google icon is visible after expansion",
+      "clicking 更多 hides the trigger and reveals Google continue only"
+    ]
+  },
+  "community": {
+    "status": "passed",
+    "source": ".codex-tasks/20260327-superun-ui-fidelity-pass-9-epic/tasks/20260327-community-iframe-return/raw/pass9-community-iframe-verify.json",
+    "observations": [
+      "snapshot-glowmind remains local recreated content",
+      "snapshot-health-guide uses iframe host with viewport-safe desktop/mobile bounds",
+      "community routes hide the global site header and keep detail-shell chrome"
+    ]
+  },
+  "targetParity": {
+    "status": "no-material-blockers",
+    "source": ".codex-tasks/20260327-superun-ui-fidelity-pass-8-epic/tasks/20260327-fidelity-polish/raw/pass8-fidelity-polish-verify.json",
+    "observations": [
+      "login shell structure already matched target with only minor chrome differences before pass-9",
+      "pass-9 addressed the remaining login interaction gap and community routing strategy requested by the user",
+      "no new material fidelity blockers were found in representative browser checks"
+    ]
+  },
+  "notes": [
+    "Playwright launcher became unavailable after representative checks, so full-validate reused the latest pass-8 home parity evidence because home code did not change in pass-9.",
+    "Validation is sufficient to proceed to deployment unless remote deploy introduces new drift."
+  ]
+}

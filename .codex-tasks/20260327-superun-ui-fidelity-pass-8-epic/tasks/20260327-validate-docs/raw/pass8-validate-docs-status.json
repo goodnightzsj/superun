@@ -1,0 +1,20 @@
+{
+  "validatedAt": "2026-03-26T19:07:41Z",
+  "localValidation": {
+    "command": "npm --prefix /Users/zsj/code/program/superun run check && npm --prefix /Users/zsj/code/program/superun run build",
+    "result": "passed"
+  },
+  "deploymentStatus": {
+    "command": "npx wrangler deployments status --json --name superun-public-site --cwd /Users/zsj/code/program/superun -c /Users/zsj/code/program/superun/wrangler.jsonc",
+    "result": "live deployment still points to version 3000bb61-b1e9-4790-99af-8c55e069ec97",
+    "deployedPass8": false
+  },
+  "docsSync": {
+    "updatedFiles": [
+      "llmdoc/reference/routes.md",
+      "llmdoc/architecture/public-site-architecture.md",
+      "llmdoc/guides/deployment.md"
+    ],
+    "status": "updated for local pass-8 state and pending deploy"
+  }
+}

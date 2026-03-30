@@ -1,0 +1,13 @@
+Local validation completed on 2026-03-25.
+
+Commands:
+- npm run check -> pass
+- npm run build -> pass
+- astro preview on http://127.0.0.1:4323/home -> loads
+
+Browser validation notes:
+- Header is lighter and visually quieter, with the language link grouped beside the brand and a subtler login control.
+- Hero spacing is closer to the target: more whitespace above the composer, a narrower input card, and a shorter placeholder.
+- Gallery reads closer to the target with a longer screenshot-led grid, flatter cards, and reduced metadata noise.
+- Footer now appears before the document link strip, closer to the target lower-page structure.
+- Lower-page document links are denser and closer to the target information pattern.

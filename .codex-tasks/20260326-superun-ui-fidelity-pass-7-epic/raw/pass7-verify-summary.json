@@ -1,0 +1,25 @@
+{
+  "home-mobile": {
+    "cardBadgeCount": 40,
+    "cardArrowCount": 40,
+    "firstCardText": "AI 私域增长工作台",
+    "screenshotLabel": "home-mobile",
+    "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-verify-home-mobile.png"
+  },
+  "login-mobile": {
+    "borderWidth": "0px",
+    "borderStyle": "none",
+    "borderRadius": "6px",
+    "screenshotLabel": "login-mobile",
+    "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-verify-login-mobile.png"
+  },
+  "community-desktop": {
+    "hasHeader": false,
+    "hasBreadcrumb": false,
+    "hasPublishDate": false,
+    "hasIntroHeading": false,
+    "hasDetailHeading": false,
+    "screenshotLabel": "community-desktop",
+    "screenshot": "/Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-verify-community-desktop.png"
+  }
+}

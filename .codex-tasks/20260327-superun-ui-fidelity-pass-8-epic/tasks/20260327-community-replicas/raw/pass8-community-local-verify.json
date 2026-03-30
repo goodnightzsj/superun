@@ -1,0 +1,42 @@
+{
+  "validatedAt": "2026-03-27T02:03:00Z",
+  "localDistBase": "http://127.0.0.1:4321",
+  "buildValidation": {
+    "command": "npm --prefix /Users/zsj/code/program/superun run check && npm --prefix /Users/zsj/code/program/superun run build",
+    "result": "passed"
+  },
+  "iframeSearch": {
+    "pattern": "<iframe|community-preview-embed|previewSrc",
+    "path": "/Users/zsj/code/program/superun/src",
+    "result": "no matches"
+  },
+  "routes": [
+    {
+      "url": "http://127.0.0.1:4321/web/community-view/snapshot-ai-coworker-platform",
+      "type": "generic-desktop",
+      "observations": [
+        "detail shell renders local generic preview instead of iframe",
+        "hero, metric cards, section cards, and recreate CTA are present",
+        "community route remains locally navigable"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:4321/web/community-view/snapshot-summer-school?device=mobile",
+      "type": "generic-mobile",
+      "observations": [
+        "mobile generic preview renders as single-column local replica",
+        "mobile-first chip and recreate CTA are present",
+        "route no longer depends on remote snapshot embed"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:4321/home",
+      "type": "home-hover-and-motion",
+      "observations": [
+        "hover CTA is present on cards with 56x34 size, rgba(255,255,255,0.8) background, and 8px radius",
+        "light and dark cards stay at scale(1) on hover",
+        "mobile cards scale above 1 on hover while CTA reveals"
+      ]
+    }
+  ]
+}

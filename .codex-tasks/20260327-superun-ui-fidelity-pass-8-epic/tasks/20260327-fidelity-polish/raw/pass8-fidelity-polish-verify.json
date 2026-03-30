@@ -1,0 +1,37 @@
+{
+  "validatedAt": "2026-03-26T19:07:41Z",
+  "localDistBase": "http://127.0.0.1:4321",
+  "buildValidation": {
+    "command": "npm --prefix /Users/zsj/code/program/superun run check && npm --prefix /Users/zsj/code/program/superun run build",
+    "result": "passed"
+  },
+  "targetComparisons": [
+    {
+      "url": "https://www.superun.com/web/login",
+      "localUrl": "http://127.0.0.1:4321/web/login",
+      "observations": [
+        "document title matches target wording: superun - 聊出你的产品 - 优势智设",
+        "login shell keeps brand plus locale trigger, welcome heading, tabs, and create-team entry",
+        "remaining differences are mostly minor spacing/visual chrome rather than structure"
+      ]
+    },
+    {
+      "url": "https://www.superun.com/web/community-view/snapshot-ai-coworker-platform",
+      "localUrl": "http://127.0.0.1:4321/web/community-view/snapshot-ai-coworker-platform",
+      "observations": [
+        "community detail shell now uses target-like top bar with back affordance, new-chat entry, and device switcher",
+        "desktop view keeps left empty-conversation panel and recreate CTA while right pane stays local recreated content",
+        "mobile and desktop device buttons toggle preview-frame state and URL query consistently"
+      ]
+    },
+    {
+      "url": "https://www.superun.com/home",
+      "localUrl": "http://127.0.0.1:4321/home",
+      "observations": [
+        "home title matches target wording",
+        "gallery cards retain visible recreate CTA on hover",
+        "major residual gap on target home remains dataset/content population rather than component chrome"
+      ]
+    }
+  ]
+}

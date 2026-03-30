@@ -1,0 +1,4 @@
+id,task,status,acceptance_criteria,validation_command,completed_at,retry_count,notes
+1,Capture fresh pass-6 target and local evidence,DONE,Fresh evidence files exist for target and deployed pages across home login and community,test -f /Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-6-epic/raw/pass6-target-evidence.md,2026-03-26 12:00,0,Created pass6-target-evidence.md with refreshed target and local metrics for home login and community.
+2,Produce concrete pass-6 gap list,DONE,Audit artifact enumerates implementable visual and interaction gaps,echo SKIP,2026-03-26 12:00,0,Audit artifact now maps concrete spacing motion and framing gaps to pass-6 implementation work.
+3,Finalize audit child task artifacts,DONE,Audit progress reflects recovery state,echo SKIP,2026-03-26 12:00,0,Audit truth files synchronized and parent epic can move to implementation tasks.

@@ -1,0 +1,24 @@
+{
+  "validatedAt": "2026-03-27T03:48:14+08:00",
+  "checkBuild": "passed",
+  "desktop": {
+    "path": "/web/community-view/snapshot-health-guide.html",
+    "mode": "desktop",
+    "host": { "width": 1160, "height": 686, "left": 264, "right": 1424, "top": 65, "bottom": 751 },
+    "frame": { "width": 1192, "height": 720, "left": 248, "right": 1440, "top": 48, "bottom": 768 },
+    "viewport": { "width": 1440, "height": 1100 }
+  },
+  "mobile": {
+    "path": "/web/community-view/snapshot-health-guide.html?device=mobile",
+    "mode": "mobile",
+    "host": { "width": 410, "height": 678, "left": 639, "right": 1049, "top": 65, "bottom": 743 },
+    "frame": { "width": 1192, "height": 720, "left": 248, "right": 1440, "top": 48, "bottom": 768 },
+    "viewport": { "width": 1440, "height": 1100 },
+    "iframeSrc": "https://snapshot--a9628af05d1de701f56fe5805fad58c6.superun.yun/"
+  },
+  "notes": [
+    "Core slug snapshot-glowmind remains local recreated content.",
+    "Non-core slug snapshot-health-guide renders inside iframe host with viewport-safe bounds.",
+    "Global site header is hidden on community view routes to match detail shell framing more closely."
+  ]
+}

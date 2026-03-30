@@ -1,0 +1,4 @@
+id,task,status,acceptance_criteria,validation_command,completed_at,retry_count,notes
+1,Revalidate home hover CTA and motion scope,DONE,Home hover CTA remains visible while only mobile cards zoom,npm --prefix /Users/zsj/code/program/superun run check && npm --prefix /Users/zsj/code/program/superun run build,,,0,Reused unchanged home evidence from pass-8 responsive validation and confirmed no pass-9 home code changes.
+2,Revalidate login and community UI parity,DONE,Login/community structure and interactions match the target without material drift,npm --prefix /Users/zsj/code/program/superun run check && npm --prefix /Users/zsj/code/program/superun run build,,,0,Representative browser checks passed for login, local core community route, and iframe-backed non-core community route.
+3,Finalize pass-9 validation artifacts,DONE,Validation evidence is saved under raw and parent truth files can advance,echo SKIP,,,0,Summary saved to raw/pass9-full-validate-summary.json.

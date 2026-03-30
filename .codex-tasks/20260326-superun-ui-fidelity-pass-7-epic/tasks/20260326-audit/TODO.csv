@@ -1,0 +1,4 @@
+id,task,status,acceptance_criteria,validation_command,completed_at,retry_count,notes
+1,Capture fresh pass-7 target and live evidence,DONE,Fresh evidence exists for target and live pages across home login and community,test -f /Users/zsj/code/program/superun/.codex-tasks/20260326-superun-ui-fidelity-pass-7-epic/raw/pass7-target-evidence.md,2026-03-26T22:40:00Z,0,Captured target/live evidence in isolated Google Chrome and wrote raw/pass7-target-evidence.md.
+2,Produce concrete pass-7 gap list,DONE,Audit artifact enumerates implementable residual gaps,echo SKIP,2026-03-26T22:40:00Z,0,Residual gaps narrowed to home card chrome, login verification input chrome, and community detail-shell structure.
+3,Finalize audit child task artifacts,DONE,Audit progress reflects recovery state,echo SKIP,2026-03-26T22:53:00Z,0,Synced audit TODO/progress and parent epic notes.

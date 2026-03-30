@@ -1,0 +1,13 @@
+Local validation completed on 2026-03-25.
+
+Commands:
+- npm run check -> pass
+- npm run build -> pass
+- astro preview on http://127.0.0.1:4323/home -> loads
+
+Browser validation notes:
+- Header is flatter and lighter, closer to the target.
+- Hero now uses a smaller eyebrow-style title and a denser prompt composer.
+- Gallery cards are shorter and denser with a higher media-to-copy ratio.
+- Bottom links and footer are visually quieter and closer to the target information blocks.
+- Core interactions remain intact: category tabs, prompt disabled state, and navigation links.
